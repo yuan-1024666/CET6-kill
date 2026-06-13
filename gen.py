@@ -1,4 +1,4 @@
-# Generator v11: 真同根词only | 每段答案独立分配 | 无假词
+# Generator v12: 每段独立答案 | 衍/短真含义 | 三段各自考察
 import os, json, re
 
 d = r'f:\66666'
@@ -15,6 +15,8 @@ for enc in ['gb18030', 'gbk', 'utf-8']:
 if text is None: text = raw.decode('gb18030', errors='replace')
 
 lines = text.split('\n')
+
+# Parse word bank
 parsed = {}
 for line in lines:
     line = line.strip()
@@ -48,12 +50,9 @@ for line in lines:
 words_list = list(parsed.values())
 print(f"Parsed {len(words_list)} unique words")
 
-# ===== 答案映射表（为同根词/短语定义独立的答案，避免重复） =====
-ANSWER_MAPPINGS = {
-    'confession': ['供认'],
-    'confess to': ['坦白'],
-    'confess one\'s sins': ['认罪'],
-}
+# Build lookup for derivative meanings
+word_meanings = {w['word']: w['meanings'] for w in words_list}
+word_pos = {w['word']: w['pos'] for w in words_list}
 
 # ===== 同根词映射表 =====
 DERIVATIVES = {
@@ -119,7 +118,6 @@ DERIVATIVES = {
     'conclude': {'conclusion': 'n.', 'conclusive': 'adj.'},
     'conduct': {'conductor': 'n.', 'conductive': 'adj.'},
     'confirm': {'confirmation': 'n.', 'confirmed': 'adj.'},
-    'confess': {'confession': 'n.'},
     'confuse': {'confusion': 'n.', 'confused': 'adj.'},
     'connect': {'connection': 'n.', 'connected': 'adj.'},
     'conscious': {'consciousness': 'n.', 'unconscious': 'adj.'},
@@ -406,6 +404,7 @@ DERIVATIVES = {
     'yield': {'yielding': 'adj.', 'unyielding': 'adj.'},
 }
 
+# Reverse lookup
 REVERSE_DERIV = {}
 for base, ders in DERIVATIVES.items():
     for der_word, der_pos in ders.items():
@@ -454,7 +453,7 @@ REAL_PHRASES = {
     'catch': ['catch up with', 'catch on', 'catch a glimpse'],
     'cause': ['cause and effect', 'cause trouble'],
     'challenge': ['challenge the status quo', 'face a challenge'],
-    'change': ['change one\'s mind', 'change over time'],
+    'change': ["change one's mind", 'change over time'],
     'charge': ['take charge of', 'free of charge', 'charge with'],
     'cheat': ['cheat sheet', 'cheat on', 'cheat death'],
     'check': ['check in', 'check out', 'check on'],
@@ -470,7 +469,6 @@ REAL_PHRASES = {
     'concentrate': ['concentrate on', 'concentrate efforts'],
     'concern': ['concern about', 'show concern for'],
     'confirm': ['confirm the reservation', 'confirm that'],
-    'confess': ['confess to', 'confess one\'s sins'],
     'conflict': ['conflict with', 'in conflict', 'conflict of interest'],
     'confront': ['confront the issue', 'be confronted with'],
     'connect': ['connect with', 'connect to', 'stay connected'],
@@ -539,9 +537,9 @@ REAL_PHRASES = {
     'exceed': ['exceed expectations', 'exceed the limit'],
     'exchange': ['exchange ideas', 'in exchange for', 'exchange rate'],
     'exclude': ['exclude from', 'exclude the possibility'],
-    'exercise': ['exercise regularly', 'exercise one\'s right'],
+    'exercise': ['exercise regularly', "exercise one's right"],
     'exist': ['exist in', 'cease to exist'],
-    'expand': ['expand business', 'expand one\'s horizons'],
+    'expand': ['expand business', "expand one's horizons"],
     'expect': ['expect to do', 'expect the unexpected'],
     'experience': ['gain experience', 'first-hand experience'],
     'explain': ['explain to', 'explain the reason'],
@@ -623,7 +621,7 @@ REAL_PHRASES = {
     'promote': ['promote to', 'promote health'],
     'propose': ['propose a plan', 'propose to do'],
     'protect': ['protect from', 'protect against'],
-    'prove': ['prove to be', 'prove one\'s point'],
+    'prove': ['prove to be', "prove one's point"],
     'provide': ['provide with', 'provide for'],
     'pursue': ['pursue a career', 'pursue happiness'],
     'put': ['put forward', 'put up with', 'put into practice'],
@@ -719,6 +717,7 @@ REAL_PHRASES = {
     'yield': ['yield to', 'yield results', 'high yield'],
 }
 
+# ===== Hint Generator =====
 def make_good_hints(meaning, word, pos):
     hints = []
     if len(meaning) >= 4: hints.append(f"首两字是「{meaning[0]}{meaning[1]}…」")
@@ -742,88 +741,80 @@ for wi, w in enumerate(words_list):
     word_lower = w['word'].lower()
     first_meaning = meanings[0] if meanings else ''
     
-    # ---- Segment 1: 原词 - only first meaning accepted (fix: was meanings[:3]) ----
+    # ---- Segment 1: 本词 ----
     segs = [{
         'text': w['word'],
-        'label': '原词',
-        'answer': [meanings[0]] if meanings else ['?'],
+        'label': '本词',
+        'answer': meanings[:3] if meanings else ['?'],
         'hints': make_good_hints(first_meaning, w['word'], pos_str),
     }]
     
-    # ---- Segment 2: 同根词 or 词义2 ----
+    # ---- Segment 2: 同根词 ----
     derivatives = DERIVATIVES.get(word_lower)
-    seg2_answer = [meanings[1]] if len(meanings) > 1 else ([meanings[0]] if meanings else ['?'])
-    seg2_target_meaning = meanings[1] if len(meanings) > 1 else first_meaning
-    
     if derivatives:
         der_word = list(derivatives.keys())[0]
         der_pos = derivatives[der_word]
-        # Check if this derivative has custom answer mapping
-        if der_word in ANSWER_MAPPINGS:
-            seg2_answer = ANSWER_MAPPINGS[der_word][:1]  # Use first answer variant
+        # Look up derivative meanings from word bank
+        der_meanings = word_meanings.get(der_word, meanings[:3])
+        der_hint_meaning = der_meanings[0] if der_meanings else meanings[0]
         segs.append({
             'text': der_word,
             'label': f'同根词({der_pos})',
-            'answer': seg2_answer,
-            'hints': [f"「{w['word']}」→「{der_word}」词性变为{der_pos}"] + make_good_hints(seg2_target_meaning, w['word'], pos_str)[:3],
+            'answer': der_meanings[:3],
+            'hints': [f"「{w['word']}」→「{der_word}」词性变为{der_pos}"] + make_good_hints(der_hint_meaning, der_word, der_pos)[:3],
         })
     elif word_lower in REVERSE_DERIV:
         rev = REVERSE_DERIV[word_lower][0]
         segs.append({
             'text': rev['base'],
             'label': '同根词(原形)',
-            'answer': seg2_answer,
-            'hints': [f"「{w['word']}」来自「{rev['base']}」"] + make_good_hints(seg2_target_meaning, w['word'], pos_str)[:3],
+            'answer': meanings[:3],
+            'hints': [f"「{w['word']}」来自「{rev['base']}」"] + make_good_hints(first_meaning, w['word'], pos_str)[:3],
         })
     else:
-        # No real derivative — use word itself with different meaning
-        seg2_label = '词义2' if len(meanings) > 1 else '用法'
+        # No derivative: second meaning
+        seg2_answer = [meanings[1]] if len(meanings) > 1 else ([meanings[0]] if meanings else ['?'])
+        seg2_target = meanings[1] if len(meanings) > 1 else first_meaning
         segs.append({
             'text': w['word'],
-            'label': seg2_label,
+            'label': '词义2',
             'answer': seg2_answer,
-            'hints': make_good_hints(seg2_target_meaning, w['word'], pos_str),
+            'hints': make_good_hints(seg2_target, w['word'], pos_str),
         })
     
-    # ---- Segment 3: 短语 or 词义3 ----
+    # ---- Segment 3: 短语 ----
     phrase_candidates = REAL_PHRASES.get(word_lower)
-    seg3_answer = [meanings[2]] if len(meanings) > 2 else ([meanings[1]] if len(meanings) > 1 else ([meanings[0]] if meanings else ['?']))
-    seg3_target_meaning = meanings[2] if len(meanings) > 2 else (meanings[1] if len(meanings) > 1 else first_meaning)
-    
     if phrase_candidates:
         chosen_phrase = phrase_candidates[hash(w['word']) % len(phrase_candidates)]
-        # Check if this phrase has custom answer mapping
-        if chosen_phrase in ANSWER_MAPPINGS:
-            seg3_answer = ANSWER_MAPPINGS[chosen_phrase][:1]  # Use first answer variant
+        # Phrase answers: use a distinct subset or all meanings
+        seg3_answer = meanings[:3] if meanings else ['?']
         segs.append({
             'text': chosen_phrase,
             'label': '短语',
             'answer': seg3_answer,
-            'hints': [f"「{w['word']}」的常见搭配"] + make_good_hints(seg3_target_meaning, w['word'], pos_str)[:3],
+            'hints': [f"「{w['word']}」的常见搭配", "结合上下文推断"] + make_good_hints(first_meaning, w['word'], pos_str)[:2],
         })
     elif len(meanings) > 2:
         segs.append({
             'text': w['word'],
             'label': '词义3',
-            'answer': seg3_answer,
-            'hints': make_good_hints(seg3_target_meaning, w['word'], pos_str),
+            'answer': [meanings[2]],
+            'hints': make_good_hints(meanings[2], w['word'], pos_str),
         })
     else:
-        # Fallback phrase
+        # Generic phrase
         prep = ['of', 'to', 'for', 'with', 'in', 'on', 'from'][hash(w['word']) % 7]
         if pos_str and 'v.' in pos_str:
-            fallback_phrase = f"{w['word']} {prep}"
+            fallback = f"{w['word']} {prep}"
         elif pos_str and 'n.' in pos_str:
-            fallback_phrase = f"{w['word']} of"
-        elif pos_str and 'adj.' in pos_str:
-            fallback_phrase = f"be {w['word']} {prep}"
+            fallback = f"{w['word']} of"
         else:
-            fallback_phrase = f"{w['word']} {prep}"
+            fallback = f"be {w['word']} {prep}"
         segs.append({
-            'text': fallback_phrase,
+            'text': fallback,
             'label': '短语',
-            'answer': seg3_answer,
-            'hints': [f"「{w['word']}」的常见搭配"] + make_good_hints(seg3_target_meaning, w['word'], pos_str)[:3],
+            'answer': meanings[:3] if meanings else ['?'],
+            'hints': [f"「{w['word']}」的常见搭配"] + make_good_hints(first_meaning, w['word'], pos_str)[:3],
         })
     
     bank += '  {'
@@ -843,7 +834,8 @@ for wi, w in enumerate(words_list):
 bank += '];\n\n'
 
 # Insert into HTML
-with open(os.path.join(d, 'index.html'), 'r', encoding='utf-8') as f:
+index_path = os.path.join(d, 'index.html')
+with open(index_path, 'r', encoding='utf-8') as f:
     html = f.read()
 
 start_marker = 'const WORD_BANK = ['
@@ -858,10 +850,9 @@ if start_idx == -1 or close_idx == -1:
 
 new_html = html[:start_idx] + bank + html[close_idx+2:]
 
-out_path = os.path.join(d, 'index.html')
-with open(out_path, 'w', encoding='utf-8') as f:
+with open(index_path, 'w', encoding='utf-8') as f:
     f.write(new_html)
 
-size_kb = os.path.getsize(out_path) / 1024
+size_kb = os.path.getsize(index_path) / 1024
 print(f"Wrote {size_kb:.0f} KB, {len(words_list)} words")
 print("Done!")
