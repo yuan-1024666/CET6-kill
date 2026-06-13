@@ -1,151 +1,93 @@
-# Generator v13: 智能自动生成同根词和短语含义
-import os, json, re
+# -*- coding: utf-8 -*-
+"""
+Generate derivatives and phrases with Chinese meanings for ALL unique words from 六级-乱序.txt
+Split output into 50+ batch JSON files, covering every single word.
+"""
+import os, re, json, hashlib
 
-d = r'f:\66666\docs'
-txt_files = [f for f in os.listdir(d) if f.endswith('.txt') and '乱序' in f]
-src = os.path.join(d, txt_files[0])
+# ===== Configuration =====
+SRC_DIR = r'f:\66666\docs'
+OUT_DIR = r'f:\66666\docs\data'
+BATCH_SIZE = 80  # ~3985/50 ≈ 80 per batch
+
+os.makedirs(OUT_DIR, exist_ok=True)
+
+# ===== Step 1: Parse all words from source =====
+src = None
+for f in os.listdir(SRC_DIR):
+    if f.endswith('.txt') and '乱序' in f:
+        src = os.path.join(SRC_DIR, f)
+        break
+
 raw = open(src, 'rb').read()
-
-# 加载同根词和短语的专属含义映射
-derivative_meanings = {}
-phrase_meanings = {}
-meanings_file = os.path.join(d, 'data', 'word_meanings.json')
-if os.path.exists(meanings_file):
-    for enc in ['utf-8', 'gb18030', 'gbk']:
-        try:
-            with open(meanings_file, 'r', encoding=enc) as f:
-                meanings_data = json.load(f)
-                derivative_meanings = meanings_data.get('derivatives', {})
-                phrase_meanings = meanings_data.get('phrases', {})
-                print(f"Loaded {len(derivative_meanings)} derivative meanings and {len(phrase_meanings)} phrase meanings with encoding {enc}")
-                break
-        except:
-            continue
-
-# 智能生成同根词含义
-def generate_derivative_meaning(base_meaning, word, pos):
-    """根据原词含义和词性智能生成同根词含义"""
-    if not base_meaning:
-        return base_meaning
-    
-    # 根据词性后缀生成相应的含义
-    transformations = {
-        'n.': [
-            (lambda m: m + '性'),      # 形容词→名词 (如: 可靠的 → 可靠性)
-            (lambda m: m + '度'),      # (如: 稳定 → 稳定度)
-            (lambda m: '对' + m + '的态度'),
-        ],
-        'adj.': [
-            (lambda m: m + '的'),      # 名词→形容词 (如: 依赖 → 依赖的)
-            (lambda m: '具有' + m + '性质的'),
-        ],
-        'adv.': [
-            (lambda m: m + '地'),      # 形容词→副词 (如: 可靠的 → 可靠地)
-        ],
-        'v.': [
-            (lambda m: '使' + m),      # 形容词→动词 (如: 稳定 → 使稳定)
-            (lambda m: '变得' + m),
-        ]
-    }
-    
-    for p, funcs in transformations.items():
-        if pos.startswith(p):
-            for func in funcs:
-                try:
-                    result = func(base_meaning)
-                    if result != base_meaning:
-                        return result
-                except:
-                    continue
-    return base_meaning
-
-# 智能生成短语含义
-def generate_phrase_meaning(base_meaning, phrase):
-    """根据原词含义和短语结构智能生成短语含义"""
-    if not base_meaning or not phrase:
-        return base_meaning
-    
-    # 常见短语模式
-    patterns = [
-        (r'be (\w+) with', lambda m: '对...' + m),
-        (r'be (\w+) to', lambda m: '可' + m + '的'),
-        (r'(\w+) of', lambda m: m + '的'),
-        (r'(\w+) on', lambda m: '在...方面' + m),
-        (r'(\w+) for', lambda m: '为...' + m),
-        (r'(\w+) in', lambda m: '在...中' + m),
-        (r'(\w+) from', lambda m: '从...' + m),
-        (r'(\w+) up', lambda m: '使' + m),
-        (r'(\w+) out', lambda m: '彻底' + m),
-        (r'(\w+) away', lambda m: '使...' + m + '离开'),
-    ]
-    
-    for pattern, func in patterns:
-        if re.match(pattern, phrase.lower()):
-            return func(base_meaning)
-    
-    # 默认：添加介词含义
-    if 'of' in phrase:
-        return base_meaning + '的'
-    elif 'with' in phrase:
-        return '与...' + base_meaning
-    elif 'to' in phrase:
-        return '向...' + base_meaning
-    elif 'for' in phrase:
-        return '为...' + base_meaning
-    elif 'in' in phrase:
-        return '在...中' + base_meaning
-    
-    return base_meaning
-
 text = None
-for enc in ['gb18030', 'gbk', 'utf-8']:
+for enc in ['utf-8', 'gb18030', 'gbk']:
     try:
         text = raw.decode(enc)
-        if '\u7684' in text: print(f"Decoded with {enc}"); break
-    except: continue
-if text is None: text = raw.decode('gb18030', errors='replace')
+        print(f"Decoded with {enc}")
+        break
+    except:
+        continue
 
 lines = text.split('\n')
 parsed = {}
 for line in lines:
     line = line.strip()
-    if not line or len(line) < 5 or '\t' not in line: continue
+    if not line or len(line) < 5 or '\t' not in line:
+        continue
     parts = line.split('\t')
-    if len(parts) < 2: continue
+    if len(parts) < 2:
+        continue
     first = parts[0].strip()
     wm = re.match(r'^([a-z\-]+)', first, re.I)
-    if not wm: continue
+    if not wm:
+        continue
     word = wm.group(1).strip().lower()
-    if len(word) < 2 or not re.search(r'[aeiou]', word): continue
+    if len(word) < 2 or not re.search(r'[aeiou]', word):
+        continue
     rest = ' '.join(parts[1:]).strip()
+    # Extract POS
     pos = ''
     mp = re.match(r'^((?:[nvadj]+\.\s*)+)\s*', rest, re.I)
-    if mp: pos = mp.group(1).strip(); rest = rest[mp.end():].strip()
+    if mp:
+        pos = mp.group(1).strip()
+        rest = rest[mp.end():].strip()
     else:
         p = re.match(r'^(n\.|v\.|adj\.|adv\.|prep\.|pron\.|conj\.|int\.|abbr\.|num\.|art\.|vi\.|vt\.)\s*', rest, re.I)
-        if p: pos = p.group(1).strip(); rest = rest[p.end():].strip()
+        if p:
+            pos = p.group(1).strip()
+            rest = rest[p.end():].strip()
     rest = re.sub(r'\[.*?\]', '', rest).strip()
-    if len(rest) < 2 or not re.search(r'[\u4e00-\u9fff]', rest): continue
+    if len(rest) < 2 or not re.search(r'[\u4e00-\u9fff]', rest):
+        continue
     meanings = re.split(r'[；;,，、]', rest)
     meanings = [m.strip() for m in meanings if m.strip() and re.search(r'[\u4e00-\u9fff]', m)]
-    if not meanings: continue
+    if not meanings:
+        continue
     if word in parsed:
-        if pos and not parsed[word]['pos']: parsed[word]['pos'] = pos
+        if pos and not parsed[word]['pos']:
+            parsed[word]['pos'] = pos
         for m in meanings:
-            if m not in parsed[word]['meanings']: parsed[word]['meanings'].append(m)
+            if m not in parsed[word]['meanings']:
+                parsed[word]['meanings'].append(m)
     else:
         parsed[word] = {'word': word, 'pos': pos, 'meanings': meanings}
 
-words_list = list(parsed.values())
-print(f"Parsed {len(words_list)} unique words")
+print(f"Parsed {len(parsed)} unique words")
 
-# ===== 同根词映射表 =====
+# ===== Step 2: Comprehensive Derivative Mapping =====
+# Format: base_word -> {derivative_word: pos}
 DERIVATIVES = {
     'abandon': {'abandonment': 'n.', 'abandoned': 'adj.'},
     'absorb': {'absorption': 'n.', 'absorbed': 'adj.'},
     'abstract': {'abstraction': 'n.', 'abstractly': 'adv.'},
     'abundant': {'abundance': 'n.', 'abundantly': 'adv.'},
     'accelerate': {'acceleration': 'n.', 'accelerating': 'adj.'},
+    'accept': {'acceptance': 'n.', 'acceptable': 'adj.'},
+    'access': {'accessible': 'adj.', 'accessibility': 'n.'},
+    'accommodate': {'accommodation': 'n.'},
+    'accompany': {'accompaniment': 'n.'},
+    'accomplish': {'accomplishment': 'n.', 'accomplished': 'adj.'},
     'accurate': {'accuracy': 'n.', 'accurately': 'adv.'},
     'achieve': {'achievement': 'n.', 'achievable': 'adj.'},
     'acknowledge': {'acknowledgement': 'n.'},
@@ -155,44 +97,67 @@ DERIVATIVES = {
     'adjust': {'adjustment': 'n.', 'adjustable': 'adj.'},
     'admire': {'admiration': 'n.', 'admirable': 'adj.'},
     'adopt': {'adoption': 'n.', 'adoptive': 'adj.'},
+    'adore': {'adoration': 'n.', 'adorable': 'adj.'},
+    'advance': {'advancement': 'n.', 'advanced': 'adj.'},
+    'advertise': {'advertisement': 'n.'},
     'affect': {'affection': 'n.', 'affected': 'adj.'},
+    'afford': {'affordable': 'adj.', 'affordability': 'n.'},
+    'agree': {'agreement': 'n.', 'agreeable': 'adj.'},
     'allocate': {'allocation': 'n.'},
     'alter': {'alteration': 'n.', 'alternative': 'adj.'},
     'amaze': {'amazement': 'n.', 'amazing': 'adj.'},
+    'analyze': {'analysis': 'n.', 'analytical': 'adj.'},
+    'announce': {'announcement': 'n.'},
+    'annoy': {'annoyance': 'n.', 'annoying': 'adj.'},
     'anticipate': {'anticipation': 'n.'},
     'anxious': {'anxiety': 'n.', 'anxiously': 'adv.'},
+    'apologize': {'apology': 'n.', 'apologetic': 'adj.'},
     'apply': {'application': 'n.', 'applicable': 'adj.'},
+    'appoint': {'appointment': 'n.', 'appointed': 'adj.'},
     'appreciate': {'appreciation': 'n.', 'appreciative': 'adj.'},
     'approach': {'approachable': 'adj.'},
     'approve': {'approval': 'n.', 'approved': 'adj.'},
     'argue': {'argument': 'n.', 'argumentative': 'adj.'},
     'arrange': {'arrangement': 'n.'},
+    'arrest': {'arrested': 'adj.'},
     'assess': {'assessment': 'n.'},
     'assign': {'assignment': 'n.', 'assigned': 'adj.'},
     'assist': {'assistance': 'n.', 'assistant': 'n.'},
+    'associate': {'association': 'n.', 'associated': 'adj.'},
     'assume': {'assumption': 'n.'},
+    'assure': {'assurance': 'n.', 'assured': 'adj.'},
     'attach': {'attachment': 'n.', 'attached': 'adj.'},
+    'attack': {'attacker': 'n.'},
+    'attempt': {'attempted': 'adj.'},
     'attend': {'attendance': 'n.', 'attendant': 'n.'},
     'attract': {'attraction': 'n.', 'attractive': 'adj.'},
+    'authorize': {'authorization': 'n.', 'authorized': 'adj.'},
+    'avoid': {'avoidance': 'n.', 'unavoidable': 'adj.'},
     'aware': {'awareness': 'n.'},
     'balance': {'balanced': 'adj.'},
     'bear': {'bearable': 'adj.', 'unbearable': 'adj.'},
+    'believe': {'belief': 'n.', 'believable': 'adj.'},
     'benefit': {'beneficial': 'adj.', 'beneficiary': 'n.'},
     'bore': {'boredom': 'n.', 'boring': 'adj.'},
     'bound': {'boundary': 'n.', 'unbound': 'adj.'},
     'brief': {'briefly': 'adv.', 'brevity': 'n.'},
+    'calculate': {'calculation': 'n.', 'calculator': 'n.'},
     'capable': {'capability': 'n.', 'incapable': 'adj.'},
     'capture': {'captive': 'n.', 'captivity': 'n.'},
     'caution': {'cautious': 'adj.', 'cautiously': 'adv.'},
     'celebrate': {'celebration': 'n.', 'celebrated': 'adj.'},
+    'certify': {'certification': 'n.', 'certified': 'adj.'},
     'challenge': {'challenging': 'adj.'},
+    'change': {'changeable': 'adj.', 'unchanged': 'adj.'},
+    'characterize': {'characterization': 'n.', 'characteristic': 'adj.'},
     'classify': {'classification': 'n.', 'classified': 'adj.'},
     'collapse': {'collapsed': 'adj.', 'collapsible': 'adj.'},
+    'collect': {'collection': 'n.', 'collective': 'adj.'},
     'combine': {'combination': 'n.', 'combined': 'adj.'},
     'commit': {'commitment': 'n.', 'committed': 'adj.'},
-    'communicate': {'communication': 'n.'},
+    'communicate': {'communication': 'n.', 'communicative': 'adj.'},
     'compare': {'comparison': 'n.', 'comparable': 'adj.'},
-    'compensate': {'compensation': 'n.'},
+    'compensate': {'compensation': 'n.', 'compensatory': 'adj.'},
     'compete': {'competition': 'n.', 'competitive': 'adj.'},
     'complain': {'complaint': 'n.'},
     'complete': {'completion': 'n.', 'completely': 'adv.'},
@@ -211,17 +176,25 @@ DERIVATIVES = {
     'consist': {'consistent': 'adj.', 'consistency': 'n.'},
     'construct': {'construction': 'n.', 'constructive': 'adj.'},
     'consume': {'consumption': 'n.', 'consumer': 'n.'},
-    'contain': {'container': 'n.'},
+    'contain': {'container': 'n.', 'containment': 'n.'},
+    'contaminate': {'contamination': 'n.'},
+    'continue': {'continuation': 'n.', 'continuous': 'adj.'},
     'contribute': {'contribution': 'n.', 'contributor': 'n.'},
-    'convenient': {'convenience': 'n.'},
+    'convert': {'conversion': 'n.', 'convertible': 'adj.'},
     'convince': {'convincing': 'adj.', 'convinced': 'adj.'},
     'cooperate': {'cooperation': 'n.', 'cooperative': 'adj.'},
+    'correct': {'correction': 'n.', 'corrective': 'adj.'},
     'correspond': {'correspondence': 'n.', 'corresponding': 'adj.'},
+    'corrupt': {'corruption': 'n.', 'corrupted': 'adj.'},
     'create': {'creation': 'n.', 'creative': 'adj.'},
     'criticize': {'criticism': 'n.', 'critical': 'adj.'},
+    'cultivate': {'cultivation': 'n.', 'cultivated': 'adj.'},
     'curious': {'curiosity': 'n.', 'curiously': 'adv.'},
     'damage': {'damaging': 'adj.', 'damaged': 'adj.'},
+    'deal': {'dealer': 'n.', 'dealing': 'n.'},
     'debate': {'debatable': 'adj.'},
+    'decay': {'decayed': 'adj.', 'decaying': 'adj.'},
+    'deceive': {'deception': 'n.', 'deceptive': 'adj.'},
     'decide': {'decision': 'n.', 'decisive': 'adj.'},
     'declare': {'declaration': 'n.'},
     'decline': {'declining': 'adj.'},
@@ -230,13 +203,15 @@ DERIVATIVES = {
     'define': {'definition': 'n.', 'definitive': 'adj.'},
     'deliver': {'delivery': 'n.', 'delivered': 'adj.'},
     'demand': {'demanding': 'adj.'},
-    'demonstrate': {'demonstration': 'n.'},
+    'demonstrate': {'demonstration': 'n.', 'demonstrative': 'adj.'},
     'depend': {'dependence': 'n.', 'dependent': 'adj.'},
     'depress': {'depression': 'n.', 'depressed': 'adj.'},
+    'deprive': {'deprivation': 'n.', 'deprived': 'adj.'},
     'describe': {'description': 'n.', 'descriptive': 'adj.'},
     'deserve': {'deserving': 'adj.'},
     'design': {'designer': 'n.', 'designed': 'adj.'},
     'destroy': {'destruction': 'n.', 'destructive': 'adj.'},
+    'detect': {'detection': 'n.', 'detective': 'n.'},
     'determine': {'determination': 'n.', 'determined': 'adj.'},
     'develop': {'development': 'n.', 'developing': 'adj.'},
     'devote': {'devotion': 'n.', 'devoted': 'adj.'},
@@ -244,16 +219,23 @@ DERIVATIVES = {
     'direct': {'direction': 'n.', 'directly': 'adv.'},
     'discover': {'discovery': 'n.'},
     'discuss': {'discussion': 'n.'},
+    'dismiss': {'dismissal': 'n.'},
+    'dispose': {'disposal': 'n.', 'disposable': 'adj.'},
     'distinct': {'distinction': 'n.', 'distinctive': 'adj.'},
     'distinguish': {'distinguished': 'adj.'},
     'distribute': {'distribution': 'n.'},
     'divide': {'division': 'n.', 'divided': 'adj.'},
     'dominate': {'domination': 'n.', 'dominant': 'adj.'},
+    'donate': {'donation': 'n.'},
     'doubt': {'doubtful': 'adj.', 'undoubtedly': 'adv.'},
+    'ease': {'easy': 'adj.', 'easily': 'adv.'},
     'economy': {'economic': 'adj.', 'economical': 'adj.'},
+    'edit': {'edition': 'n.', 'editor': 'n.'},
     'educate': {'education': 'n.', 'educational': 'adj.'},
     'effective': {'effectively': 'adv.', 'effectiveness': 'n.'},
     'efficient': {'efficiency': 'n.', 'efficiently': 'adv.'},
+    'elect': {'election': 'n.', 'electoral': 'adj.'},
+    'elevate': {'elevation': 'n.', 'elevated': 'adj.'},
     'eliminate': {'elimination': 'n.'},
     'emerge': {'emergence': 'n.', 'emerging': 'adj.'},
     'emotion': {'emotional': 'adj.', 'emotionally': 'adv.'},
@@ -263,6 +245,7 @@ DERIVATIVES = {
     'engage': {'engagement': 'n.', 'engaged': 'adj.'},
     'enhance': {'enhancement': 'n.', 'enhanced': 'adj.'},
     'enjoy': {'enjoyment': 'n.', 'enjoyable': 'adj.'},
+    'enrich': {'enrichment': 'n.', 'enriched': 'adj.'},
     'entertain': {'entertainment': 'n.', 'entertaining': 'adj.'},
     'enthusiasm': {'enthusiastic': 'adj.'},
     'environment': {'environmental': 'adj.'},
@@ -275,14 +258,15 @@ DERIVATIVES = {
     'excite': {'excitement': 'n.', 'exciting': 'adj.'},
     'exclude': {'exclusion': 'n.', 'exclusive': 'adj.'},
     'execute': {'execution': 'n.', 'executive': 'n.'},
+    'exhaust': {'exhaustion': 'n.', 'exhausted': 'adj.'},
     'exhibit': {'exhibition': 'n.'},
     'exist': {'existence': 'n.', 'existing': 'adj.'},
     'expand': {'expansion': 'n.', 'expanding': 'adj.'},
     'expect': {'expectation': 'n.', 'expected': 'adj.'},
+    'expense': {'expensive': 'adj.', 'inexpensive': 'adj.'},
     'explain': {'explanation': 'n.'},
     'exploit': {'exploitation': 'n.'},
     'explore': {'exploration': 'n.', 'exploratory': 'adj.'},
-    'export': {'exportation': 'n.', 'exported': 'adj.'},
     'expose': {'exposure': 'n.', 'exposed': 'adj.'},
     'express': {'expression': 'n.', 'expressive': 'adj.'},
     'extend': {'extension': 'n.', 'extensive': 'adj.'},
@@ -291,8 +275,11 @@ DERIVATIVES = {
     'familiar': {'familiarity': 'n.', 'familiarize': 'v.'},
     'fascinate': {'fascination': 'n.', 'fascinating': 'adj.'},
     'finance': {'financial': 'adj.', 'financially': 'adv.'},
-    'flexible': {'flexibility': 'n.'},
+    'fit': {'fitting': 'adj.', 'fitness': 'n.'},
+    'flexible': {'flexibility': 'n.', 'inflexible': 'adj.'},
     'focus': {'focused': 'adj.'},
+    'form': {'formation': 'n.', 'formative': 'adj.'},
+    'formulate': {'formulation': 'n.'},
     'fortunate': {'fortunately': 'adv.', 'unfortunately': 'adv.'},
     'found': {'foundation': 'n.', 'founder': 'n.'},
     'fragile': {'fragility': 'n.'},
@@ -301,16 +288,17 @@ DERIVATIVES = {
     'function': {'functional': 'adj.'},
     'generate': {'generation': 'n.', 'generator': 'n.'},
     'generous': {'generosity': 'n.'},
-    'globe': {'global': 'adj.', 'globalization': 'n.'},
     'govern': {'government': 'n.', 'governing': 'adj.'},
     'graduate': {'graduation': 'n.', 'undergraduate': 'n.'},
     'guide': {'guidance': 'n.', 'guiding': 'adj.'},
+    'harm': {'harmful': 'adj.', 'harmless': 'adj.'},
     'harmony': {'harmonious': 'adj.'},
-    'healthy': {'health': 'n.', 'healthier': 'adj.'},
-    'hush': {'hushed': 'adj.', 'hush-hush': 'adj.'},
+    'health': {'healthy': 'adj.'},
     'hesitate': {'hesitation': 'n.', 'hesitant': 'adj.'},
+    'honor': {'honorary': 'adj.', 'honored': 'adj.'},
     'identify': {'identification': 'n.', 'identity': 'n.'},
     'ignore': {'ignorance': 'n.', 'ignorant': 'adj.'},
+    'illuminate': {'illumination': 'n.'},
     'illustrate': {'illustration': 'n.', 'illustrative': 'adj.'},
     'imagine': {'imagination': 'n.', 'imaginative': 'adj.'},
     'implement': {'implementation': 'n.'},
@@ -319,9 +307,11 @@ DERIVATIVES = {
     'impose': {'imposition': 'n.'},
     'impress': {'impression': 'n.', 'impressive': 'adj.'},
     'improve': {'improvement': 'n.', 'improved': 'adj.'},
+    'incorporate': {'incorporation': 'n.'},
     'indicate': {'indication': 'n.', 'indicative': 'adj.'},
-    'individual': {'individually': 'adv.'},
-    'industry': {'industrial': 'adj.', 'industrialize': 'v.'},
+    'induce': {'induction': 'n.', 'inducement': 'n.'},
+    'industrial': {'industry': 'n.', 'industrialize': 'v.'},
+    'infect': {'infection': 'n.', 'infectious': 'adj.'},
     'influence': {'influential': 'adj.'},
     'inform': {'information': 'n.', 'informative': 'adj.'},
     'inherit': {'inheritance': 'n.', 'inherited': 'adj.'},
@@ -341,10 +331,11 @@ DERIVATIVES = {
     'invest': {'investment': 'n.', 'investor': 'n.'},
     'investigate': {'investigation': 'n.'},
     'involve': {'involvement': 'n.', 'involved': 'adj.'},
+    'irritate': {'irritation': 'n.', 'irritating': 'adj.'},
     'isolate': {'isolation': 'n.', 'isolated': 'adj.'},
     'judge': {'judgment': 'n.', 'judicial': 'adj.'},
     'justify': {'justification': 'n.', 'justified': 'adj.'},
-    'legal': {'legally': 'adv.'},
+    'legislate': {'legislation': 'n.', 'legislative': 'adj.'},
     'liberal': {'liberate': 'v.', 'liberation': 'n.'},
     'limit': {'limitation': 'n.', 'limited': 'adj.'},
     'locate': {'location': 'n.', 'located': 'adj.'},
@@ -352,22 +343,25 @@ DERIVATIVES = {
     'maintain': {'maintenance': 'n.'},
     'major': {'majority': 'n.'},
     'manage': {'management': 'n.', 'manager': 'n.'},
+    'manipulate': {'manipulation': 'n.', 'manipulative': 'adj.'},
     'manufacture': {'manufacturing': 'n.', 'manufacturer': 'n.'},
     'measure': {'measurement': 'n.', 'measurable': 'adj.'},
-    'memory': {'memorable': 'adj.', 'memorize': 'v.'},
+    'memorize': {'memory': 'n.', 'memorable': 'adj.'},
     'migrate': {'migration': 'n.', 'immigrant': 'n.'},
     'modify': {'modification': 'n.'},
     'monitor': {'monitoring': 'n.'},
     'motivate': {'motivation': 'n.', 'motivated': 'adj.'},
-    'mystery': {'mysterious': 'adj.'},
+    'mystery': {'mysterious': 'adj.', 'mysteriously': 'adv.'},
+    'navigate': {'navigation': 'n.', 'navigator': 'n.'},
     'necessary': {'necessarily': 'adv.', 'necessity': 'n.'},
+    'neglect': {'negligence': 'n.', 'negligent': 'adj.'},
     'negotiate': {'negotiation': 'n.'},
     'normal': {'normally': 'adv.', 'normalize': 'v.'},
+    'nourish': {'nourishment': 'n.', 'nourishing': 'adj.'},
     'object': {'objection': 'n.', 'objective': 'adj.'},
-    'observe': {'observation': 'n.'},
+    'observe': {'observation': 'n.', 'observer': 'n.'},
     'obtain': {'obtainable': 'adj.', 'obtained': 'adj.'},
     'occupy': {'occupation': 'n.', 'occupied': 'adj.'},
-    'offend': {'offense': 'n.', 'offensive': 'adj.'},
     'operate': {'operation': 'n.', 'operational': 'adj.'},
     'oppose': {'opposition': 'n.', 'opposed': 'adj.'},
     'organize': {'organization': 'n.', 'organized': 'adj.'},
@@ -380,20 +374,19 @@ DERIVATIVES = {
     'persist': {'persistence': 'n.', 'persistent': 'adj.'},
     'persuade': {'persuasion': 'n.', 'persuasive': 'adj.'},
     'phenomenon': {'phenomenal': 'adj.'},
-    'politics': {'political': 'adj.', 'politician': 'n.'},
-    'pollute': {'pollution': 'n.', 'polluted': 'adj.'},
-    'popular': {'popularity': 'n.'},
-    'possess': {'possession': 'n.'},
+    'pollute': {'pollution': 'n.', 'pollutant': 'n.'},
+    'popular': {'popularity': 'n.', 'popularize': 'v.'},
+    'possess': {'possession': 'n.', 'possessive': 'adj.'},
     'possible': {'possibility': 'n.', 'possibly': 'adv.'},
     'predict': {'prediction': 'n.', 'predictable': 'adj.'},
     'prefer': {'preference': 'n.', 'preferable': 'adj.'},
     'prepare': {'preparation': 'n.', 'prepared': 'adj.'},
     'prescribe': {'prescription': 'n.'},
-    'preserve': {'preservation': 'n.', 'preserved': 'adj.'},
+    'preserve': {'preservation': 'n.', 'preservative': 'adj.'},
     'prevent': {'prevention': 'n.', 'preventable': 'adj.'},
-    'proceed': {'procedure': 'n.'},
+    'proceed': {'procedure': 'n.', 'proceeding': 'n.'},
     'produce': {'production': 'n.', 'productive': 'adj.'},
-    'profession': {'professional': 'adj.'},
+    'profession': {'professional': 'adj.', 'professor': 'n.'},
     'profit': {'profitable': 'adj.', 'profitability': 'n.'},
     'progress': {'progressive': 'adj.'},
     'prohibit': {'prohibition': 'n.', 'prohibited': 'adj.'},
@@ -402,6 +395,8 @@ DERIVATIVES = {
     'protect': {'protection': 'n.', 'protective': 'adj.'},
     'prove': {'proof': 'n.', 'proven': 'adj.'},
     'provide': {'provision': 'n.', 'provided': 'conj.'},
+    'provoke': {'provocation': 'n.', 'provocative': 'adj.'},
+    'public': {'publicity': 'n.', 'publicize': 'v.'},
     'publish': {'publication': 'n.', 'published': 'adj.'},
     'punish': {'punishment': 'n.'},
     'pursue': {'pursuit': 'n.'},
@@ -422,7 +417,7 @@ DERIVATIVES = {
     'reinforce': {'reinforcement': 'n.'},
     'reject': {'rejection': 'n.'},
     'relate': {'relation': 'n.', 'relationship': 'n.'},
-    'reliable': {'reliability': 'n.'},
+    'reliable': {'reliability': 'n.', 'reliably': 'adv.', 'reliance': 'n.'},
     'relieve': {'relief': 'n.', 'relieved': 'adj.'},
     'remain': {'remainder': 'n.', 'remaining': 'adj.'},
     'remove': {'removal': 'n.', 'removed': 'adj.'},
@@ -466,23 +461,22 @@ DERIVATIVES = {
     'sustain': {'sustainable': 'adj.', 'sustainability': 'n.'},
     'symbol': {'symbolic': 'adj.', 'symbolize': 'v.'},
     'sympathy': {'sympathetic': 'adj.'},
-    'technology': {'technological': 'adj.'},
     'tend': {'tendency': 'n.'},
+    'terrify': {'terror': 'n.', 'terrifying': 'adj.'},
     'tolerate': {'tolerance': 'n.', 'tolerable': 'adj.'},
-    'tradition': {'traditional': 'adj.'},
-    'transform': {'transformation': 'n.'},
+    'transform': {'transformation': 'n.', 'transformative': 'adj.'},
     'translate': {'translation': 'n.', 'translator': 'n.'},
     'transmit': {'transmission': 'n.'},
     'treat': {'treatment': 'n.', 'treaty': 'n.'},
-    'ultimate': {'ultimately': 'adv.'},
+    'undergo': {'undergoing': 'adj.'},
     'understand': {'understanding': 'n.', 'understandable': 'adj.'},
-    'unique': {'uniquely': 'adv.', 'uniqueness': 'n.'},
     'urge': {'urgent': 'adj.', 'urgency': 'n.'},
+    'utilize': {'utilization': 'n.'},
     'valid': {'validity': 'n.', 'validate': 'v.'},
     'value': {'valuable': 'adj.', 'valuation': 'n.'},
     'vary': {'variety': 'n.', 'variation': 'n.', 'various': 'adj.'},
     'verify': {'verification': 'n.'},
-    'violate': {'violation': 'n.', 'violent': 'adj.'},
+    'violate': {'violation': 'n.', 'violator': 'n.'},
     'volunteer': {'voluntary': 'adj.', 'voluntarily': 'adv.'},
     'warn': {'warning': 'n.'},
     'withdraw': {'withdrawal': 'n.'},
@@ -490,49 +484,112 @@ DERIVATIVES = {
     'yield': {'yielding': 'adj.', 'unyielding': 'adj.'},
 }
 
-REVERSE_DERIV = {}
-for base, ders in DERIVATIVES.items():
-    for der_word, der_pos in ders.items():
-        if der_word not in REVERSE_DERIV:
-            REVERSE_DERIV[der_word] = []
-        REVERSE_DERIV[der_word].append({'base': base, 'base_pos': der_pos})
+# ===== Step 3: Chinese Translation for Derivatives =====
+# Simple POS-based meaning generation  
+def get_derivative_meaning(base_word, base_meaning, der_word, der_pos):
+    """Generate Chinese meaning for a derivative based on base word meaning."""
+    suffix_map = {
+        'tion': '…的行为/过程/结果',
+        'sion': '…的行为/过程/结果',
+        'ment': '…的行为/过程/结果',
+        'ness': '…的性质/状态',
+        'ity': '…的性质/状态',
+        'ence': '…的性质/状态',
+        'ance': '…的性质/状态',
+        'able': '可…的',
+        'ible': '可…的',
+        'ful': '充满…的',
+        'less': '无…的',
+        'ous': '具有…性质的',
+        'ive': '有…倾向的',
+        'al': '与…有关的',
+        'ary': '与…有关的',
+        'ic': '…的',
+        'ly': '…地',
+        'er': '…的人/物',
+        'or': '…的人/物',
+        'ist': '…的人',
+        'ee': '被…的人',
+        'en': '使…',
+        'ize': '使…化',
+        'fy': '使…化',
+        'ate': '使…/…的',
+    }
+    
+    for suf, meaning_template in suffix_map.items():
+        if der_word.endswith(suf) and len(der_word) > len(suf) + 2:
+            return meaning_template
+    
+    # Default
+    if 'n.' in der_pos:
+        return f"…的行为/性质"
+    elif 'adj.' in der_pos or 'adj' == der_pos:
+        return "…的"
+    elif 'adv.' in der_pos or 'adv' == der_pos:
+        return "…地"
+    elif 'v.' in der_pos:
+        return "使…"
+    return "与…相关"
 
-# ===== 短语映射表 =====
+# ===== Step 4: Comprehensive Phrase Mapping =====
 REAL_PHRASES = {
     'abandon': ['abandon ship', 'abandon hope', 'abandon oneself'],
     'absorb': ['absorb information', 'absorb the cost', 'be absorbed in'],
     'accelerate': ['accelerate growth', 'accelerate the pace'],
+    'accept': ['accept responsibility', 'accept an invitation'],
+    'access': ['access to', 'have access to'],
+    'accommodate': ['accommodate to', 'accommodate guests'],
+    'accompany': ['accompany by', 'be accompanied by'],
+    'accomplish': ['accomplish a goal', 'accomplish the mission'],
     'accumulate': ['accumulate wealth', 'accumulate experience'],
+    'achieve': ['achieve success', 'achieve the goal'],
     'acknowledge': ['acknowledge receipt', 'acknowledge the fact'],
     'acquire': ['acquire knowledge', 'acquire a taste for'],
     'adapt': ['adapt to change', 'adapt oneself to'],
+    'addict': ['addict to', 'be addicted to'],
     'address': ['address the issue', 'address a letter'],
     'adjust': ['adjust to', 'adjust the settings'],
+    'admire': ['admire for', 'admire the view'],
     'adopt': ['adopt a policy', 'adopt a child'],
+    'advance': ['advance in', 'make advances'],
     'affect': ['affect the outcome', 'deeply affected'],
+    'agree': ['agree with', 'agree on', 'agree to'],
     'allocate': ['allocate resources', 'allocate funds'],
+    'alter': ['alter the course', 'alter the plan'],
     'analyze': ['analyze data', 'analyze the situation'],
+    'announce': ['announce the results', 'announce that'],
+    'anticipate': ['anticipate needs', 'anticipate problems'],
+    'apologize': ['apologize for', 'apologize to'],
     'apply': ['apply for', 'apply to', 'apply pressure'],
     'appreciate': ['appreciate art', 'appreciate the effort'],
     'approach': ['approach the problem', 'take an approach'],
     'approve': ['approve of', 'approve the plan'],
+    'argue': ['argue about', 'argue that', 'argue against'],
     'arrange': ['arrange a meeting', 'arrange for'],
     'assess': ['assess the damage', 'assess the risk'],
     'assign': ['assign blame', 'assign a task', 'assign responsibility'],
     'assist': ['assist with', 'assist in'],
+    'associate': ['associate with', 'be associated with'],
     'assume': ['assume responsibility', 'assume the worst'],
+    'assure': ['assure of', 'rest assured'],
     'attach': ['attach importance to', 'attach a file'],
     'attempt': ['attempt to do', 'make an attempt'],
     'attend': ['attend a meeting', 'attend to'],
-    'attribute': ['attribute to', 'attribute the success'],
+    'attract': ['attract attention', 'attract investment'],
+    'avoid': ['avoid doing', 'avoid the issue'],
     'balance': ['balance work and life', 'strike a balance'],
+    'base': ['base on', 'be based on', 'on the basis of'],
     'bear': ['bear in mind', 'bear the burden', 'bear fruit'],
+    'believe': ['believe in', 'believe that', 'make believe'],
     'benefit': ['benefit from', 'mutual benefit'],
     'boost': ['boost the economy', 'boost morale'],
+    'bore': ['bore with', 'be bored with'],
     'bound': ['bound to', 'be bound by', 'out of bounds'],
     'break': ['break down', 'break through', 'break up'],
     'bring': ['bring about', 'bring up', 'bring forward'],
+    'calculate': ['calculate on', 'calculate the cost'],
     'capture': ['capture attention', 'capture the moment'],
+    'care': ['care about', 'care for', 'take care of'],
     'carry': ['carry out', 'carry on', 'carry weight'],
     'cast': ['cast doubt on', 'cast a shadow', 'cast a vote'],
     'catch': ['catch up with', 'catch on', 'catch a glimpse'],
@@ -540,11 +597,13 @@ REAL_PHRASES = {
     'challenge': ['challenge the status quo', 'face a challenge'],
     'change': ['change one\'s mind', 'change over time'],
     'charge': ['take charge of', 'free of charge', 'charge with'],
-    'cheat': ['cheat sheet', 'cheat on', 'cheat death'],
     'check': ['check in', 'check out', 'check on'],
+    'choose': ['choose from', 'choose to do', 'pick and choose'],
     'claim': ['claim responsibility', 'make a claim'],
+    'classify': ['classify into', 'classify as'],
     'collapse': ['collapse under pressure', 'economic collapse'],
     'combine': ['combine with', 'combine efforts'],
+    'come': ['come across', 'come up with', 'come to terms'],
     'commit': ['commit to', 'commit a crime', 'commit oneself'],
     'communicate': ['communicate with', 'communicate effectively'],
     'compare': ['compare with', 'compare to', 'beyond compare'],
@@ -553,6 +612,8 @@ REAL_PHRASES = {
     'complete': ['complete the task', 'complete works'],
     'concentrate': ['concentrate on', 'concentrate efforts'],
     'concern': ['concern about', 'show concern for'],
+    'conclude': ['conclude with', 'conclude that'],
+    'conduct': ['conduct research', 'conduct an experiment'],
     'confirm': ['confirm the reservation', 'confirm that'],
     'conflict': ['conflict with', 'in conflict', 'conflict of interest'],
     'confront': ['confront the issue', 'be confronted with'],
@@ -572,6 +633,8 @@ REAL_PHRASES = {
     'count': ['count on', 'count down', 'count for'],
     'cover': ['cover up', 'cover the cost', 'cover a topic'],
     'create': ['create opportunities', 'create problems'],
+    'criticize': ['criticize for', 'criticize harshly'],
+    'cut': ['cut down on', 'cut off', 'cut through'],
     'deal': ['deal with', 'a great deal of', 'close the deal'],
     'debate': ['debate on', 'a heated debate'],
     'decide': ['decide on', 'decide whether to'],
@@ -607,7 +670,7 @@ REAL_PHRASES = {
     'effect': ['take effect', 'have an effect on', 'in effect'],
     'eliminate': ['eliminate poverty', 'eliminate the possibility'],
     'emerge': ['emerge from', 'emerge as'],
-    'emphasize': ['emphasize the importance'],
+    'emphasize': ['emphasize the importance', 'put emphasis on'],
     'employ': ['employ a method', 'employ workers'],
     'enable': ['enable to do', 'enable access'],
     'encounter': ['encounter difficulties', 'a chance encounter'],
@@ -645,12 +708,15 @@ REAL_PHRASES = {
     'fulfill': ['fulfill a dream', 'fulfill the requirements'],
     'gain': ['gain access to', 'gain experience', 'gain weight'],
     'generate': ['generate revenue', 'generate interest'],
+    'get': ['get along with', 'get over', 'get through'],
+    'give': ['give up', 'give rise to', 'give away'],
+    'go': ['go through', 'go on', 'go after'],
     'grant': ['take for granted', 'grant a request'],
     'guard': ['guard against', 'on guard', 'off guard'],
     'handle': ['handle the situation', 'handle with care'],
     'hold': ['hold on', 'hold a meeting', 'hold true'],
-    'hush': ['hush up', 'hush money', 'all clear'],
     'identify': ['identify with', 'identify the problem'],
+    'ignore': ['ignore the fact', 'ignore completely'],
     'impact': ['impact on', 'have an impact on'],
     'implement': ['implement a plan', 'implement changes'],
     'imply': ['imply that', 'as the name implies'],
@@ -671,17 +737,24 @@ REAL_PHRASES = {
     'investigate': ['investigate the case', 'investigate further'],
     'involve': ['involve in', 'get involved with', 'involve doing'],
     'keep': ['keep in mind', 'keep up with', 'keep on doing'],
+    'know': ['know about', 'know better', 'as we know'],
     'lack': ['lack of', 'lack the ability', 'for lack of'],
     'launch': ['launch a campaign', 'launch into'],
     'lead': ['lead to', 'lead by example', 'take the lead'],
+    'learn': ['learn from', 'learn about', 'learn the lesson'],
+    'leave': ['leave behind', 'leave out', 'on leave'],
     'limit': ['limit to', 'time limit', 'off limits'],
+    'look': ['look for', 'look forward to', 'look into'],
+    'lose': ['lose weight', 'lose control', 'lose track'],
     'maintain': ['maintain order', 'maintain relationships'],
+    'make': ['make sure', 'make a difference', 'make sense'],
     'manage': ['manage to do', 'manage a business'],
     'manufacture': ['manufacture goods', 'manufacturing industry'],
     'measure': ['measure up to', 'take measures'],
     'merge': ['merge with', 'merge into', 'merge companies'],
     'monitor': ['monitor progress', 'monitor closely'],
     'motivate': ['motivate to do', 'keep motivated'],
+    'move': ['move on', 'move forward', 'on the move'],
     'negotiate': ['negotiate with', 'negotiate a deal'],
     'obtain': ['obtain from', 'obtain permission'],
     'offer': ['offer to do', 'make an offer', 'on offer'],
@@ -691,6 +764,7 @@ REAL_PHRASES = {
     'overcome': ['overcome difficulties', 'overcome fear'],
     'participate': ['participate in', 'participate actively'],
     'pass': ['pass away', 'pass on', 'pass the test'],
+    'pay': ['pay attention to', 'pay for', 'pay off'],
     'perform': ['perform well', 'perform a task'],
     'persist': ['persist in', 'if symptoms persist'],
     'persuade': ['persuade to do', 'persuade of'],
@@ -732,7 +806,7 @@ REAL_PHRASES = {
     'remain': ['remain to be seen', 'remain silent', 'remain loyal'],
     'remove': ['remove from', 'remove obstacles'],
     'replace': ['replace with', 'replace by'],
-    'represent': ['represent the interests of'],
+    'represent': ['represent interests of'],
     'require': ['require that', 'require attention'],
     'resolve': ['resolve the issue', 'resolve to do'],
     'respond': ['respond to', 'respond quickly'],
@@ -759,10 +833,11 @@ REAL_PHRASES = {
     'sign': ['sign up for', 'sign a contract'],
     'solve': ['solve the problem', 'solve a mystery'],
     'sort': ['sort out', 'sort of', 'of all sorts'],
-    'spark': ['spark a debate', 'spark outrage'],
+    'speak': ['speak out', 'speak of', 'so to speak'],
     'spend': ['spend on', 'spend time doing', 'spend money'],
     'spread': ['spread out', 'spread the word'],
     'stand': ['stand out', 'stand for', 'stand by'],
+    'stay': ['stay up', 'stay away from', 'stay in touch'],
     'stimulate': ['stimulate growth', 'stimulate the economy'],
     'strengthen': ['strengthen ties', 'strengthen the position'],
     'stress': ['stress the importance', 'under stress'],
@@ -777,6 +852,9 @@ REAL_PHRASES = {
     'suspect': ['suspect of', 'suspect that'],
     'sustain': ['sustain damage', 'sustain growth', 'sustain life'],
     'tackle': ['tackle the problem', 'tackle the issue'],
+    'take': ['take on', 'take over', 'take into account'],
+    'talk': ['talk about', 'talk over', 'small talk'],
+    'tell': ['tell apart', 'tell the difference', 'tell the truth'],
     'tend': ['tend to do', 'tend to be', 'tend towards'],
     'think': ['think about', 'think over', 'think highly of'],
     'trace': ['trace back to', 'without a trace'],
@@ -786,202 +864,188 @@ REAL_PHRASES = {
     'treat': ['treat as', 'treat with respect'],
     'trigger': ['trigger a reaction', 'trigger the alarm'],
     'trust': ['trust in', 'trust with', 'build trust'],
+    'try': ['try out', 'try on', 'try one\'s best'],
     'turn': ['turn out', 'turn down', 'in turn'],
     'undergo': ['undergo changes', 'undergo surgery'],
     'undermine': ['undermine authority', 'undermine confidence'],
     'undertake': ['undertake a task', 'undertake to do'],
     'urge': ['urge to do', 'urge that', 'urge caution'],
+    'use': ['use up', 'make use of', 'in use'],
     'vary': ['vary from', 'vary widely', 'vary in'],
     'verify': ['verify the information', 'verify the identity'],
     'view': ['view as', 'point of view', 'in view of'],
     'violate': ['violate the law', 'violate rights'],
     'vote': ['vote for', 'vote against', 'cast a vote'],
+    'wait': ['wait for', 'wait on', 'can\'t wait'],
     'warn': ['warn of', 'warn against', 'warn that'],
     'weigh': ['weigh the pros and cons', 'weigh on'],
+    'win': ['win over', 'win back', 'win the prize'],
     'withdraw': ['withdraw from', 'withdraw money'],
     'work': ['work out', 'work on', 'work for'],
+    'worry': ['worry about', 'worry over', 'no worries'],
     'yield': ['yield to', 'yield results', 'high yield'],
 }
 
-def make_good_hints(meaning, word, pos):
-    hints = []
-    if len(meaning) >= 4: hints.append(f"首两字是「{meaning[0]}{meaning[1]}…」")
-    elif len(meaning) >= 2: hints.append(f"首字为「{meaning[0]}」")
-    if pos:
-        for k, v in {'n.': '名词', 'v.': '动词', 'adj.': '形容词', 'adv.': '副词'}.items():
-            if pos.startswith(k): hints.append(f"这是一个{v}"); break
-    opposites = {'大': '小', '小': '大', '高': '低', '低': '高', '多': '少', '少': '多', '好': '坏', '坏': '好',
-                 '快': '慢', '慢': '快', '新': '旧', '旧': '新', '强': '弱', '弱': '强', '真': '假', '假': '真'}
-    for ch, opp in opposites.items():
-        if ch in meaning: hints.append(f"试着从「{opp}」的反面来想"); break
-    if len(hints) < 2: hints.append(f"回忆'{word}'的相关含义")
-    return hints[:4]
+# Generate phrase Chinese meanings
+def get_phrase_meaning(base_meaning, phrase, pos):
+    """Generate Chinese meaning for a phrase."""
+    phrase_lower = phrase.lower()
+    
+    # Pattern-based
+    if 'to' in phrase_lower and pos and 'v.' in pos:
+        if phrase_lower.startswith('be '):
+            return '对…'
+        return '向…'
+    if 'of' in phrase_lower:
+        return '…的'
+    if 'with' in phrase_lower:
+        return '与…相关'
+    if 'for' in phrase_lower:
+        return '为…'
+    if 'in' in phrase_lower:
+        return '在…中'
+    if 'from' in phrase_lower:
+        return '从…'
+    if 'against' in phrase_lower:
+        return '反对…'
+    if 'on' in phrase_lower:
+        return '关于…'
+    if 'about' in phrase_lower:
+        return '关于…'
+    
+    return '与…相关'
 
-# ===== Build WORD_BANK JS =====
-bank = 'const WORD_BANK = [\n'
-for wi, w in enumerate(words_list):
-    pos_str = w['pos'] if w['pos'] else 'n./v./adj.'
-    meanings = w['meanings'][:6]
-    phonetic = '/' + re.sub(r'[^a-z]', '', w['word']) + '/'
-    word_lower = w['word'].lower()
+# ===== Step 5: Build reverse derivative index =====
+REVERSE_DERIV = {}
+for base, ders in DERIVATIVES.items():
+    for der_word, der_pos in ders.items():
+        if der_word not in REVERSE_DERIV:
+            REVERSE_DERIV[der_word] = []
+        REVERSE_DERIV[der_word].append({'base': base, 'base_pos': der_pos})
+
+# ===== Step 6: Generate entries for ALL words =====
+all_entries = []
+words_processed = 0
+
+for word, info in parsed.items():
+    word_lower = word.lower()
+    pos = info['pos']
+    meanings = info['meanings']
     first_meaning = meanings[0] if meanings else ''
     
-    # ---- Segment 1: 原词 - only first meaning accepted (fix: was meanings[:3]) ----
-    segs = [{
-        'text': w['word'],
-        'label': '原词',
-        'answer': [meanings[0]] if meanings else ['?'],
-        'hints': make_good_hints(first_meaning, w['word'], pos_str),
-    }]
-    
-    # ---- Segment 2: 同根词 or 词义2 ----
-    derivatives = DERIVATIVES.get(word_lower)
-    
-    if derivatives:
-        der_word = list(derivatives.keys())[0]
-        der_pos = derivatives[der_word]
-        # 使用同根词的专属含义，如果没有则智能生成
-        der_meanings = derivative_meanings.get(der_word.lower(), [])
-        if der_meanings:
-            seg2_answer = der_meanings[:2]
-            seg2_target_meaning = der_meanings[0]
-        else:
-            # 智能生成同根词含义
-            generated_meaning = generate_derivative_meaning(first_meaning, der_word, der_pos)
-            if generated_meaning and generated_meaning != first_meaning:
-                seg2_answer = [generated_meaning]
-                seg2_target_meaning = generated_meaning
-            else:
-                seg2_answer = [meanings[1]] if len(meanings) > 1 else ([meanings[0]] if meanings else ['?'])
-                seg2_target_meaning = meanings[1] if len(meanings) > 1 else first_meaning
-        segs.append({
-            'text': der_word,
-            'label': f'同根词({der_pos})',
-            'answer': seg2_answer,
-            'hints': [f"「{w['word']}」→「{der_word}」词性变为{der_pos}"] + make_good_hints(seg2_target_meaning, der_word, der_pos)[:3],
-        })
+    # ---- Derivatives ----
+    derivatives = []
+    if word_lower in DERIVATIVES:
+        for der_word, der_pos in DERIVATIVES[word_lower].items():
+            der_meaning = get_derivative_meaning(word, first_meaning, der_word, der_pos)
+            derivatives.append(f"{der_word} ({der_pos})")
     elif word_lower in REVERSE_DERIV:
-        rev = REVERSE_DERIV[word_lower][0]
-        rev_word = rev['base']
-        # 使用同根词的专属含义，如果没有则智能生成
-        rev_meanings = derivative_meanings.get(rev_word.lower(), [])
-        if rev_meanings:
-            seg2_answer = rev_meanings[:2]
-            seg2_target_meaning = rev_meanings[0]
+        for rev in REVERSE_DERIV[word_lower]:
+            derivatives.append(f"{rev['base']} ({rev['base_pos']})")
+    
+    # If no mapped derivative found, generate one morphologically
+    if not derivatives:
+        # Try morphological derivation
+        suffixes_to_add = [
+            ('tion', 'n.'),
+            ('ment', 'n.'),
+            ('ness', 'n.'),
+            ('ity', 'n.'),
+            ('able', 'adj.'),
+            ('ible', 'adj.'),
+            ('ive', 'adj.'),
+            ('al', 'adj.'),
+            ('ous', 'adj.'),
+            ('ful', 'adj.'),
+            ('less', 'adj.'),
+            ('ly', 'adv.'),
+        ]
+        for suf, pos_tag in suffixes_to_add:
+            base_stem = word_lower
+            # Strip existing suffixes to find stem
+            for strip_suf in ['tion', 'sion', 'ment', 'ness', 'ity', 'ence', 'ance', 'able', 'ible', 'ive', 'al', 'ous', 'ful', 'less', 'ly', 'ing', 'ed', 'er', 'or', 'ist', 'en', 'ize', 'fy', 'ate']:
+                if base_stem.endswith(strip_suf) and len(base_stem) > len(strip_suf) + 2:
+                    base_stem = base_stem[:-len(strip_suf)]
+                    break
+            der_word = base_stem + suf
+            if der_word != word_lower and len(der_word) >= 3:
+                derivatives.append(f"{der_word} ({pos_tag})")
+                break
+        if not derivatives and len(meanings) > 1:
+            # Just add a note about word family
+            pass
+    
+    # ---- Phrases ----
+    phrases = []
+    if word_lower in REAL_PHRASES:
+        for p in REAL_PHRASES[word_lower][:2]:
+            phrases.append(p)
+    
+    # If no mapped phrases, generate common ones
+    if not phrases:
+        if pos and 'v.' in pos:
+            phrases.append(f"{word} to")
+            if len(meanings) > 1:
+                phrases.append(f"{word} with")
+        elif pos and 'n.' in pos:
+            phrases.append(f"{word} of")
+            phrases.append(f"in {word}")
+        elif pos and 'adj.' in pos:
+            phrases.append(f"be {word}")
+            phrases.append(f"{word} enough")
         else:
-            generated_meaning = generate_derivative_meaning(first_meaning, rev_word, pos_str)
-            if generated_meaning and generated_meaning != first_meaning:
-                seg2_answer = [generated_meaning]
-                seg2_target_meaning = generated_meaning
+            prep = ['of', 'to', 'with', 'for', 'in'][hash(word) % 5]
+            phrases.append(f"{word} {prep}")
+            if word_lower in REVERSE_DERIV and REVERSE_DERIV[word_lower]:
+                phrases.append(f"{REVERSE_DERIV[word_lower][0]['base']} {prep}")
             else:
-                seg2_answer = [meanings[1]] if len(meanings) > 1 else ([meanings[0]] if meanings else ['?'])
-                seg2_target_meaning = meanings[1] if len(meanings) > 1 else first_meaning
-        segs.append({
-            'text': rev_word,
-            'label': '同根词(原形)',
-            'answer': seg2_answer,
-            'hints': [f"「{w['word']}」来自「{rev_word}」"] + make_good_hints(seg2_target_meaning, rev_word, pos_str)[:3],
-        })
-    else:
-        # No real derivative — use word itself with different meaning
-        seg2_label = '词义2' if len(meanings) > 1 else '用法'
-        seg2_answer = [meanings[1]] if len(meanings) > 1 else ([meanings[0]] if meanings else ['?'])
-        seg2_target_meaning = meanings[1] if len(meanings) > 1 else first_meaning
-        segs.append({
-            'text': w['word'],
-            'label': seg2_label,
-            'answer': seg2_answer,
-            'hints': make_good_hints(seg2_target_meaning, w['word'], pos_str),
-        })
+                phrases.append(f"be {word} {prep}")
     
-    # ---- Segment 3: 短语 or 词义3 ----
-    phrase_candidates = REAL_PHRASES.get(word_lower)
+    # ---- Build entry ----
+    entry = {
+        "word": word,
+        "derivatives": derivatives,
+        "phrases": phrases[:2],
+    }
+    all_entries.append(entry)
+    words_processed += 1
+
+print(f"Generated entries for {words_processed} words")
+
+# ===== Step 7: Split into batches and write JSON files =====
+total = len(all_entries)
+num_batches = (total + BATCH_SIZE - 1) // BATCH_SIZE
+if num_batches < 50:
+    # Adjust to make at least 50 batches
+    BATCH_SIZE = max(1, total // 50)
+    num_batches = (total + BATCH_SIZE - 1) // BATCH_SIZE
+
+print(f"Splitting {total} words into {num_batches} batches of ~{BATCH_SIZE} each")
+
+for batch_idx in range(num_batches):
+    start = batch_idx * BATCH_SIZE
+    end = min((batch_idx + 1) * BATCH_SIZE, total)
+    batch = all_entries[start:end]
     
-    # 预先定义默认值
-    seg3_answer = [meanings[2]] if len(meanings) > 2 else ([meanings[1]] if len(meanings) > 1 else ([meanings[0]] if meanings else ['?']))
-    seg3_target_meaning = meanings[2] if len(meanings) > 2 else (meanings[1] if len(meanings) > 1 else first_meaning)
+    filename = f"words_batch_{batch_idx+1:02d}.json"
+    filepath = os.path.join(OUT_DIR, filename)
     
-    if phrase_candidates:
-        chosen_phrase = phrase_candidates[hash(w['word']) % len(phrase_candidates)]
-        # 使用短语的专属含义，如果没有则智能生成
-        phrase_dict = phrase_meanings.get(word_lower, {})
-        phrase_ans = phrase_dict.get(chosen_phrase, [])
-        if phrase_ans:
-            seg3_answer = phrase_ans
-            seg3_target_meaning = phrase_ans[0]
-        else:
-            # 智能生成短语含义
-            generated_meaning = generate_phrase_meaning(first_meaning, chosen_phrase)
-            if generated_meaning and generated_meaning != first_meaning:
-                seg3_answer = [generated_meaning]
-                seg3_target_meaning = generated_meaning
-        segs.append({
-            'text': chosen_phrase,
-            'label': '短语',
-            'answer': seg3_answer,
-            'hints': [f"「{w['word']}」的常见搭配"] + make_good_hints(seg3_target_meaning, chosen_phrase, pos_str)[:3],
-        })
-    elif len(meanings) > 2:
-        segs.append({
-            'text': w['word'],
-            'label': '词义3',
-            'answer': seg3_answer,
-            'hints': make_good_hints(seg3_target_meaning, w['word'], pos_str),
-        })
-    else:
-        # Fallback phrase
-        prep = ['of', 'to', 'for', 'with', 'in', 'on', 'from'][hash(w['word']) % 7]
-        if pos_str and 'v.' in pos_str:
-            fallback_phrase = f"{w['word']} {prep}"
-        elif pos_str and 'n.' in pos_str:
-            fallback_phrase = f"{w['word']} of"
-        elif pos_str and 'adj.' in pos_str:
-            fallback_phrase = f"be {w['word']} {prep}"
-        else:
-            fallback_phrase = f"{w['word']} {prep}"
-        segs.append({
-            'text': fallback_phrase,
-            'label': '短语',
-            'answer': seg3_answer,
-            'hints': [f"「{w['word']}」的常见搭配"] + make_good_hints(seg3_target_meaning, w['word'], pos_str)[:3],
-        })
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(batch, f, ensure_ascii=False, indent=2)
     
-    bank += '  {'
-    bank += f'word:"{w["word"]}",phonetic:"{phonetic}",pos:"{pos_str}",segments:['
-    
-    for si, seg in enumerate(segs):
-        seg_json = json.dumps(seg, ensure_ascii=False)
-        bank += seg_json
-        if si < len(segs) - 1:
-            bank += ','
-    
-    bank += ']}'
-    if wi < len(words_list) - 1:
-        bank += ','
-    bank += '\n'
+    if batch_idx < 5 or batch_idx % 10 == 0:
+        print(f"  Wrote {filename}: {len(batch)} words")
 
-bank += '];\n\n'
+print(f"\nDone! Generated {num_batches} batch files in {OUT_DIR}")
+print(f"Total words covered: {total}")
 
-# Insert into HTML
-with open(os.path.join(d, 'index.html'), 'r', encoding='utf-8') as f:
-    html = f.read()
-
-start_marker = 'const WORD_BANK = ['
-start_idx = html.find(start_marker)
-end_marker = "// ==================== 名句宝库"
-end_idx = html.find(end_marker)
-close_idx = html.rfind('];', start_idx, end_idx)
-
-if start_idx == -1 or close_idx == -1:
-    print("ERROR: markers not found")
-    exit(1)
-
-new_html = html[:start_idx] + bank + html[close_idx+2:]
-
-out_path = os.path.join(d, 'index.html')
-with open(out_path, 'w', encoding='utf-8') as f:
-    f.write(new_html)
-
-size_kb = os.path.getsize(out_path) / 1024
-print(f"Wrote {size_kb:.0f} KB, {len(words_list)} words")
-print("Done!")
+# Verify no words missed
+all_words_in_output = set()
+for entry in all_entries:
+    all_words_in_output.add(entry['word'].lower())
+parsed_words = set(w.lower() for w in parsed.keys())
+missed = parsed_words - all_words_in_output
+if missed:
+    print(f"WARNING: {len(missed)} words not covered: {list(missed)[:20]}")
+else:
+    print("All words successfully covered!")

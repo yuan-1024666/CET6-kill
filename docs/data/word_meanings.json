@@ -1,692 +1,6704 @@
 {
   "derivatives": {
-    "hush": ["安静", "使安静"],
-    "hushed": ["安静的", "寂静的"],
-    "hush-hush": ["秘密的"],
-    "reliability": ["可靠性", "可信度"],
-    "reliably": ["可靠地", "可信地"],
-    "reliance": ["依赖", "依靠"],
-    "consistence": ["一致性", "连贯性"],
-    "consistent": ["前后一致的", "始终如一的"],
-    "consistently": ["一致地", "始终如一"],
-    "preservation": ["保存", "保护"],
-    "possess": ["拥有", "具有"],
-    "possessions": ["财产", "所有物"],
-    "profit": ["利润", "利益"],
-    "profitably": ["有利地", "有益地"],
-    "ultimately": ["最终", "最后"],
-    "consume": ["消耗", "消费"],
-    "classification": ["分类", "分级"],
-    "demonstrate": ["演示", "证明"],
-    "reserve": ["保留", "预订"],
-    "revolutionary": ["革命的", "革命性的"],
-    "revolution": ["革命", "变革"],
-    "relief": ["缓解", "救济"],
-    "regard": ["看待", "尊敬"],
-    "opposing": ["相反的", "对立的"],
-    "transformation": ["转变", "变革"],
-    "intervention": ["干预", "介入"],
-    "variety": ["多样性", "种类"],
-    "various": ["各种的", "多样的"],
-    "necessary": ["必要的", "必需的"],
-    "decision": ["决定", "决策"],
-    "violate": ["违反", "侵犯"],
-    "extension": ["扩展", "延期"],
-    "analyze": ["分析", "解析"],
-    "analysis": ["分析", "解析"],
-    "frightened": ["害怕的", "受惊的"],
-    "frightening": ["令人害怕的", "吓人的"],
-    "furnishing": ["家具", "陈设"],
-    "scare": ["惊吓", "恐慌"],
-    "scarcely": ["几乎不", "勉强"],
-    "recruit": ["招募", "招聘"],
-    "recruitment": ["招募", "招聘"],
-    "determine": ["确定", "决定"],
-    "determination": ["决心", "决定"],
-    "protection": ["保护", "防护"],
-    "productive": ["多产的", "富有成效的"],
-    "production": ["生产", "产量"],
-    "productivity": ["生产力", "生产率"],
-    "introduction": ["介绍", "引言"],
-    "reduction": ["减少", "降低"],
-    "inclusion": ["包含", "纳入"],
-    "exclusion": ["排除", "排斥"],
-    "conclusion": ["结论", "结尾"],
-    "resolution": ["决议", "分辨率"],
-    "solution": ["解决方案", "溶液"],
-    "involvement": ["参与", "涉及"],
-    "development": ["发展", "开发"],
-    "improvement": ["改善", "改进"],
-    "expansion": ["扩展", "扩大"],
-    "intention": ["意图", "目的"],
-    "attention": ["注意", "关注"],
-    "contention": ["争论", "论点"],
-    "dependent": ["依赖的", "依靠的"],
-    "independence": ["独立", "自主"],
-    "independent": ["独立的", "自主的"],
-    "difference": ["差异", "区别"],
-    "differentiation": ["区分", "分化"],
-    "reference": ["参考", "引用"],
-    "transferable": ["可转移的", "可转让的"],
-    "preference": ["偏好", "偏爱"],
-    "inference": ["推论", "推断"],
-    "offering": ["提供物", "祭品"],
-    "suffering": ["痛苦", "苦难"],
-    "conference": ["会议", "协商"],
-    "deferral": ["推迟", "延期"],
-    "admission": ["承认", "准入"],
-    "permission": ["许可", "允许"],
-    "submission": ["提交", "服从"],
-    "commitment": ["承诺", "投入"],
-    "transmission": ["传输", "变速器"],
-    "emission": ["排放", "发射"],
-    "acquisition": ["获得", "收购"],
-    "requirement": ["要求", "需求"],
-    "inquiry": ["询问", "调查"],
-    "demanding": ["苛刻的", "要求高的"],
-    "commander": ["指挥官"],
-    "supplier": ["供应商"],
-    "application": ["应用", "申请"],
-    "implication": ["暗示", "含义"],
-    "compliance": ["遵守", "依从"],
-    "multiplication": ["乘法", "繁殖"],
-    "simplification": ["简化"],
-    "identification": ["识别", "身份证明"],
-    "identity": ["身份", "同一性"],
-    "clarification": ["澄清", "说明"],
-    "specification": ["规范", "规格"],
-    "modification": ["修改", "调整"],
-    "verification": ["验证", "核实"],
-    "qualification": ["资格", "限制"],
-    "certification": ["证明", "认证"],
-    "justification": ["理由", "辩护"],
-    "maintenance": ["维护", "维修"],
-    "container": ["容器"],
-    "retention": ["保留", "保持"],
-    "attainment": ["成就", "达到"],
-    "evaluation": ["评估", "评价"],
-    "appreciation": ["欣赏", "感激"],
-    "depreciation": ["贬值", "折旧"],
-    "prediction": ["预测", "预言"],
-    "contradiction": ["矛盾", "反驳"],
-    "dictation": ["口述", "听写"],
-    "construction": ["建设", "建造"],
-    "instruction": ["指导", "指令"],
-    "destruction": ["破坏", "毁灭"],
-    "obstruction": ["障碍", "妨碍"],
-    "conductor": ["导体", "指挥"],
-    "producer": ["生产者", "制片人"],
-    "reducer": ["还原剂"],
-    "introducer": ["介绍人"],
-    "induction": ["归纳", "就职"],
-    "deduction": ["演绎", "扣除"],
-    "impression": ["印象", "印记"],
-    "expression": ["表达", "表情"],
-    "suppression": ["压制", "抑制"],
-    "depression": ["抑郁", "萧条"],
-    "congress": ["国会", "代表大会"],
-    "regression": ["回归", "倒退"],
-    "succession": ["继承", "连续"],
-    "processor": ["处理器"],
-    "excessive": ["过度的", "过分的"],
-    "confession": ["承认", "忏悔"],
-    "investment": ["投资", "投入"],
-    "investor": ["投资者"],
-    "divestment": ["剥离", "撤资"],
-    "suggestion": ["建议", "暗示"],
-    "proposal": ["提议", "提案"],
-    "composition": ["组成", "作文"],
-    "composer": ["作曲家"],
-    "disposal": ["处理", "处置"],
-    "exposure": ["暴露", "曝光"],
-    "imposition": ["强加", "征税"],
-    "recognition": ["识别", "承认"],
-    "organization": ["组织", "机构"],
-    "realization": ["实现", "认识"],
-    "specialization": ["专业化"],
-    "emphasis": ["强调", "重点"],
-    "characterization": ["描述", "刻画"],
-    "summary": ["总结", "概要"],
-    "memory": ["记忆", "内存"],
-    "memorial": ["纪念的", "纪念碑"],
-    "standardization": ["标准化"]
+    "abandonment": [
+      "放弃",
+      "抛弃"
+    ],
+    "abandoned": [
+      "被遗弃的",
+      "放纵的"
+    ],
+    "absorption": [
+      "吸收",
+      "专注"
+    ],
+    "absorbed": [
+      "被吸收的",
+      "全神贯注的"
+    ],
+    "abstraction": [
+      "抽象",
+      "抽象概念"
+    ],
+    "abstractly": [
+      "抽象地",
+      "理论地"
+    ],
+    "abundance": [
+      "丰富",
+      "充裕"
+    ],
+    "abundantly": [
+      "丰富地",
+      "大量地"
+    ],
+    "acceleration": [
+      "加速",
+      "加速度"
+    ],
+    "accelerating": [
+      "加速的",
+      "不断增加的"
+    ],
+    "acceptance": [
+      "接受",
+      "认可"
+    ],
+    "acceptable": [
+      "可接受的",
+      "令人满意的"
+    ],
+    "accessible": [
+      "可接近的",
+      "易使用的"
+    ],
+    "accessibility": [
+      "可达性",
+      "易接近性"
+    ],
+    "accommodation": [
+      "住宿",
+      "容纳"
+    ],
+    "accompaniment": [
+      "伴随",
+      "伴奏"
+    ],
+    "accomplishment": [
+      "成就",
+      "完成"
+    ],
+    "accomplished": [
+      "有成就的",
+      "熟练的"
+    ],
+    "accuracy": [
+      "准确性",
+      "精确度"
+    ],
+    "accurately": [
+      "准确地",
+      "精确地"
+    ],
+    "achievement": [
+      "成就",
+      "成绩"
+    ],
+    "achievable": [
+      "可实现的",
+      "可达成的"
+    ],
+    "acknowledgement": [
+      "承认",
+      "致谢"
+    ],
+    "acquisition": [
+      "获得",
+      "收购"
+    ],
+    "acquired": [
+      "后天获得的",
+      "习得的"
+    ],
+    "adaptation": [
+      "适应",
+      "改编版"
+    ],
+    "adaptable": [
+      "适应性强的",
+      "可改编的"
+    ],
+    "addiction": [
+      "上瘾",
+      "沉溺"
+    ],
+    "addictive": [
+      "使人上瘾的",
+      "令人着迷的"
+    ],
+    "adjustment": [
+      "调整",
+      "适应"
+    ],
+    "adjustable": [
+      "可调节的",
+      "可调整的"
+    ],
+    "admiration": [
+      "钦佩",
+      "赞美"
+    ],
+    "admirable": [
+      "令人钦佩的",
+      "值得赞赏的"
+    ],
+    "adoption": [
+      "采纳",
+      "收养"
+    ],
+    "adoptive": [
+      "收养的",
+      "采用的"
+    ],
+    "adoration": [
+      "崇拜",
+      "爱慕"
+    ],
+    "adorable": [
+      "可爱的",
+      "值得崇拜的"
+    ],
+    "advancement": [
+      "进步",
+      "晋升"
+    ],
+    "advanced": [
+      "先进的",
+      "高级的"
+    ],
+    "advertisement": [
+      "广告",
+      "宣传"
+    ],
+    "affection": [
+      "喜爱",
+      "感情"
+    ],
+    "affected": [
+      "受影响的",
+      "做作的"
+    ],
+    "affordable": [
+      "负担得起的",
+      "价格合理的"
+    ],
+    "agreement": [
+      "协议",
+      "同意"
+    ],
+    "agreeable": [
+      "令人愉快的",
+      "同意的"
+    ],
+    "allocation": [
+      "分配",
+      "拨款"
+    ],
+    "alteration": [
+      "改变",
+      "修改"
+    ],
+    "alternative": [
+      "替代的",
+      "供选择的"
+    ],
+    "amazement": [
+      "惊奇",
+      "诧异"
+    ],
+    "amazing": [
+      "令人惊奇的",
+      "了不起的"
+    ],
+    "analysis": [
+      "分析",
+      "解析"
+    ],
+    "analytical": [
+      "分析的",
+      "善于分析的"
+    ],
+    "announcement": [
+      "公告",
+      "宣布"
+    ],
+    "annoyance": [
+      "烦恼",
+      "恼怒"
+    ],
+    "annoying": [
+      "令人烦恼的",
+      "讨厌的"
+    ],
+    "anticipation": [
+      "预期",
+      "期望"
+    ],
+    "anxiety": [
+      "焦虑",
+      "忧虑"
+    ],
+    "anxiously": [
+      "焦虑地",
+      "不安地"
+    ],
+    "apology": [
+      "道歉",
+      "认错"
+    ],
+    "apologetic": [
+      "道歉的",
+      "歉意的"
+    ],
+    "application": [
+      "申请",
+      "应用"
+    ],
+    "applicable": [
+      "适用的",
+      "可应用的"
+    ],
+    "appointment": [
+      "任命",
+      "约会"
+    ],
+    "appointed": [
+      "被任命的",
+      "指定的"
+    ],
+    "appreciation": [
+      "欣赏",
+      "感激"
+    ],
+    "appreciative": [
+      "感激的",
+      "赞赏的"
+    ],
+    "approachable": [
+      "可接近的",
+      "平易近人的"
+    ],
+    "approval": [
+      "批准",
+      "赞成"
+    ],
+    "approved": [
+      "经批准的",
+      "公认的"
+    ],
+    "argument": [
+      "争论",
+      "论据"
+    ],
+    "argumentative": [
+      "好争论的",
+      "有争议的"
+    ],
+    "arrangement": [
+      "安排",
+      "排列"
+    ],
+    "arrested": [
+      "被捕的",
+      "被阻止的"
+    ],
+    "assessment": [
+      "评估",
+      "评价"
+    ],
+    "assignment": [
+      "任务",
+      "分配"
+    ],
+    "assigned": [
+      "被分配的",
+      "指定的"
+    ],
+    "assistance": [
+      "援助",
+      "帮助"
+    ],
+    "assistant": [
+      "助手",
+      "助理"
+    ],
+    "association": [
+      "协会",
+      "联系"
+    ],
+    "associated": [
+      "关联的",
+      "相关的"
+    ],
+    "assumption": [
+      "假设",
+      "承担"
+    ],
+    "assurance": [
+      "保证",
+      "自信"
+    ],
+    "assured": [
+      "有保证的",
+      "自信的"
+    ],
+    "attachment": [
+      "附件",
+      "依恋"
+    ],
+    "attached": [
+      "附着的",
+      "依恋的"
+    ],
+    "attacker": [
+      "攻击者",
+      "袭击者"
+    ],
+    "attempted": [
+      "未遂的",
+      "企图的"
+    ],
+    "attendance": [
+      "出席",
+      "参加人数"
+    ],
+    "attendant": [
+      "服务员",
+      "随从"
+    ],
+    "attraction": [
+      "吸引力",
+      "景点"
+    ],
+    "attractive": [
+      "有吸引力的",
+      "迷人的"
+    ],
+    "authorization": [
+      "授权",
+      "许可"
+    ],
+    "authorized": [
+      "经授权的",
+      "公认的"
+    ],
+    "avoidance": [
+      "避免",
+      "回避"
+    ],
+    "unavoidable": [
+      "不可避免的",
+      "必然的"
+    ],
+    "awareness": [
+      "意识",
+      "认识"
+    ],
+    "balanced": [
+      "平衡的",
+      "均衡的"
+    ],
+    "bearable": [
+      "可忍受的",
+      "可承受的"
+    ],
+    "unbearable": [
+      "难以忍受的",
+      "不可承受的"
+    ],
+    "belief": [
+      "信念",
+      "信仰"
+    ],
+    "believable": [
+      "可信的",
+      "值得相信的"
+    ],
+    "beneficial": [
+      "有益的",
+      "有利的"
+    ],
+    "beneficiary": [
+      "受益人",
+      "受惠者"
+    ],
+    "boredom": [
+      "无聊",
+      "厌倦"
+    ],
+    "boring": [
+      "令人厌烦的",
+      "无聊的"
+    ],
+    "boundary": [
+      "边界",
+      "分界线"
+    ],
+    "briefly": [
+      "简要地",
+      "短暂地"
+    ],
+    "brevity": [
+      "简洁",
+      "短暂"
+    ],
+    "calculation": [
+      "计算",
+      "估算"
+    ],
+    "calculator": [
+      "计算器",
+      "计算者"
+    ],
+    "capability": [
+      "能力",
+      "才能"
+    ],
+    "incapable": [
+      "无能力的",
+      "不能的"
+    ],
+    "captive": [
+      "俘虏",
+      "被捕获的"
+    ],
+    "captivity": [
+      "囚禁",
+      "监禁"
+    ],
+    "cautious": [
+      "谨慎的",
+      "小心的"
+    ],
+    "cautiously": [
+      "谨慎地",
+      "小心地"
+    ],
+    "celebration": [
+      "庆祝",
+      "庆典"
+    ],
+    "celebrated": [
+      "著名的",
+      "庆祝的"
+    ],
+    "certification": [
+      "认证",
+      "证明"
+    ],
+    "certified": [
+      "经认证的",
+      "有证书的"
+    ],
+    "challenging": [
+      "有挑战性的",
+      "困难的"
+    ],
+    "characteristic": [
+      "特征",
+      "特性"
+    ],
+    "character": [
+      "性格",
+      "角色"
+    ],
+    "classification": [
+      "分类",
+      "等级"
+    ],
+    "classified": [
+      "分类的",
+      "机密的"
+    ],
+    "collapsed": [
+      "倒塌的",
+      "崩溃的"
+    ],
+    "collapsible": [
+      "可折叠的",
+      "可拆卸的"
+    ],
+    "collection": [
+      "收藏",
+      "收集"
+    ],
+    "collective": [
+      "集体的",
+      "共同的"
+    ],
+    "combination": [
+      "组合",
+      "结合"
+    ],
+    "combined": [
+      "结合的",
+      "联合的"
+    ],
+    "commitment": [
+      "承诺",
+      "投入"
+    ],
+    "committed": [
+      "忠诚的",
+      "尽心尽力的"
+    ],
+    "communication": [
+      "交流",
+      "通讯"
+    ],
+    "communicative": [
+      "爱交流的",
+      "沟通的"
+    ],
+    "comparison": [
+      "比较",
+      "对比"
+    ],
+    "comparable": [
+      "可比较的",
+      "类似的"
+    ],
+    "compensation": [
+      "补偿",
+      "赔偿"
+    ],
+    "compensatory": [
+      "补偿的",
+      "赔偿的"
+    ],
+    "competition": [
+      "竞争",
+      "比赛"
+    ],
+    "competitive": [
+      "有竞争力的",
+      "竞争性的"
+    ],
+    "complaint": [
+      "投诉",
+      "抱怨"
+    ],
+    "completion": [
+      "完成",
+      "竣工"
+    ],
+    "completely": [
+      "完全地",
+      "彻底地"
+    ],
+    "complexity": [
+      "复杂性",
+      "复杂程度"
+    ],
+    "composition": [
+      "组成",
+      "作文"
+    ],
+    "composer": [
+      "作曲家",
+      "创作者"
+    ],
+    "concentration": [
+      "集中",
+      "专注"
+    ],
+    "concentrated": [
+      "集中的",
+      "浓缩的"
+    ],
+    "concerning": [
+      "关于",
+      "涉及"
+    ],
+    "concerned": [
+      "关心的",
+      "担忧的"
+    ],
+    "conclusion": [
+      "结论",
+      "结尾"
+    ],
+    "conclusive": [
+      "决定性的",
+      "确凿的"
+    ],
+    "conductor": [
+      "指挥",
+      "导体"
+    ],
+    "conduction": [
+      "传导",
+      "输送"
+    ],
+    "confirmation": [
+      "确认",
+      "证实"
+    ],
+    "confirmed": [
+      "被证实的",
+      "确认的"
+    ],
+    "confusion": [
+      "混乱",
+      "困惑"
+    ],
+    "confused": [
+      "困惑的",
+      "混乱的"
+    ],
+    "connection": [
+      "连接",
+      "联系"
+    ],
+    "connected": [
+      "连接的",
+      "相关的"
+    ],
+    "consciousness": [
+      "意识",
+      "知觉"
+    ],
+    "unconscious": [
+      "无意识的",
+      "昏迷的"
+    ],
+    "conservation": [
+      "保护",
+      "保存"
+    ],
+    "conservative": [
+      "保守的",
+      "守旧的"
+    ],
+    "consideration": [
+      "考虑",
+      "体贴"
+    ],
+    "considerable": [
+      "相当大的",
+      "重要的"
+    ],
+    "consistent": [
+      "一致的",
+      "始终如一的"
+    ],
+    "consistency": [
+      "一致性",
+      "连贯性"
+    ],
+    "construction": [
+      "建造",
+      "建筑"
+    ],
+    "constructive": [
+      "建设性的",
+      "有助益的"
+    ],
+    "consumption": [
+      "消费",
+      "消耗"
+    ],
+    "consumer": [
+      "消费者",
+      "顾客"
+    ],
+    "container": [
+      "容器",
+      "集装箱"
+    ],
+    "containment": [
+      "遏制",
+      "控制"
+    ],
+    "contamination": [
+      "污染",
+      "玷污"
+    ],
+    "continuous": [
+      "连续的",
+      "不间断的"
+    ],
+    "continuation": [
+      "继续",
+      "延续"
+    ],
+    "contribution": [
+      "贡献",
+      "捐献"
+    ],
+    "contributor": [
+      "贡献者",
+      "捐助者"
+    ],
+    "conversion": [
+      "转变",
+      "兑换"
+    ],
+    "convertible": [
+      "可转换的",
+      "可兑换的"
+    ],
+    "convincing": [
+      "令人信服的",
+      "有说服力的"
+    ],
+    "convinced": [
+      "确信的",
+      "信服的"
+    ],
+    "cooperation": [
+      "合作",
+      "协作"
+    ],
+    "cooperative": [
+      "合作的",
+      "协作的"
+    ],
+    "correction": [
+      "改正",
+      "纠正"
+    ],
+    "correctness": [
+      "正确性",
+      "准确性"
+    ],
+    "correspondence": [
+      "通信",
+      "对应"
+    ],
+    "corresponding": [
+      "相应的",
+      "对应的"
+    ],
+    "corruption": [
+      "腐败",
+      "贪污"
+    ],
+    "corrupted": [
+      "腐败的",
+      "损坏的"
+    ],
+    "creation": [
+      "创造",
+      "创作"
+    ],
+    "creative": [
+      "有创造力的",
+      "创新的"
+    ],
+    "criticism": [
+      "批评",
+      "评论"
+    ],
+    "critical": [
+      "批评的",
+      "关键的"
+    ],
+    "cultivation": [
+      "培养",
+      "耕作"
+    ],
+    "cultivated": [
+      "有教养的",
+      "耕种的"
+    ],
+    "curiosity": [
+      "好奇心",
+      "求知欲"
+    ],
+    "curiously": [
+      "好奇地",
+      "奇怪地"
+    ],
+    "damaging": [
+      "有害的",
+      "破坏性的"
+    ],
+    "damaged": [
+      "受损的",
+      "损坏的"
+    ],
+    "dealer": [
+      "经销商",
+      "交易商"
+    ],
+    "dealing": [
+      "交易",
+      "交往"
+    ],
+    "debatable": [
+      "有争议的",
+      "可争论的"
+    ],
+    "decayed": [
+      "腐烂的",
+      "衰退的"
+    ],
+    "decadence": [
+      "衰落",
+      "颓废"
+    ],
+    "deception": [
+      "欺骗",
+      "骗局"
+    ],
+    "deceptive": [
+      "欺骗性的",
+      "误导的"
+    ],
+    "decision": [
+      "决定",
+      "决策"
+    ],
+    "decisive": [
+      "决定性的",
+      "果断的"
+    ],
+    "declaration": [
+      "宣言",
+      "声明"
+    ],
+    "declared": [
+      "宣布的",
+      "申报的"
+    ],
+    "declining": [
+      "下降的",
+      "衰退的"
+    ],
+    "decoration": [
+      "装饰",
+      "装潢"
+    ],
+    "decorative": [
+      "装饰性的",
+      "装潢的"
+    ],
+    "defense": [
+      "防御",
+      "辩护"
+    ],
+    "defensive": [
+      "防御的",
+      "防守的"
+    ],
+    "definition": [
+      "定义",
+      "释义"
+    ],
+    "definitive": [
+      "确定的",
+      "权威的"
+    ],
+    "delivery": [
+      "递送",
+      "分娩"
+    ],
+    "delivered": [
+      "已交付的",
+      "已送达的"
+    ],
+    "demanding": [
+      "要求高的",
+      "苛求的"
+    ],
+    "demonstration": [
+      "示威",
+      "展示"
+    ],
+    "demonstrative": [
+      "感情外露的",
+      "示范的"
+    ],
+    "dependence": [
+      "依赖",
+      "依靠"
+    ],
+    "dependent": [
+      "依赖的",
+      "从属的"
+    ],
+    "depression": [
+      "抑郁",
+      "萧条"
+    ],
+    "depressed": [
+      "沮丧的",
+      "萧条的"
+    ],
+    "deprivation": [
+      "剥夺",
+      "匮乏"
+    ],
+    "deprived": [
+      "贫困的",
+      "被剥夺的"
+    ],
+    "description": [
+      "描述",
+      "说明"
+    ],
+    "descriptive": [
+      "描述的",
+      "说明性的"
+    ],
+    "deserving": [
+      "值得的",
+      "应得的"
+    ],
+    "designer": [
+      "设计师",
+      "设计者"
+    ],
+    "designed": [
+      "设计的",
+      "故意的"
+    ],
+    "destruction": [
+      "破坏",
+      "毁灭"
+    ],
+    "destructive": [
+      "破坏性的",
+      "毁灭性的"
+    ],
+    "detection": [
+      "侦查",
+      "发现"
+    ],
+    "detective": [
+      "侦探",
+      "警探"
+    ],
+    "determination": [
+      "决心",
+      "决定"
+    ],
+    "determined": [
+      "坚决的",
+      "有决心的"
+    ],
+    "development": [
+      "发展",
+      "开发"
+    ],
+    "developing": [
+      "发展中的",
+      "发育中的"
+    ],
+    "devotion": [
+      "奉献",
+      "热爱"
+    ],
+    "devoted": [
+      "忠诚的",
+      "奉献的"
+    ],
+    "difference": [
+      "差异",
+      "不同"
+    ],
+    "different": [
+      "不同的",
+      "各异的"
+    ],
+    "direction": [
+      "方向",
+      "指导"
+    ],
+    "directly": [
+      "直接地",
+      "立即"
+    ],
+    "discovery": [
+      "发现",
+      "发觉"
+    ],
+    "discussion": [
+      "讨论",
+      "商议"
+    ],
+    "dismissal": [
+      "解雇",
+      "驳回"
+    ],
+    "disposal": [
+      "处理",
+      "处置"
+    ],
+    "disposable": [
+      "一次性的",
+      "可抛弃的"
+    ],
+    "distinction": [
+      "区别",
+      "荣誉"
+    ],
+    "distinctive": [
+      "独特的",
+      "有特色的"
+    ],
+    "distinguished": [
+      "杰出的",
+      "高贵的"
+    ],
+    "distribution": [
+      "分配",
+      "分布"
+    ],
+    "division": [
+      "划分",
+      "部门"
+    ],
+    "divided": [
+      "分裂的",
+      "分开的"
+    ],
+    "domination": [
+      "统治",
+      "支配"
+    ],
+    "dominant": [
+      "占优势的",
+      "主导的"
+    ],
+    "donation": [
+      "捐赠",
+      "捐款"
+    ],
+    "doubtful": [
+      "怀疑的",
+      "不确定的"
+    ],
+    "undoubtedly": [
+      "毫无疑问地",
+      "毋庸置疑地"
+    ],
+    "economic": [
+      "经济的",
+      "经济学的"
+    ],
+    "economical": [
+      "节约的",
+      "经济的"
+    ],
+    "edition": [
+      "版本",
+      "版次"
+    ],
+    "editor": [
+      "编辑",
+      "编者"
+    ],
+    "education": [
+      "教育",
+      "培养"
+    ],
+    "educational": [
+      "教育的",
+      "有教育意义的"
+    ],
+    "effectively": [
+      "有效地",
+      "实际上"
+    ],
+    "effectiveness": [
+      "有效性",
+      "效力"
+    ],
+    "efficiency": [
+      "效率",
+      "效能"
+    ],
+    "efficiently": [
+      "高效地",
+      "效率高地"
+    ],
+    "election": [
+      "选举",
+      "当选"
+    ],
+    "electoral": [
+      "选举的",
+      "与选举有关的"
+    ],
+    "elevation": [
+      "海拔",
+      "提升"
+    ],
+    "elevated": [
+      "升高的",
+      "高尚的"
+    ],
+    "elimination": [
+      "消除",
+      "淘汰"
+    ],
+    "emergence": [
+      "出现",
+      "兴起"
+    ],
+    "emerging": [
+      "新兴的",
+      "正在出现的"
+    ],
+    "emotional": [
+      "感情的",
+      "情绪化的"
+    ],
+    "emotionally": [
+      "情感上",
+      "情绪上"
+    ],
+    "emphasis": [
+      "强调",
+      "重点"
+    ],
+    "emphatic": [
+      "强调的",
+      "坚决的"
+    ],
+    "employment": [
+      "就业",
+      "雇用"
+    ],
+    "employer": [
+      "雇主",
+      "老板"
+    ],
+    "employee": [
+      "雇员",
+      "员工"
+    ],
+    "encouragement": [
+      "鼓励",
+      "支持"
+    ],
+    "encouraging": [
+      "鼓舞人心的",
+      "令人振奋的"
+    ],
+    "engagement": [
+      "订婚",
+      "参与"
+    ],
+    "engaged": [
+      "已订婚的",
+      "忙于…的"
+    ],
+    "enhancement": [
+      "增强",
+      "提高"
+    ],
+    "enhanced": [
+      "增强的",
+      "改进的"
+    ],
+    "enjoyment": [
+      "享受",
+      "乐趣"
+    ],
+    "enjoyable": [
+      "令人愉快的",
+      "有趣的"
+    ],
+    "enrichment": [
+      "丰富",
+      "充实"
+    ],
+    "enriched": [
+      "富含…的",
+      "充实的"
+    ],
+    "entertainment": [
+      "娱乐",
+      "款待"
+    ],
+    "entertaining": [
+      "有趣的",
+      "娱乐的"
+    ],
+    "enthusiastic": [
+      "热情的",
+      "热心的"
+    ],
+    "environmental": [
+      "环境的",
+      "与环境有关的"
+    ],
+    "establishment": [
+      "建立",
+      "机构"
+    ],
+    "established": [
+      "已建立的",
+      "公认的"
+    ],
+    "evaluation": [
+      "评价",
+      "评估"
+    ],
+    "evidence": [
+      "证据",
+      "迹象"
+    ],
+    "evident": [
+      "明显的",
+      "显然的"
+    ],
+    "evidently": [
+      "显然",
+      "明显地"
+    ],
+    "evolution": [
+      "进化",
+      "演变"
+    ],
+    "evolving": [
+      "不断发展的",
+      "进化的"
+    ],
+    "examination": [
+      "考试",
+      "检查"
+    ],
+    "exception": [
+      "例外",
+      "除外"
+    ],
+    "exceptional": [
+      "例外的",
+      "卓越的"
+    ],
+    "excitement": [
+      "兴奋",
+      "激动"
+    ],
+    "exciting": [
+      "令人兴奋的",
+      "激动人心的"
+    ],
+    "exclusion": [
+      "排斥",
+      "排除"
+    ],
+    "exclusive": [
+      "独有的",
+      "排他的"
+    ],
+    "execution": [
+      "执行",
+      "处决"
+    ],
+    "executive": [
+      "行政的",
+      "执行的"
+    ],
+    "exhaustion": [
+      "筋疲力尽",
+      "耗尽"
+    ],
+    "exhausted": [
+      "疲惫的",
+      "耗尽的"
+    ],
+    "exhibition": [
+      "展览",
+      "展览会"
+    ],
+    "existence": [
+      "存在",
+      "生存"
+    ],
+    "existing": [
+      "现有的",
+      "存在的"
+    ],
+    "expansion": [
+      "扩张",
+      "扩展"
+    ],
+    "expanding": [
+      "扩大的",
+      "扩展的"
+    ],
+    "expectation": [
+      "期望",
+      "预期"
+    ],
+    "expected": [
+      "预期的",
+      "意料之中的"
+    ],
+    "explanation": [
+      "解释",
+      "说明"
+    ],
+    "exploitation": [
+      "剥削",
+      "开发"
+    ],
+    "exploration": [
+      "探索",
+      "勘探"
+    ],
+    "exploratory": [
+      "探索性的",
+      "考察的"
+    ],
+    "exposure": [
+      "暴露",
+      "曝光"
+    ],
+    "exposed": [
+      "暴露的",
+      "无保护的"
+    ],
+    "expression": [
+      "表达",
+      "表情"
+    ],
+    "expressive": [
+      "富有表现力的",
+      "表达的"
+    ],
+    "extension": [
+      "延伸",
+      "扩展"
+    ],
+    "extensive": [
+      "广泛的",
+      "大量的"
+    ],
+    "extremely": [
+      "极其",
+      "非常"
+    ],
+    "extremity": [
+      "极端",
+      "末端"
+    ],
+    "facilitation": [
+      "促进",
+      "便利化"
+    ],
+    "familiarity": [
+      "熟悉",
+      "通晓"
+    ],
+    "familiarize": [
+      "使熟悉",
+      "使了解"
+    ],
+    "fascination": [
+      "着迷",
+      "魅力"
+    ],
+    "fascinating": [
+      "迷人的",
+      "极有吸引力的"
+    ],
+    "financial": [
+      "金融的",
+      "财政的"
+    ],
+    "financially": [
+      "财政上",
+      "经济上"
+    ],
+    "fitting": [
+      "合适的",
+      "恰当的"
+    ],
+    "fitness": [
+      "健康",
+      "适合"
+    ],
+    "flexibility": [
+      "灵活性",
+      "弹性"
+    ],
+    "inflexible": [
+      "不灵活的",
+      "僵化的"
+    ],
+    "focused": [
+      "专注的",
+      "集中的"
+    ],
+    "formation": [
+      "形成",
+      "组成"
+    ],
+    "formative": [
+      "形成的",
+      "塑造性的"
+    ],
+    "formulation": [
+      "制定",
+      "表述"
+    ],
+    "fortunately": [
+      "幸运地",
+      "幸亏"
+    ],
+    "unfortunately": [
+      "不幸地",
+      "遗憾的是"
+    ],
+    "fostered": [
+      "被培养的",
+      "被促进的"
+    ],
+    "foundation": [
+      "基础",
+      "基金会"
+    ],
+    "founder": [
+      "创始人",
+      "创建者"
+    ],
+    "fragility": [
+      "脆弱",
+      "易碎性"
+    ],
+    "frequency": [
+      "频率",
+      "频繁"
+    ],
+    "frequently": [
+      "频繁地",
+      "经常"
+    ],
+    "fulfillment": [
+      "实现",
+      "满足"
+    ],
+    "fulfilled": [
+      "满足的",
+      "实现的"
+    ],
+    "functional": [
+      "功能性的",
+      "实用的"
+    ],
+    "functionality": [
+      "功能性",
+      "功能"
+    ],
+    "generation": [
+      "一代人",
+      "产生"
+    ],
+    "generator": [
+      "发电机",
+      "生产者"
+    ],
+    "generosity": [
+      "慷慨",
+      "大方"
+    ],
+    "generously": [
+      "慷慨地",
+      "大方地"
+    ],
+    "government": [
+      "政府",
+      "治理"
+    ],
+    "governing": [
+      "统治的",
+      "管理的"
+    ],
+    "graduation": [
+      "毕业",
+      "毕业典礼"
+    ],
+    "undergraduate": [
+      "本科生",
+      "大学生"
+    ],
+    "guidance": [
+      "指导",
+      "引导"
+    ],
+    "guiding": [
+      "指导性的",
+      "引导的"
+    ],
+    "harmful": [
+      "有害的",
+      "伤害的"
+    ],
+    "harmless": [
+      "无害的",
+      "无恶意的"
+    ],
+    "harmonious": [
+      "和谐的",
+      "协调的"
+    ],
+    "healthy": [
+      "健康的",
+      "有益的"
+    ],
+    "healthier": [
+      "更健康的",
+      "较健康的"
+    ],
+    "hesitation": [
+      "犹豫",
+      "迟疑"
+    ],
+    "hesitant": [
+      "犹豫的",
+      "迟疑的"
+    ],
+    "honorary": [
+      "荣誉的",
+      "名誉的"
+    ],
+    "honored": [
+      "受尊敬的",
+      "荣幸的"
+    ],
+    "hushed": [
+      "安静的",
+      "寂静的"
+    ],
+    "identification": [
+      "识别",
+      "身份证"
+    ],
+    "identity": [
+      "身份",
+      "特性"
+    ],
+    "ignorance": [
+      "无知",
+      "愚昧"
+    ],
+    "ignorant": [
+      "无知的",
+      "愚昧的"
+    ],
+    "illumination": [
+      "照明",
+      "启发"
+    ],
+    "illuminating": [
+      "有启发性的",
+      "照明的"
+    ],
+    "illustration": [
+      "插图",
+      "说明"
+    ],
+    "illustrative": [
+      "说明性的",
+      "用作例证的"
+    ],
+    "imagination": [
+      "想象力",
+      "幻想"
+    ],
+    "imaginative": [
+      "富有想象力的",
+      "虚构的"
+    ],
+    "implementation": [
+      "实施",
+      "执行"
+    ],
+    "implication": [
+      "含义",
+      "暗示"
+    ],
+    "implied": [
+      "隐含的",
+      "暗示的"
+    ],
+    "importation": [
+      "进口",
+      "输入"
+    ],
+    "imported": [
+      "进口的",
+      "引进的"
+    ],
+    "imposition": [
+      "强加",
+      "征收"
+    ],
+    "impression": [
+      "印象",
+      "感想"
+    ],
+    "impressive": [
+      "令人印象深刻的",
+      "感人的"
+    ],
+    "improvement": [
+      "改进",
+      "改善"
+    ],
+    "improved": [
+      "改进的",
+      "改良的"
+    ],
+    "incorporation": [
+      "合并",
+      "结合"
+    ],
+    "indication": [
+      "指示",
+      "迹象"
+    ],
+    "indicative": [
+      "指示的",
+      "象征的"
+    ],
+    "induction": [
+      "就职",
+      "归纳"
+    ],
+    "inducement": [
+      "诱因",
+      "动机"
+    ],
+    "infection": [
+      "感染",
+      "传染"
+    ],
+    "infectious": [
+      "传染性的",
+      "有感染力的"
+    ],
+    "influential": [
+      "有影响力的",
+      "有权势的"
+    ],
+    "information": [
+      "信息",
+      "消息"
+    ],
+    "informative": [
+      "提供信息的",
+      "有教益的"
+    ],
+    "inheritance": [
+      "继承",
+      "遗产"
+    ],
+    "inherited": [
+      "继承的",
+      "遗传的"
+    ],
+    "innovation": [
+      "创新",
+      "革新"
+    ],
+    "innovative": [
+      "创新的",
+      "新颖的"
+    ],
+    "insistence": [
+      "坚持",
+      "坚决主张"
+    ],
+    "insistent": [
+      "坚持的",
+      "执着的"
+    ],
+    "inspection": [
+      "检查",
+      "视察"
+    ],
+    "inspector": [
+      "检查员",
+      "督察"
+    ],
+    "inspiration": [
+      "灵感",
+      "鼓舞"
+    ],
+    "inspiring": [
+      "鼓舞人心的",
+      "启发灵感的"
+    ],
+    "installation": [
+      "安装",
+      "就职"
+    ],
+    "instruction": [
+      "指令",
+      "指导"
+    ],
+    "instructive": [
+      "有教育意义的",
+      "有启发的"
+    ],
+    "integration": [
+      "整合",
+      "融合"
+    ],
+    "integrated": [
+      "综合的",
+      "整合的"
+    ],
+    "intelligence": [
+      "智力",
+      "情报"
+    ],
+    "intention": [
+      "意图",
+      "目的"
+    ],
+    "intended": [
+      "预期的",
+      "故意的"
+    ],
+    "intensity": [
+      "强度",
+      "强烈"
+    ],
+    "intensely": [
+      "强烈地",
+      "极度地"
+    ],
+    "interaction": [
+      "互动",
+      "相互作用"
+    ],
+    "interactive": [
+      "互动的",
+      "交互式的"
+    ],
+    "interpretation": [
+      "解释",
+      "口译"
+    ],
+    "intervention": [
+      "干预",
+      "介入"
+    ],
+    "investment": [
+      "投资",
+      "投入"
+    ],
+    "investor": [
+      "投资者",
+      "投资人"
+    ],
+    "investigation": [
+      "调查",
+      "研究"
+    ],
+    "involvement": [
+      "参与",
+      "牵连"
+    ],
+    "involved": [
+      "涉及的",
+      "复杂的"
+    ],
+    "irritation": [
+      "恼怒",
+      "刺激"
+    ],
+    "irritating": [
+      "令人恼怒的",
+      "刺激性的"
+    ],
+    "isolation": [
+      "隔离",
+      "孤立"
+    ],
+    "isolated": [
+      "孤立的",
+      "隔离的"
+    ],
+    "judgment": [
+      "判断",
+      "审判"
+    ],
+    "judicial": [
+      "司法的",
+      "法庭的"
+    ],
+    "justification": [
+      "正当理由",
+      "辩护"
+    ],
+    "justified": [
+      "正当的",
+      "有理由的"
+    ],
+    "leader": [
+      "领导者",
+      "领袖"
+    ],
+    "leadership": [
+      "领导力",
+      "领导层"
+    ],
+    "legally": [
+      "合法地",
+      "法律上地"
+    ],
+    "liberate": [
+      "解放",
+      "释放"
+    ],
+    "liberation": [
+      "解放",
+      "摆脱"
+    ],
+    "limitation": [
+      "限制",
+      "局限"
+    ],
+    "limited": [
+      "有限的",
+      "受限的"
+    ],
+    "location": [
+      "位置",
+      "地点"
+    ],
+    "located": [
+      "位于…的",
+      "坐落在…的"
+    ],
+    "logical": [
+      "逻辑的",
+      "合理的"
+    ],
+    "logically": [
+      "合乎逻辑地",
+      "按理说"
+    ],
+    "maintenance": [
+      "维护",
+      "保养"
+    ],
+    "majority": [
+      "大多数",
+      "多数"
+    ],
+    "management": [
+      "管理",
+      "经营"
+    ],
+    "manager": [
+      "经理",
+      "管理者"
+    ],
+    "manipulation": [
+      "操纵",
+      "操控"
+    ],
+    "manipulative": [
+      "善于操纵的",
+      "控制的"
+    ],
+    "manufacturing": [
+      "制造业",
+      "制造"
+    ],
+    "manufacturer": [
+      "制造商",
+      "生产商"
+    ],
+    "measurement": [
+      "测量",
+      "尺寸"
+    ],
+    "measurable": [
+      "可衡量的",
+      "可测量的"
+    ],
+    "memory": [
+      "记忆",
+      "回忆"
+    ],
+    "memorable": [
+      "值得纪念的",
+      "难忘的"
+    ],
+    "migration": [
+      "迁移",
+      "迁徙"
+    ],
+    "immigrant": [
+      "移民",
+      "侨民"
+    ],
+    "modification": [
+      "修改",
+      "变更"
+    ],
+    "monitoring": [
+      "监控",
+      "监测"
+    ],
+    "motivation": [
+      "动机",
+      "动力"
+    ],
+    "motivated": [
+      "有动力的",
+      "积极的"
+    ],
+    "mysterious": [
+      "神秘的",
+      "不可思议的"
+    ],
+    "mysteriously": [
+      "神秘地",
+      "不可思议地"
+    ],
+    "navigation": [
+      "导航",
+      "航行"
+    ],
+    "navigator": [
+      "导航员",
+      "领航员"
+    ],
+    "necessarily": [
+      "必然地",
+      "必定"
+    ],
+    "necessity": [
+      "必要性",
+      "必需品"
+    ],
+    "negligence": [
+      "疏忽",
+      "过失"
+    ],
+    "negligent": [
+      "疏忽的",
+      "玩忽职守的"
+    ],
+    "negotiation": [
+      "谈判",
+      "协商"
+    ],
+    "normally": [
+      "通常",
+      "正常地"
+    ],
+    "normalize": [
+      "使正常化",
+      "使标准化"
+    ],
+    "nourishment": [
+      "营养",
+      "滋养"
+    ],
+    "nourishing": [
+      "有营养的",
+      "滋养的"
+    ],
+    "objection": [
+      "反对",
+      "异议"
+    ],
+    "objective": [
+      "客观的",
+      "目标"
+    ],
+    "observation": [
+      "观察",
+      "评论"
+    ],
+    "observer": [
+      "观察者",
+      "目击者"
+    ],
+    "obtainable": [
+      "可获得的",
+      "可得到的"
+    ],
+    "obtained": [
+      "获得的",
+      "取得的"
+    ],
+    "occupation": [
+      "职业",
+      "占领"
+    ],
+    "occupied": [
+      "忙碌的",
+      "被占用的"
+    ],
+    "operation": [
+      "操作",
+      "手术"
+    ],
+    "operational": [
+      "操作的",
+      "运营的"
+    ],
+    "opposition": [
+      "反对",
+      "对立"
+    ],
+    "opposed": [
+      "反对的",
+      "对立的"
+    ],
+    "organization": [
+      "组织",
+      "机构"
+    ],
+    "organized": [
+      "有组织的",
+      "有条理的"
+    ],
+    "original": [
+      "原来的",
+      "独创的"
+    ],
+    "originally": [
+      "最初",
+      "本来"
+    ],
+    "participation": [
+      "参与",
+      "参加"
+    ],
+    "participant": [
+      "参与者",
+      "参加者"
+    ],
+    "patience": [
+      "耐心",
+      "忍耐"
+    ],
+    "patiently": [
+      "耐心地",
+      "容忍地"
+    ],
+    "perception": [
+      "感知",
+      "看法"
+    ],
+    "perceptive": [
+      "有洞察力的",
+      "敏锐的"
+    ],
+    "performance": [
+      "表现",
+      "演出"
+    ],
+    "performer": [
+      "表演者",
+      "执行者"
+    ],
+    "permission": [
+      "许可",
+      "允许"
+    ],
+    "permissible": [
+      "可允许的",
+      "许可的"
+    ],
+    "persistence": [
+      "坚持",
+      "持续性"
+    ],
+    "persistent": [
+      "坚持不懈的",
+      "持续的"
+    ],
+    "persuasion": [
+      "说服",
+      "劝说"
+    ],
+    "persuasive": [
+      "有说服力的",
+      "令人信服的"
+    ],
+    "phenomenal": [
+      "非凡的",
+      "惊人的"
+    ],
+    "pollution": [
+      "污染",
+      "玷污"
+    ],
+    "pollutant": [
+      "污染物",
+      "污染物质"
+    ],
+    "popularity": [
+      "流行",
+      "受欢迎程度"
+    ],
+    "popularize": [
+      "普及",
+      "推广"
+    ],
+    "possession": [
+      "拥有",
+      "财产"
+    ],
+    "possessive": [
+      "占有欲强的",
+      "物主的"
+    ],
+    "possibility": [
+      "可能性",
+      "可能的事"
+    ],
+    "possibly": [
+      "可能地",
+      "也许"
+    ],
+    "prediction": [
+      "预测",
+      "预言"
+    ],
+    "predictable": [
+      "可预测的",
+      "不出所料的"
+    ],
+    "preference": [
+      "偏爱",
+      "偏好"
+    ],
+    "preferable": [
+      "更可取的",
+      "更好的"
+    ],
+    "preparation": [
+      "准备",
+      "预备"
+    ],
+    "prepared": [
+      "有准备的",
+      "准备好的"
+    ],
+    "prescription": [
+      "处方",
+      "药方"
+    ],
+    "preservation": [
+      "保存",
+      "保护"
+    ],
+    "preservative": [
+      "防腐的",
+      "保存的"
+    ],
+    "preserved": [
+      "保存的",
+      "保护的"
+    ],
+    "prevention": [
+      "预防",
+      "防止"
+    ],
+    "preventable": [
+      "可预防的",
+      "可避免的"
+    ],
+    "procedure": [
+      "程序",
+      "步骤"
+    ],
+    "proceeding": [
+      "诉讼",
+      "进程"
+    ],
+    "production": [
+      "生产",
+      "产量"
+    ],
+    "productive": [
+      "多产的",
+      "富有成效的"
+    ],
+    "professional": [
+      "专业的",
+      "职业的"
+    ],
+    "professor": [
+      "教授",
+      "教师"
+    ],
+    "profitable": [
+      "有利可图的",
+      "有益的"
+    ],
+    "profitability": [
+      "盈利能力",
+      "收益性"
+    ],
+    "progressive": [
+      "进步的",
+      "渐进的"
+    ],
+    "prohibition": [
+      "禁止",
+      "禁令"
+    ],
+    "prohibited": [
+      "被禁止的",
+      "禁止的"
+    ],
+    "promotion": [
+      "晋升",
+      "促销"
+    ],
+    "promotional": [
+      "促销的",
+      "推广的"
+    ],
+    "proposal": [
+      "提议",
+      "建议"
+    ],
+    "proposed": [
+      "被提议的",
+      "计划的"
+    ],
+    "protection": [
+      "保护",
+      "防护"
+    ],
+    "protective": [
+      "保护的",
+      "防护的"
+    ],
+    "proof": [
+      "证据",
+      "证明"
+    ],
+    "proven": [
+      "已被证实的",
+      "经过验证的"
+    ],
+    "provision": [
+      "条款",
+      "供应"
+    ],
+    "provided": [
+      "假如",
+      "如果"
+    ],
+    "provocation": [
+      "挑衅",
+      "煽动"
+    ],
+    "provocative": [
+      "挑衅的",
+      "煽动性的"
+    ],
+    "publicity": [
+      "宣传",
+      "知名度"
+    ],
+    "publicize": [
+      "宣传",
+      "推广"
+    ],
+    "publication": [
+      "出版",
+      "发表"
+    ],
+    "published": [
+      "已出版的",
+      "发表的"
+    ],
+    "punishment": [
+      "惩罚",
+      "处罚"
+    ],
+    "pursuit": [
+      "追求",
+      "追赶"
+    ],
+    "qualification": [
+      "资格",
+      "条件"
+    ],
+    "qualified": [
+      "合格的",
+      "有资格的"
+    ],
+    "reaction": [
+      "反应",
+      "反作用"
+    ],
+    "reactive": [
+      "反应的",
+      "易反应的"
+    ],
+    "reality": [
+      "现实",
+      "实际"
+    ],
+    "realistic": [
+      "现实的",
+      "实际的"
+    ],
+    "realization": [
+      "认识",
+      "实现"
+    ],
+    "reception": [
+      "接待",
+      "接收"
+    ],
+    "recipient": [
+      "接受者",
+      "收件人"
+    ],
+    "recognition": [
+      "认可",
+      "识别"
+    ],
+    "recognizable": [
+      "可辨认的",
+      "可识别的"
+    ],
+    "recommendation": [
+      "推荐",
+      "建议"
+    ],
+    "recovery": [
+      "恢复",
+      "康复"
+    ],
+    "reduction": [
+      "减少",
+      "降低"
+    ],
+    "reduced": [
+      "减少的",
+      "降低的"
+    ],
+    "reference": [
+      "参考",
+      "提及"
+    ],
+    "reflection": [
+      "反思",
+      "反射"
+    ],
+    "reflective": [
+      "沉思的",
+      "反射的"
+    ],
+    "regardless": [
+      "不管",
+      "不顾"
+    ],
+    "regarding": [
+      "关于",
+      "至于"
+    ],
+    "registration": [
+      "注册",
+      "登记"
+    ],
+    "regulation": [
+      "规章",
+      "管理"
+    ],
+    "regulatory": [
+      "监管的",
+      "管理的"
+    ],
+    "reinforcement": [
+      "增强",
+      "加固"
+    ],
+    "rejection": [
+      "拒绝",
+      "排斥"
+    ],
+    "relation": [
+      "关系",
+      "联系"
+    ],
+    "relationship": [
+      "关系",
+      "关联"
+    ],
+    "reliability": [
+      "可靠性",
+      "可信度"
+    ],
+    "reliably": [
+      "可靠地",
+      "可信地"
+    ],
+    "reliance": [
+      "依赖",
+      "信赖"
+    ],
+    "relief": [
+      "缓解",
+      "救济"
+    ],
+    "relieved": [
+      "放心的",
+      "宽慰的"
+    ],
+    "remainder": [
+      "剩余物",
+      "余数"
+    ],
+    "remaining": [
+      "剩余的",
+      "余下的"
+    ],
+    "removal": [
+      "移除",
+      "消除"
+    ],
+    "removed": [
+      "被移除的",
+      "远离的"
+    ],
+    "renewal": [
+      "更新",
+      "续期"
+    ],
+    "renewable": [
+      "可再生的",
+      "可更新的"
+    ],
+    "representation": [
+      "代表",
+      "陈述"
+    ],
+    "representative": [
+      "代表",
+      "代理人"
+    ],
+    "requirement": [
+      "要求",
+      "必要条件"
+    ],
+    "required": [
+      "必需的",
+      "要求的"
+    ],
+    "reservation": [
+      "预订",
+      "保留"
+    ],
+    "reserved": [
+      "预订的",
+      "矜持的"
+    ],
+    "resistance": [
+      "抵抗",
+      "阻力"
+    ],
+    "resistant": [
+      "抵抗的",
+      "抗…的"
+    ],
+    "resolution": [
+      "决心",
+      "决议"
+    ],
+    "resolved": [
+      "下定决心的",
+      "已解决的"
+    ],
+    "response": [
+      "回应",
+      "答复"
+    ],
+    "responsive": [
+      "反应迅速的",
+      "响应的"
+    ],
+    "responsibility": [
+      "责任",
+      "职责"
+    ],
+    "restoration": [
+      "恢复",
+      "修复"
+    ],
+    "restriction": [
+      "限制",
+      "约束"
+    ],
+    "restrictive": [
+      "限制性的",
+      "约束的"
+    ],
+    "retention": [
+      "保留",
+      "记忆"
+    ],
+    "retirement": [
+      "退休",
+      "退休生活"
+    ],
+    "revelation": [
+      "揭示",
+      "启示"
+    ],
+    "revision": [
+      "修订",
+      "修改"
+    ],
+    "revolutionary": [
+      "革命的",
+      "革命性的"
+    ],
+    "satisfaction": [
+      "满意",
+      "满足"
+    ],
+    "satisfactory": [
+      "令人满意的",
+      "合格的"
+    ],
+    "security": [
+      "安全",
+      "保卫"
+    ],
+    "secured": [
+      "安全的",
+      "有保障的"
+    ],
+    "selection": [
+      "选择",
+      "选拔"
+    ],
+    "selective": [
+      "选择性的",
+      "精挑细选的"
+    ],
+    "sensitivity": [
+      "敏感",
+      "灵敏度"
+    ],
+    "sensible": [
+      "明智的",
+      "合理的"
+    ],
+    "separation": [
+      "分离",
+      "分开"
+    ],
+    "separately": [
+      "分别地",
+      "分开地"
+    ],
+    "significant": [
+      "重要的",
+      "显著的"
+    ],
+    "significance": [
+      "重要性",
+      "意义"
+    ],
+    "similarity": [
+      "相似",
+      "类似"
+    ],
+    "similarly": [
+      "相似地",
+      "同样地"
+    ],
+    "simplification": [
+      "简化",
+      "精简"
+    ],
+    "simplified": [
+      "简化的",
+      "精简的"
+    ],
+    "solution": [
+      "解决方案",
+      "溶液"
+    ],
+    "specialize": [
+      "专门从事",
+      "专攻"
+    ],
+    "specialist": [
+      "专家",
+      "专科医生"
+    ],
+    "specifically": [
+      "具体地",
+      "特别地"
+    ],
+    "specify": [
+      "指定",
+      "详细说明"
+    ],
+    "stability": [
+      "稳定性",
+      "稳固"
+    ],
+    "stabilize": [
+      "使稳定",
+      "使稳固"
+    ],
+    "stimulation": [
+      "刺激",
+      "激励"
+    ],
+    "stimulating": [
+      "刺激的",
+      "激励人的"
+    ],
+    "strength": [
+      "力量",
+      "实力"
+    ],
+    "struggling": [
+      "挣扎的",
+      "努力的"
+    ],
+    "submission": [
+      "提交",
+      "屈服"
+    ],
+    "success": [
+      "成功",
+      "成就"
+    ],
+    "successful": [
+      "成功的",
+      "有成就的"
+    ],
+    "sufficiently": [
+      "充分地",
+      "足够地"
+    ],
+    "insufficient": [
+      "不足的",
+      "不够的"
+    ],
+    "suggestion": [
+      "建议",
+      "提示"
+    ],
+    "suggestive": [
+      "暗示的",
+      "使人联想的"
+    ],
+    "supportive": [
+      "支持的",
+      "支援的"
+    ],
+    "supporter": [
+      "支持者",
+      "拥护者"
+    ],
+    "survival": [
+      "生存",
+      "幸存"
+    ],
+    "survivor": [
+      "幸存者",
+      "生还者"
+    ],
+    "suspicion": [
+      "怀疑",
+      "嫌疑"
+    ],
+    "suspicious": [
+      "可疑的",
+      "怀疑的"
+    ],
+    "sustainable": [
+      "可持续的",
+      "能维持的"
+    ],
+    "sustainability": [
+      "可持续性",
+      "持久性"
+    ],
+    "symbolic": [
+      "象征的",
+      "符号的"
+    ],
+    "symbolize": [
+      "象征",
+      "代表"
+    ],
+    "sympathetic": [
+      "同情的",
+      "有同情心的"
+    ],
+    "tendency": [
+      "倾向",
+      "趋势"
+    ],
+    "terror": [
+      "恐怖",
+      "恐惧"
+    ],
+    "terrifying": [
+      "可怕的",
+      "令人恐惧的"
+    ],
+    "tolerance": [
+      "容忍",
+      "宽容"
+    ],
+    "tolerable": [
+      "可容忍的",
+      "可接受的"
+    ],
+    "transformation": [
+      "转变",
+      "变革"
+    ],
+    "transformative": [
+      "变革性的",
+      "有改造力的"
+    ],
+    "translation": [
+      "翻译",
+      "译文"
+    ],
+    "translator": [
+      "译者",
+      "翻译员"
+    ],
+    "transmission": [
+      "传播",
+      "传送"
+    ],
+    "treatment": [
+      "治疗",
+      "处理"
+    ],
+    "treaty": [
+      "条约",
+      "协定"
+    ],
+    "undergoing": [
+      "正在经历的",
+      "经受的"
+    ],
+    "understanding": [
+      "理解",
+      "谅解"
+    ],
+    "understandable": [
+      "可以理解的",
+      "合情理的"
+    ],
+    "urgent": [
+      "紧急的",
+      "急迫的"
+    ],
+    "urgency": [
+      "紧迫",
+      "紧急的事"
+    ],
+    "utilization": [
+      "利用",
+      "使用"
+    ],
+    "validity": [
+      "有效性",
+      "正确性"
+    ],
+    "validate": [
+      "验证",
+      "证实"
+    ],
+    "valuable": [
+      "有价值的",
+      "宝贵的"
+    ],
+    "valuation": [
+      "估价",
+      "评价"
+    ],
+    "variety": [
+      "多样性",
+      "种类"
+    ],
+    "variation": [
+      "变化",
+      "变动"
+    ],
+    "various": [
+      "各种各样的",
+      "不同的"
+    ],
+    "verification": [
+      "核实",
+      "验证"
+    ],
+    "violation": [
+      "违反",
+      "侵犯"
+    ],
+    "violator": [
+      "违反者",
+      "侵犯者"
+    ],
+    "voluntary": [
+      "自愿的",
+      "志愿的"
+    ],
+    "voluntarily": [
+      "自愿地",
+      "主动地"
+    ],
+    "warning": [
+      "警告",
+      "警示"
+    ],
+    "withdrawal": [
+      "撤回",
+      "取款"
+    ],
+    "worthy": [
+      "值得的",
+      "有价值的"
+    ],
+    "worthwhile": [
+      "值得的",
+      "有价值的"
+    ],
+    "yielding": [
+      "屈服的",
+      "顺从的"
+    ],
+    "unyielding": [
+      "不屈的",
+      "坚硬的"
+    ]
   },
   "phrases": {
-    "hush": {
-      "hush up": ["掩盖", "隐瞒"],
-      "hush money": ["封口费"],
-      "all clear": ["安全了", "解除警报"],
-      "hush-hush": ["秘密的"]
-    },
-    "reliable": {
-      "be reliable with": ["对...可靠"],
-      "reliable source": ["可靠来源"],
-      "be reliable to": ["可依赖的"],
-      "reliable service": ["可靠服务"]
-    },
-    "consistent": {
-      "consistent with": ["与...一致"],
-      "be consistent in": ["在...方面一致"]
-    },
-    "preserve": {
-      "preserve the environment": ["保护环境"],
-      "preserve tradition": ["保留传统"]
-    },
-    "possess": {
-      "possess skills": ["拥有技能"],
-      "possess knowledge": ["拥有知识"]
-    },
-    "profit": {
-      "make a profit": ["获利"],
-      "profit from": ["从...获利"]
-    },
-    "consume": {
-      "consume energy": ["消耗能量"],
-      "consume resources": ["消耗资源"]
-    },
-    "classify": {
-      "classify as": ["归类为"],
-      "be classified as": ["被归类为"]
-    },
-    "demonstrate": {
-      "demonstrate skills": ["展示技能"],
-      "demonstrate support": ["表示支持"]
-    },
-    "reserve": {
-      "reserve a seat": ["预订座位"],
-      "natural reserve": ["自然保护区"]
-    },
-    "relieve": {
-      "relieve pain": ["缓解疼痛"],
-      "relieve stress": ["减轻压力"]
-    },
-    "regard": {
-      "regard as": ["认为是"],
-      "with regard to": ["关于"]
-    },
-    "eliminate": {
-      "eliminate poverty": ["消除贫困"],
-      "eliminate risks": ["消除风险"]
-    },
-    "oppose": {
-      "oppose to": ["反对"],
-      "be opposed to": ["反对"]
-    },
-    "transform": {
-      "transform into": ["转变为"],
-      "transform the industry": ["变革行业"]
-    },
-    "intervene": {
-      "intervene in": ["干预"],
-      "intervene between": ["调停"]
-    },
-    "vary": {
-      "vary from": ["不同于"],
-      "vary widely": ["差异很大"]
-    },
-    "necessity": {
-      "of necessity": ["必然"],
-      "out of necessity": ["出于必要"]
-    },
-    "decide": {
-      "decide on": ["决定"],
-      "decide against": ["决定反对"]
-    },
-    "violate": {
-      "violate rules": ["违反规则"],
-      "violate rights": ["侵犯权利"]
-    },
-    "extend": {
-      "extend an invitation": ["发出邀请"],
-      "extend deadline": ["延长截止日期"]
-    },
-    "analyze": {
-      "analyze data": ["分析数据"],
-      "analyze problem": ["分析问题"]
-    },
-    "frighten": {
-      "frighten away": ["吓跑"],
-      "be frightened of": ["害怕"]
-    },
-    "furnish": {
-      "furnish with": ["配备"],
-      "well-furnished": ["装修良好的"]
-    },
-    "scare": {
-      "scare away": ["吓跑"],
-      "be scared of": ["害怕"]
-    },
-    "recruit": {
-      "recruit employees": ["招聘员工"],
-      "military recruitment": ["征兵"]
-    },
-    "determine": {
-      "determine to": ["决心"],
-      "determine the cause": ["确定原因"]
-    },
-    "protect": {
-      "protect from": ["保护免受"],
-      "protect environment": ["保护环境"]
-    },
-    "produce": {
-      "produce goods": ["生产商品"],
-      "produce results": ["产生结果"]
-    },
-    "reduce": {
-      "reduce costs": ["降低成本"],
-      "reduce pollution": ["减少污染"]
-    },
-    "introduce": {
-      "introduce to": ["介绍给"],
-      "self-introduction": ["自我介绍"]
-    },
-    "include": {
-      "include in": ["包含在内"],
-      "be included in": ["被包含"]
-    },
-    "exclude": {
-      "exclude from": ["排除"],
-      "be excluded from": ["被排除"]
-    },
-    "conclude": {
-      "conclude that": ["得出结论"],
-      "conclude meeting": ["结束会议"]
-    },
-    "resolve": {
-      "resolve problem": ["解决问题"],
-      "resolve dispute": ["解决争端"]
-    },
-    "solve": {
-      "solve problem": ["解决问题"],
-      "solve crisis": ["解决危机"]
-    },
-    "involve": {
-      "involve in": ["参与"],
-      "be involved in": ["涉及"]
-    },
-    "develop": {
-      "develop skills": ["培养技能"],
-      "develop technology": ["开发技术"]
-    },
-    "improve": {
-      "improve performance": ["提高性能"],
-      "improve quality": ["提高质量"]
-    },
-    "increase": {
-      "increase by": ["增加了"],
-      "increase productivity": ["提高生产力"]
-    },
-    "decrease": {
-      "decrease by": ["减少了"],
-      "decrease gradually": ["逐渐减少"]
-    },
-    "expand": {
-      "expand business": ["拓展业务"],
-      "expand market": ["扩大市场"]
-    },
-    "intend": {
-      "intend to": ["打算"],
-      "be intended for": ["旨在"]
-    },
-    "attend": {
-      "attend meeting": ["参加会议"],
-      "attend school": ["上学"]
-    },
-    "contend": {
-      "contend with": ["应对"],
-      "contend for": ["争夺"]
-    },
-    "depend": {
-      "depend on": ["依赖"],
-      "be dependent on": ["依赖于"]
-    },
-    "differ": {
-      "differ from": ["不同于"],
-      "differ in": ["在...方面不同"]
-    },
-    "refer": {
-      "refer to": ["参考"],
-      "refer to as": ["称为"]
-    },
-    "transfer": {
-      "transfer to": ["转移到"],
-      "transfer money": ["转账"]
-    },
-    "prefer": {
-      "prefer to": ["更喜欢"],
-      "prefer doing": ["更喜欢做"]
-    },
-    "infer": {
-      "infer from": ["从...推断"],
-      "infer conclusion": ["推断结论"]
-    },
-    "offer": {
-      "offer help": ["提供帮助"],
-      "offer advice": ["提供建议"]
-    },
-    "suffer": {
-      "suffer from": ["遭受"],
-      "suffer loss": ["遭受损失"]
-    },
-    "confer": {
-      "confer with": ["协商"],
-      "confer on": ["授予"]
-    },
-    "defer": {
-      "defer to": ["遵从"],
-      "defer decision": ["推迟决定"]
-    },
-    "admit": {
-      "admit to": ["承认"],
-      "admit mistake": ["承认错误"]
-    },
-    "permit": {
-      "permit doing": ["允许做"],
-      "work permit": ["工作许可证"]
-    },
-    "submit": {
-      "submit to": ["提交"],
-      "submit application": ["提交申请"]
-    },
-    "commit": {
-      "commit to": ["承诺"],
-      "commit crime": ["犯罪"]
-    },
-    "transmit": {
-      "transmit information": ["传输信息"],
-      "transmit signals": ["传输信号"]
-    },
-    "emit": {
-      "emit light": ["发光"],
-      "emit sound": ["发出声音"]
-    },
-    "acquire": {
-      "acquire skills": ["获得技能"],
-      "acquire knowledge": ["获得知识"]
-    },
-    "require": {
-      "require to": ["要求"],
-      "require attention": ["需要注意"]
-    },
-    "inquire": {
-      "inquire about": ["询问"],
-      "inquire into": ["调查"]
-    },
-    "request": {
-      "request help": ["请求帮助"],
-      "request information": ["请求信息"]
-    },
-    "demand": {
-      "demand attention": ["需要关注"],
-      "meet demand": ["满足需求"]
-    },
-    "command": {
-      "command respect": ["赢得尊重"],
-      "command army": ["指挥军队"]
-    },
-    "supply": {
-      "supply with": ["供应"],
-      "supply chain": ["供应链"]
-    },
-    "apply": {
-      "apply for": ["申请"],
-      "apply to": ["应用于"]
-    },
-    "imply": {
-      "imply that": ["暗示"],
-      "be implied": ["被暗示"]
-    },
-    "reply": {
-      "reply to": ["回复"],
-      "quick reply": ["快速回复"]
-    },
-    "comply": {
-      "comply with": ["遵守"],
-      "fully comply": ["完全遵守"]
-    },
-    "multiply": {
-      "multiply by": ["乘以"],
-      "multiply rapidly": ["快速增加"]
-    },
-    "simplify": {
-      "simplify process": ["简化流程"],
-      "simplify problem": ["简化问题"]
-    },
-    "identify": {
-      "identify problem": ["识别问题"],
-      "identify cause": ["确定原因"]
-    },
-    "clarify": {
-      "clarify point": ["阐明观点"],
-      "clarify misunderstanding": ["澄清误解"]
-    },
-    "specify": {
-      "specify requirements": ["指定要求"],
-      "specify details": ["详细说明"]
-    },
-    "modify": {
-      "modify plan": ["修改计划"],
-      "modify behavior": ["改变行为"]
-    },
-    "verify": {
-      "verify information": ["验证信息"],
-      "verify identity": ["核实身份"]
-    },
-    "qualify": {
-      "qualify for": ["有资格"],
-      "qualify exam": ["资格考试"]
-    },
-    "certify": {
-      "certify product": ["认证产品"],
-      "certify documents": ["认证文件"]
-    },
-    "justify": {
-      "justify decision": ["证明决定合理"],
-      "justify expense": ["证明费用合理"]
-    },
-    "sustain": {
-      "sustain growth": ["维持增长"],
-      "sustain effort": ["持续努力"]
-    },
-    "maintain": {
-      "maintain order": ["维持秩序"],
-      "maintain relationship": ["维持关系"]
-    },
-    "contain": {
-      "contain information": ["包含信息"],
-      "contain costs": ["控制成本"]
-    },
-    "obtain": {
-      "obtain information": ["获取信息"],
-      "obtain permission": ["获得许可"]
-    },
-    "retain": {
-      "retain employees": ["留住员工"],
-      "retain information": ["保留信息"]
-    },
-    "attain": {
-      "attain goal": ["达到目标"],
-      "attain success": ["获得成功"]
-    },
-    "entertain": {
-      "entertain guests": ["招待客人"],
-      "entertain ideas": ["考虑想法"]
-    },
-    "evaluate": {
-      "evaluate performance": ["评估表现"],
-      "evaluate options": ["评估选项"]
-    },
-    "appreciate": {
-      "appreciate help": ["感谢帮助"],
-      "appreciate art": ["欣赏艺术"]
-    },
-    "depreciate": {
-      "depreciate in value": ["贬值"],
-      "depreciate currency": ["货币贬值"]
-    },
-    "predict": {
-      "predict future": ["预测未来"],
-      "predict outcome": ["预测结果"]
-    },
-    "contradict": {
-      "contradict oneself": ["自相矛盾"],
-      "contradict statement": ["反驳声明"]
-    },
-    "dictate": {
-      "dictate terms": ["发号施令"],
-      "dictate policy": ["制定政策"]
-    },
-    "construct": {
-      "construct building": ["建造建筑"],
-      "construct theory": ["构建理论"]
-    },
-    "instruct": {
-      "instruct student": ["指导学生"],
-      "instruct to": ["指示"]
-    },
-    "destruct": {
-      "destruct building": ["破坏建筑"],
-      "self-destruct": ["自毁"]
-    },
-    "obstruct": {
-      "obstruct progress": ["阻碍进步"],
-      "obstruct justice": ["妨碍司法"]
-    },
-    "conduct": {
-      "conduct research": ["进行研究"],
-      "conduct meeting": ["主持会议"]
-    },
-    "induce": {
-      "induce labor": ["引产"],
-      "induce investment": ["吸引投资"]
-    },
-    "deduce": {
-      "deduce conclusion": ["推断结论"],
-      "deduce logically": ["逻辑推断"]
-    },
-    "impress": {
-      "impress boss": ["给老板留下印象"],
-      "make impression": ["留下印象"]
-    },
-    "express": {
-      "express opinion": ["表达观点"],
-      "express gratitude": ["表达感激"]
-    },
-    "suppress": {
-      "suppress rebellion": ["镇压叛乱"],
-      "suppress emotions": ["压抑情绪"]
-    },
-    "depress": {
-      "depress market": ["使市场低迷"],
-      "feel depressed": ["感到沮丧"]
-    },
-    "progress": {
-      "progress slowly": ["进展缓慢"],
-      "make progress": ["取得进步"]
-    },
-    "congress": {
-      "congress meeting": ["国会会议"],
-      "congress vote": ["国会投票"]
-    },
-    "regress": {
-      "regress to": ["退回到"],
-      "economic regress": ["经济倒退"]
-    },
-    "succeed": {
-      "succeed in": ["成功"],
-      "succeed quickly": ["快速成功"]
-    },
-    "process": {
-      "process data": ["处理数据"],
-      "process order": ["处理订单"]
-    },
-    "excess": {
-      "excess baggage": ["超重行李"],
-      "in excess of": ["超过"]
+    "abandon": {
+      "abandon ship": [
+        "弃船",
+        "放弃"
+      ],
+      "abandon hope": [
+        "放弃希望",
+        "绝望"
+      ],
+      "abandon oneself": [
+        "放纵自己",
+        "沉溺于"
+      ]
+    },
+    "absorb": {
+      "absorb information": [
+        "吸收信息",
+        "获取知识"
+      ],
+      "absorb the cost": [
+        "承担费用",
+        "吸收成本"
+      ],
+      "be absorbed in": [
+        "沉浸于",
+        "全神贯注于"
+      ]
+    },
+    "accelerate": {
+      "accelerate growth": [
+        "加速增长",
+        "促进发展"
+      ],
+      "accelerate the pace": [
+        "加快步伐",
+        "提速"
+      ]
+    },
+    "accept": {
+      "accept responsibility": [
+        "承担责任",
+        "接受责任"
+      ],
+      "accept an invitation": [
+        "接受邀请",
+        "应邀"
+      ]
     },
     "access": {
-      "access information": ["访问信息"],
-      "access denied": ["访问被拒绝"]
+      "access to": [
+        "进入…的通道",
+        "使用…的权利"
+      ],
+      "have access to": [
+        "有权限接触…",
+        "能够使用…"
+      ]
     },
-    "recess": {
-      "recess time": ["休息时间"],
-      "recess period": ["休会期"]
+    "accommodate": {
+      "accommodate to": [
+        "适应…",
+        "迁就…"
+      ],
+      "accommodate guests": [
+        "容纳客人",
+        "接待客人"
+      ]
     },
-    "confess": {
-      "confess crime": ["认罪"],
-      "confess mistake": ["承认错误"]
+    "accompany": {
+      "accompany by": [
+        "由…陪同",
+        "伴随…发生"
+      ],
+      "be accompanied by": [
+        "伴随有…",
+        "由…陪同的"
+      ]
     },
-    "invest": {
-      "invest money": ["投资"],
-      "invest time": ["投入时间"]
+    "accomplish": {
+      "accomplish a goal": [
+        "实现目标",
+        "完在任务"
+      ],
+      "accomplish the mission": [
+        "完成使命",
+        "达成任务"
+      ]
     },
-    "divest": {
-      "divest assets": ["剥离资产"],
-      "divest holdings": ["出售股份"]
+    "accumulate": {
+      "accumulate wealth": [
+        "积累财富",
+        "聚财"
+      ],
+      "accumulate experience": [
+        "积累经验",
+        "增长阅历"
+      ]
     },
-    "suggest": {
-      "suggest idea": ["提出想法"],
-      "suggest changes": ["建议修改"]
+    "achieve": {
+      "achieve success": [
+        "取得成功",
+        "获得成功"
+      ],
+      "achieve the goal": [
+        "实现目标",
+        "达成目的"
+      ]
     },
-    "propose": {
-      "propose plan": ["提出计划"],
-      "propose marriage": ["求婚"]
+    "acknowledge": {
+      "acknowledge receipt": [
+        "确认收到",
+        "函复"
+      ],
+      "acknowledge the fact": [
+        "承认事实",
+        "认可…的现实"
+      ]
     },
-    "compose": {
-      "compose music": ["作曲"],
-      "compose letter": ["写信"]
+    "acquire": {
+      "acquire knowledge": [
+        "获取知识",
+        "学习知识"
+      ],
+      "acquire a taste for": [
+        "培养对…的兴趣",
+        "喜欢上…"
+      ]
+    },
+    "adapt": {
+      "adapt to change": [
+        "适应变化",
+        "随机应变"
+      ],
+      "adapt oneself to": [
+        "使自己适应于",
+        "调整自身以…"
+      ]
+    },
+    "addict": {
+      "be addicted to": [
+        "对…上瘾",
+        "沉迷于…"
+      ]
+    },
+    "address": {
+      "address the issue": [
+        "解决这个问题",
+        "处理该事项"
+      ],
+      "address a letter": [
+        "写信",
+        "致函"
+      ]
+    },
+    "adjust": {
+      "adjust to": [
+        "适应…",
+        "调整以适应…"
+      ],
+      "adjust the settings": [
+        "调整设置",
+        "修改配置"
+      ]
+    },
+    "admire": {
+      "admire for": [
+        "因…而钦佩",
+        "仰慕…的"
+      ],
+      "admire the view": [
+        "欣赏景色",
+        "赞叹景观"
+      ]
+    },
+    "adopt": {
+      "adopt a policy": [
+        "采取一种政策",
+        "采纳某项方针"
+      ],
+      "adopt a child": [
+        "收养一个孩子",
+        "认养孩子"
+      ]
+    },
+    "advance": {
+      "advance in": [
+        "在…方面进步",
+        "在…领域发展"
+      ],
+      "make advances": [
+        "取得进展",
+        "预付款"
+      ]
+    },
+    "affect": {
+      "affect the outcome": [
+        "影响结果",
+        "左右结局"
+      ],
+      "deeply affected": [
+        "深受影响的",
+        "深受感动的"
+      ]
+    },
+    "agree": {
+      "agree with": [
+        "同意…的观点",
+        "与…一致"
+      ],
+      "agree on": [
+        "就…达成一致",
+        "商定…"
+      ],
+      "agree to": [
+        "同意（做）…",
+        "答应…"
+      ]
+    },
+    "allocate": {
+      "allocate resources": [
+        "分配资源",
+        "配置资源"
+      ],
+      "allocate funds": [
+        "拨款",
+        "分配资金"
+      ]
+    },
+    "alter": {
+      "alter the course": [
+        "改变航向",
+        "改变进程"
+      ],
+      "alter the plan": [
+        "改变计划",
+        "调整规划"
+      ]
+    },
+    "analyze": {
+      "analyze data": [
+        "分析数据",
+        "解析资料"
+      ],
+      "analyze the situation": [
+        "分析形势",
+        "研判形势"
+      ]
+    },
+    "announce": {
+      "announce the results": [
+        "宣布结果",
+        "公布成绩"
+      ],
+      "announce that": [
+        "宣布…",
+        "通告…"
+      ]
+    },
+    "anticipate": {
+      "anticipate needs": [
+        "预见需求",
+        "预判需要"
+      ],
+      "anticipate problems": [
+        "预见问题",
+        "预料困难"
+      ]
+    },
+    "apologize": {
+      "apologize for": [
+        "为…道歉",
+        "因…致歉"
+      ],
+      "apologize to": [
+        "向…道歉",
+        "对…致歉"
+      ]
+    },
+    "apply": {
+      "apply for": [
+        "申请…",
+        "请求…"
+      ],
+      "apply to": [
+        "适用于…",
+        "向…申请"
+      ],
+      "apply pressure": [
+        "施加压力",
+        "施压"
+      ]
+    },
+    "appreciate": {
+      "appreciate art": [
+        "欣赏艺术",
+        "鉴赏艺术品"
+      ],
+      "appreciate the effort": [
+        "感谢努力",
+        "认可付出"
+      ]
+    },
+    "approach": {
+      "approach the problem": [
+        "处理问题",
+        "解决问题的方式"
+      ],
+      "take an approach": [
+        "采取一种方法",
+        "选择一种方式"
+      ]
+    },
+    "approve": {
+      "approve of": [
+        "赞成…",
+        "同意…"
+      ],
+      "approve the plan": [
+        "批准计划",
+        "赞成方案"
+      ]
+    },
+    "argue": {
+      "argue about": [
+        "争论…",
+        "为…而争吵"
+      ],
+      "argue that": [
+        "主张…",
+        "辩称…"
+      ],
+      "argue against": [
+        "反对…",
+        "辩驳…"
+      ]
+    },
+    "arrange": {
+      "arrange a meeting": [
+        "安排一次会议",
+        "组织会面"
+      ],
+      "arrange for": [
+        "安排…",
+        "为…做准备"
+      ]
+    },
+    "assess": {
+      "assess the damage": [
+        "评估损失",
+        "估定损害程度"
+      ],
+      "assess the risk": [
+        "评估风险",
+        "评定危险"
+      ]
+    },
+    "assign": {
+      "assign blame": [
+        "归咎于",
+        "追究责任"
+      ],
+      "assign a task": [
+        "分配任务",
+        "指派工作"
+      ],
+      "assign responsibility": [
+        "分配责任",
+        "指定责任人"
+      ]
+    },
+    "assist": {
+      "assist with": [
+        "协助处理…",
+        "帮助完成…"
+      ],
+      "assist in": [
+        "协助进行…",
+        "参与帮助…"
+      ]
+    },
+    "associate": {
+      "associate with": [
+        "与…联系",
+        "和…交往"
+      ],
+      "be associated with": [
+        "与…有关联",
+        "和…相联系"
+      ]
+    },
+    "assume": {
+      "assume responsibility": [
+        "承担责任",
+        "担负职责"
+      ],
+      "assume the worst": [
+        "作最坏的打算",
+        "往最坏处想"
+      ]
+    },
+    "assure": {
+      "assure of": [
+        "向…保证",
+        "使确信…"
+      ],
+      "rest assured": [
+        "放心",
+        "确信无疑"
+      ]
+    },
+    "attach": {
+      "attach importance to": [
+        "重视…",
+        "认为…重要"
+      ],
+      "attach a file": [
+        "附上一个文件",
+        "上传附件"
+      ]
+    },
+    "attempt": {
+      "attempt to do": [
+        "企图做…",
+        "尝试去…"
+      ],
+      "make an attempt": [
+        "做一次尝试",
+        "试图…"
+      ]
+    },
+    "attend": {
+      "attend a meeting": [
+        "参加会议",
+        "出席会晤"
+      ],
+      "attend to": [
+        "处理",
+        "照顾…"
+      ]
+    },
+    "attract": {
+      "attract attention": [
+        "吸引注意",
+        "引起关注"
+      ],
+      "attract investment": [
+        "吸引投资",
+        "招商引资"
+      ]
+    },
+    "avoid": {
+      "avoid doing": [
+        "避免做…",
+        "逃避…"
+      ],
+      "avoid the issue": [
+        "回避问题",
+        "避而不谈"
+      ]
+    },
+    "balance": {
+      "balance work and life": [
+        "平衡工作与生活",
+        "兼顾工作生活"
+      ],
+      "strike a balance": [
+        "达到平衡",
+        "找到一个平衡点"
+      ]
+    },
+    "bear": {
+      "bear in mind": [
+        "牢记",
+        "记住"
+      ],
+      "bear the burden": [
+        "承担重担",
+        "肩负重任"
+      ],
+      "bear fruit": [
+        "结出果实",
+        "取得成果"
+      ]
+    },
+    "believe": {
+      "believe in": [
+        "相信…",
+        "信仰…"
+      ],
+      "believe that": [
+        "相信…",
+        "认为…"
+      ]
+    },
+    "benefit": {
+      "benefit from": [
+        "得益于",
+        "从…受益"
+      ],
+      "mutual benefit": [
+        "互利",
+        "互惠"
+      ]
+    },
+    "boost": {
+      "boost the economy": [
+        "促进经济",
+        "提振经济"
+      ],
+      "boost morale": [
+        "鼓舞士气",
+        "提升斗志"
+      ]
+    },
+    "bore": {
+      "bore with": [
+        "对…感到厌烦",
+        "因…无聊"
+      ],
+      "be bored with": [
+        "对…厌烦",
+        "厌倦于…"
+      ]
+    },
+    "bound": {
+      "bound to": [
+        "一定会…",
+        "必然…"
+      ],
+      "be bound by": [
+        "受…约束",
+        "被…束缚"
+      ],
+      "out of bounds": [
+        "超出界限",
+        "不可接受的"
+      ]
+    },
+    "break": {
+      "break down": [
+        "分解",
+        "出故障"
+      ],
+      "break through": [
+        "突破",
+        "冲破"
+      ],
+      "break up": [
+        "分手",
+        "打碎"
+      ]
+    },
+    "bring": {
+      "bring about": [
+        "引起",
+        "导致"
+      ],
+      "bring up": [
+        "提起",
+        "养育"
+      ],
+      "bring forward": [
+        "提出",
+        "提前"
+      ]
+    },
+    "calculate": {
+      "calculate on": [
+        "指望",
+        "依靠"
+      ],
+      "calculate the cost": [
+        "计算成本",
+        "估算费用"
+      ]
+    },
+    "capture": {
+      "capture attention": [
+        "抓住注意力",
+        "吸引关注"
+      ],
+      "capture the moment": [
+        "捕捉瞬间",
+        "把握时机"
+      ]
+    },
+    "carry": {
+      "carry out": [
+        "执行",
+        "进行"
+      ],
+      "carry on": [
+        "继续",
+        "坚持下去"
+      ],
+      "carry weight": [
+        "有分量",
+        "有影响力"
+      ]
+    },
+    "cast": {
+      "cast doubt on": [
+        "对…表示怀疑",
+        "质疑…"
+      ],
+      "cast a shadow": [
+        "投下阴影",
+        "蒙上阴影"
+      ],
+      "cast a vote": [
+        "投票",
+        "表决"
+      ]
+    },
+    "catch": {
+      "catch up with": [
+        "赶上",
+        "追上"
+      ],
+      "catch on": [
+        "理解",
+        "流行起来"
+      ],
+      "catch a glimpse": [
+        "瞥见",
+        "看一眼"
+      ]
+    },
+    "cause": {
+      "cause and effect": [
+        "因果关系",
+        "因果"
+      ],
+      "cause trouble": [
+        "制造麻烦",
+        "惹事"
+      ]
+    },
+    "challenge": {
+      "challenge the status quo": [
+        "挑战现状",
+        "质疑既有秩序"
+      ],
+      "face a challenge": [
+        "面对挑战",
+        "迎接困难"
+      ]
+    },
+    "change": {
+      "change mind": [
+        "改变想法",
+        "改主意"
+      ],
+      "change over time": [
+        "随时间变化",
+        "历时变迁"
+      ]
+    },
+    "charge": {
+      "take charge of": [
+        "负责",
+        "掌管"
+      ],
+      "free of charge": [
+        "免费",
+        "不收费"
+      ],
+      "charge with": [
+        "指控…犯有",
+        "委托…负责"
+      ]
+    },
+    "check": {
+      "check in": [
+        "办理登记",
+        "报到"
+      ],
+      "check out": [
+        "结账离开",
+        "退房"
+      ],
+      "check on": [
+        "检查",
+        "核实"
+      ]
+    },
+    "claim": {
+      "claim responsibility": [
+        "声称负责",
+        "认领责任"
+      ],
+      "make a claim": [
+        "提出索赔",
+        "声称"
+      ]
+    },
+    "classify": {
+      "classify into": [
+        "分为",
+        "归入"
+      ],
+      "classify as": [
+        "归类为",
+        "列为"
+      ]
+    },
+    "collapse": {
+      "collapse under pressure": [
+        "在压力下崩溃",
+        "压垮"
+      ],
+      "economic collapse": [
+        "经济崩溃",
+        "经济垮塌"
+      ]
+    },
+    "combine": {
+      "combine with": [
+        "与…结合",
+        "与…合并"
+      ],
+      "combine efforts": [
+        "共同努力",
+        "合力"
+      ]
+    },
+    "come": {
+      "come across": [
+        "偶然遇到",
+        "碰见"
+      ],
+      "come up with": [
+        "想出",
+        "提出"
+      ],
+      "come to terms": [
+        "达成协议",
+        "接受现实"
+      ]
+    },
+    "commit": {
+      "commit to": [
+        "承诺",
+        "致力于"
+      ],
+      "commit a crime": [
+        "犯罪",
+        "作案"
+      ],
+      "commit oneself": [
+        "投入",
+        "承诺"
+      ]
+    },
+    "communicate": {
+      "communicate with": [
+        "与…交流",
+        "和…沟通"
+      ],
+      "communicate effectively": [
+        "有效沟通",
+        "善于交流"
+      ]
+    },
+    "compare": {
+      "compare with": [
+        "与…相比较",
+        "对比"
+      ],
+      "compare to": [
+        "比作",
+        "比喻为"
+      ],
+      "beyond compare": [
+        "无与伦比",
+        "无可比拟的"
+      ]
+    },
+    "compete": {
+      "compete with": [
+        "与…竞争",
+        "和…角逐"
+      ],
+      "compete for": [
+        "争夺",
+        "竞争"
+      ]
+    },
+    "complain": {
+      "complain about": [
+        "抱怨",
+        "投诉"
+      ],
+      "complain of": [
+        "诉说",
+        "抱怨"
+      ]
+    },
+    "complete": {
+      "complete the task": [
+        "完成任务",
+        "做完工作"
+      ],
+      "complete works": [
+        "全集",
+        "全部作品"
+      ]
+    },
+    "concentrate": {
+      "concentrate on": [
+        "集中精力于",
+        "专注于"
+      ],
+      "concentrate efforts": [
+        "集中努力",
+        "把力量集中在"
+      ]
+    },
+    "concern": {
+      "concern about": [
+        "关心",
+        "担忧"
+      ],
+      "show concern for": [
+        "表达对…的关怀",
+        "关心"
+      ]
+    },
+    "conclude": {
+      "conclude with": [
+        "以…结束",
+        "以…作为结论"
+      ],
+      "conclude that": [
+        "得出结论…",
+        "断定"
+      ]
+    },
+    "conduct": {
+      "conduct research": [
+        "进行研究",
+        "开展研究"
+      ],
+      "conduct an experiment": [
+        "进行实验",
+        "做试验"
+      ]
+    },
+    "confirm": {
+      "confirm the reservation": [
+        "确认预订",
+        "确认预约"
+      ],
+      "confirm that": [
+        "确认…",
+        "证实"
+      ]
+    },
+    "conflict": {
+      "conflict with": [
+        "与…冲突",
+        "与…矛盾"
+      ],
+      "in conflict": [
+        "在冲突中",
+        "矛盾"
+      ],
+      "conflict of interest": [
+        "利益冲突",
+        "公私利益的冲突"
+      ]
+    },
+    "confront": {
+      "confront the issue": [
+        "正视问题",
+        "直面困难"
+      ],
+      "be confronted with": [
+        "面对",
+        "面临"
+      ]
+    },
+    "connect": {
+      "connect with": [
+        "与…连接",
+        "和…相联系"
+      ],
+      "connect to": [
+        "连接到",
+        "与…接通"
+      ],
+      "stay connected": [
+        "保持联系",
+        "保持连接"
+      ]
+    },
+    "consider": {
+      "consider doing": [
+        "考虑做",
+        "打算做"
+      ],
+      "consider the possibility": [
+        "考虑这种可能性",
+        "思及"
+      ]
+    },
+    "consist": {
+      "consist of": [
+        "由…组成",
+        "包括"
+      ],
+      "consist in": [
+        "在于",
+        "存在于"
+      ]
+    },
+    "construct": {
+      "construct a theory": [
+        "建构一种理论",
+        "创立学说"
+      ],
+      "construct a building": [
+        "建造一座大楼",
+        "盖楼"
+      ]
+    },
+    "consume": {
+      "consume resources": [
+        "消耗资源",
+        "消费资源"
+      ],
+      "consume time": [
+        "花费时间",
+        "耗时"
+      ]
+    },
+    "contain": {
+      "contain the spread": [
+        "遏制扩散",
+        "控制蔓延"
+      ],
+      "contain oneself": [
+        "克制自己",
+        "忍耐"
+      ]
+    },
+    "contribute": {
+      "contribute to": [
+        "有助于",
+        "导致"
+      ],
+      "make a contribution": [
+        "做出贡献",
+        "出一份力"
+      ]
+    },
+    "control": {
+      "take control of": [
+        "控制",
+        "掌控"
+      ],
+      "under control": [
+        "在掌控中",
+        "受到控制"
+      ],
+      "out of control": [
+        "失控",
+        "不受控制"
+      ]
+    },
+    "convert": {
+      "convert to": [
+        "转变为",
+        "皈依"
+      ],
+      "convert into": [
+        "变为",
+        "转换成"
+      ]
+    },
+    "convey": {
+      "convey a message": [
+        "传达信息",
+        "表达意思"
+      ],
+      "convey the meaning": [
+        "表达含义",
+        "传达意图"
+      ]
+    },
+    "convince": {
+      "convince of": [
+        "使相信",
+        "说服"
+      ],
+      "convince to do": [
+        "劝说做",
+        "说服去做"
+      ]
+    },
+    "cope": {
+      "cope with": [
+        "应对",
+        "处理"
+      ],
+      "cope with stress": [
+        "应对压力",
+        "缓解压力"
+      ]
+    },
+    "correspond": {
+      "correspond to": [
+        "对应于",
+        "相当于"
+      ],
+      "correspond with": [
+        "与…通信",
+        "与…符合"
+      ]
+    },
+    "count": {
+      "count on": [
+        "指望",
+        "依靠"
+      ],
+      "count down": [
+        "倒数",
+        "倒计时"
+      ],
+      "count for": [
+        "有价值",
+        "值得考虑"
+      ]
+    },
+    "cover": {
+      "cover up": [
+        "掩盖",
+        "遮掩"
+      ],
+      "cover the cost": [
+        "支付费用",
+        "覆盖成本"
+      ],
+      "cover a topic": [
+        "涵盖一个主题",
+        "涉及话题"
+      ]
+    },
+    "create": {
+      "create opportunities": [
+        "创造机会",
+        "提供机遇"
+      ],
+      "create problems": [
+        "制造问题",
+        "造成麻烦"
+      ]
+    },
+    "criticize": {
+      "criticize for": [
+        "因…批评",
+        "批评…的"
+      ],
+      "criticize harshly": [
+        "严厉批评",
+        "苛刻指责"
+      ]
+    },
+    "cut": {
+      "cut down on": [
+        "减少",
+        "削减"
+      ],
+      "cut off": [
+        "切断",
+        "断绝"
+      ],
+      "cut through": [
+        "穿越",
+        "洞穿"
+      ]
+    },
+    "deal": {
+      "deal with": [
+        "处理",
+        "应对"
+      ],
+      "a great deal of": [
+        "许多",
+        "大量"
+      ],
+      "close the deal": [
+        "完成交易",
+        "成交"
+      ]
+    },
+    "debate": {
+      "debate on": [
+        "就…进行辩论",
+        "讨论"
+      ],
+      "a heated debate": [
+        "一场激烈的辩论",
+        "热烈的争论"
+      ]
+    },
+    "decide": {
+      "decide on": [
+        "决定",
+        "选定"
+      ],
+      "decide whether to": [
+        "决定是否",
+        "抉择"
+      ]
+    },
+    "declare": {
+      "declare war": [
+        "宣战",
+        "发动战争"
+      ],
+      "declare independence": [
+        "宣布独立",
+        "宣告独立"
+      ]
+    },
+    "decline": {
+      "decline an invitation": [
+        "谢绝邀请",
+        "婉拒邀请"
+      ],
+      "in decline": [
+        "在衰退中",
+        "走下坡路"
+      ]
+    },
+    "define": {
+      "define as": [
+        "定义为",
+        "界定为"
+      ],
+      "define the boundaries": [
+        "界定边界",
+        "划定界限"
+      ]
+    },
+    "deliver": {
+      "deliver a speech": [
+        "发表演讲",
+        "做报告"
+      ],
+      "deliver goods": [
+        "送货",
+        "交货"
+      ],
+      "deliver results": [
+        "产生结果",
+        "取得成效"
+      ]
+    },
+    "demand": {
+      "demand for": [
+        "对…的需求",
+        "要求"
+      ],
+      "in demand": [
+        "受欢迎",
+        "需求量大的"
+      ],
+      "meet the demand": [
+        "满足需求",
+        "符合要求"
+      ]
+    },
+    "demonstrate": {
+      "demonstrate the ability": [
+        "展示能力",
+        "证明才能"
+      ],
+      "demonstrate against": [
+        "示威反对",
+        "游行抗议"
+      ]
+    },
+    "deny": {
+      "deny doing": [
+        "否认做过",
+        "矢口否认"
+      ],
+      "deny the charge": [
+        "否认指控",
+        "不认罪"
+      ]
+    },
+    "depend": {
+      "depend on": [
+        "取决于",
+        "依靠"
+      ],
+      "it depends": [
+        "视情况而定",
+        "看情况"
+      ]
+    },
+    "describe": {
+      "describe as": [
+        "描述为",
+        "说成是"
+      ],
+      "describe in detail": [
+        "详细描述",
+        "具体说明"
+      ]
+    },
+    "design": {
+      "design for": [
+        "为…设计",
+        "以…为目标设计"
+      ],
+      "by design": [
+        "故意地",
+        "有意设计地"
+      ],
+      "design a system": [
+        "设计一个系统",
+        "规划体系"
+      ]
+    },
+    "determine": {
+      "determine to do": [
+        "下定决心做",
+        "决定做"
+      ],
+      "determine the cause": [
+        "确定原因",
+        "查明起因"
+      ]
+    },
+    "develop": {
+      "develop skills": [
+        "培养技能",
+        "发展能力"
+      ],
+      "develop a plan": [
+        "制定计划",
+        "拟定方案"
+      ]
+    },
+    "devote": {
+      "devote to": [
+        "致力于",
+        "奉献给"
+      ],
+      "devote oneself to": [
+        "献身于",
+        "专心致志于"
+      ]
+    },
+    "differ": {
+      "differ from": [
+        "不同于",
+        "与…有差异"
+      ],
+      "differ in": [
+        "在…方面不同",
+        "在…上有差别"
+      ],
+      "beg to differ": [
+        "恕不同意",
+        "不敢苟同"
+      ]
+    },
+    "direct": {
+      "direct attention to": [
+        "将注意力转向",
+        "把关注点指向"
+      ],
+      "take direct action": [
+        "采取直接行动",
+        "直接采取行动"
+      ]
+    },
+    "discover": {
+      "discover the truth": [
+        "发现真相",
+        "揭露真相"
+      ],
+      "discover new lands": [
+        "发现新的陆地",
+        "探索新大陆"
+      ]
+    },
+    "discuss": {
+      "discuss with": [
+        "与…讨论",
+        "与…协商"
+      ],
+      "discuss the matter": [
+        "讨论这件事",
+        "商议此事"
+      ]
+    },
+    "dismiss": {
+      "dismiss the idea": [
+        "不理会这个想法",
+        "驳回这个观点"
+      ],
+      "dismiss from": [
+        "从…开除",
+        "解雇"
+      ]
+    },
+    "display": {
+      "on display": [
+        "在展览中",
+        "展出"
+      ],
+      "display the results": [
+        "展示结果",
+        "呈现成果"
+      ]
     },
     "dispose": {
-      "dispose of": ["处理"],
-      "dispose waste": ["处理废物"]
+      "dispose of": [
+        "处理掉",
+        "处置"
+      ],
+      "dispose waste": [
+        "处理废物",
+        "处置垃圾"
+      ]
     },
-    "expose": {
-      "expose to": ["暴露于"],
-      "expose corruption": ["揭露腐败"]
+    "distinguish": {
+      "distinguish between": [
+        "区分",
+        "辨别"
+      ],
+      "distinguish from": [
+        "与…区分开",
+        "区别于"
+      ]
     },
-    "impose": {
-      "impose tax": ["征税"],
-      "impose restrictions": ["施加限制"]
+    "distribute": {
+      "distribute to": [
+        "分发给",
+        "分配给"
+      ],
+      "distribute leaflets": [
+        "分发传单",
+        "散发宣传品"
+      ]
     },
-    "recognize": {
-      "recognize achievement": ["认可成就"],
-      "recognize importance": ["认识到重要性"]
+    "divide": {
+      "divide into": [
+        "分成",
+        "划分为"
+      ],
+      "divide by": [
+        "除以",
+        "被…除"
+      ],
+      "digital divide": [
+        "数字鸿沟",
+        "数码落差"
+      ]
     },
-    "organize": {
-      "organize event": ["组织活动"],
-      "organize team": ["组织团队"]
+    "dominate": {
+      "dominate the market": [
+        "主导市场",
+        "独占市场"
+      ],
+      "dominant position": [
+        "主导地位",
+        "优势地位"
+      ]
     },
-    "realize": {
-      "realize dream": ["实现梦想"],
-      "realize potential": ["发挥潜力"]
+    "doubt": {
+      "doubt about": [
+        "对…有怀疑",
+        "怀疑"
+      ],
+      "without doubt": [
+        "毫无疑问地",
+        "毋庸置疑地"
+      ],
+      "cast doubt on": [
+        "对…表示怀疑",
+        "质疑"
+      ]
     },
-    "specialize": {
-      "specialize in": ["专攻"],
-      "specialize field": ["专业领域"]
+    "draw": {
+      "draw attention to": [
+        "吸引对…的注意",
+        "使关注"
+      ],
+      "draw a conclusion": [
+        "得出结论",
+        "下结论"
+      ],
+      "draw on": [
+        "利用",
+        "借鉴"
+      ]
+    },
+    "drop": {
+      "drop out of": [
+        "从…退出",
+        "辍学"
+      ],
+      "drop by": [
+        "顺便拜访",
+        "顺路看看"
+      ],
+      "drop the idea": [
+        "放弃这个想法",
+        "打消念头"
+      ]
+    },
+    "earn": {
+      "earn a living": [
+        "谋生",
+        "赚钱糊口"
+      ],
+      "earn respect": [
+        "赢得尊重",
+        "获得敬意"
+      ],
+      "earn interest": [
+        "赚取利息",
+        "生息"
+      ]
+    },
+    "effect": {
+      "take effect": [
+        "生效",
+        "起作用"
+      ],
+      "have an effect on": [
+        "对…有影响",
+        "对…产生作用"
+      ],
+      "in effect": [
+        "实际上",
+        "在实施中"
+      ]
+    },
+    "eliminate": {
+      "eliminate poverty": [
+        "消除贫困",
+        "消灭贫穷"
+      ],
+      "eliminate risks": [
+        "消除风险",
+        "排除隐患"
+      ]
+    },
+    "emerge": {
+      "emerge from": [
+        "从…中出现",
+        "源自"
+      ],
+      "emerging market": [
+        "新兴市场",
+        "正在崛起的市场"
+      ]
     },
     "emphasize": {
-      "emphasize importance": ["强调重要性"],
-      "emphasize need": ["强调需求"]
+      "emphasize the importance": [
+        "强调重要性",
+        "突出意义"
+      ],
+      "put emphasis on": [
+        "强调",
+        "重视"
+      ]
     },
-    "characterize": {
-      "characterize by": ["以...为特征"],
-      "characterize behavior": ["描述行为"]
+    "employ": {
+      "employ a method": [
+        "使用一种方法",
+        "采用某种方式"
+      ],
+      "employ workers": [
+        "雇用工人",
+        "招聘员工"
+      ]
     },
-    "summarize": {
-      "summarize report": ["总结报告"],
-      "summarize meeting": ["总结会议"]
+    "enable": {
+      "enable to do": [
+        "使能够做…",
+        "使有能力…"
+      ],
+      "enable access": [
+        "允许访问",
+        "使得能够进入"
+      ]
     },
-    "symbolize": {
-      "symbolize freedom": ["象征自由"],
-      "symbolize unity": ["象征团结"]
+    "encounter": {
+      "encounter difficulties": [
+        "遭遇困难",
+        "遇到麻烦"
+      ],
+      "a chance encounter": [
+        "一次偶然的遇见",
+        "邂逅"
+      ]
     },
-    "memorize": {
-      "memorize words": ["记单词"],
-      "memorize speech": ["背诵演讲"]
+    "encourage": {
+      "encourage someone": [
+        "鼓励某人",
+        "激励某人"
+      ],
+      "encourage innovation": [
+        "鼓励创新",
+        "促进革新"
+      ]
     },
-    "standardize": {
-      "standardize process": ["标准化流程"],
-      "standardize product": ["标准化产品"]
+    "engage": {
+      "engage in": [
+        "从事",
+        "参与"
+      ],
+      "be engaged": [
+        "已订婚的",
+        "忙碌的"
+      ]
+    },
+    "enhance": {
+      "enhance performance": [
+        "提高性能",
+        "提升表现"
+      ],
+      "enhance security": [
+        "增强安全性",
+        "加强安保"
+      ]
+    },
+    "ensure": {
+      "ensure that": [
+        "确保…",
+        "保证…"
+      ],
+      "ensure safety": [
+        "确保安全",
+        "保障平安"
+      ]
+    },
+    "establish": {
+      "establish a company": [
+        "成立一家公司",
+        "创办企业"
+      ],
+      "well-established": [
+        "已建立的",
+        "根基稳固的"
+      ]
+    },
+    "evaluate": {
+      "evaluate performance": [
+        "评估表现",
+        "考核绩效"
+      ],
+      "conduct an evaluation": [
+        "进行一次评估",
+        "做评价"
+      ]
+    },
+    "evolve": {
+      "evolve over time": [
+        "随时间演变",
+        "逐步进化"
+      ],
+      "evolution of": [
+        "…的演变",
+        "…的进化过程"
+      ]
+    },
+    "examine": {
+      "examine the evidence": [
+        "审查证据",
+        "检查证物"
+      ],
+      "examine carefully": [
+        "仔细检查",
+        "认真考察"
+      ]
+    },
+    "exceed": {
+      "exceed expectations": [
+        "超出预期",
+        "超预期"
+      ],
+      "exceed the limit": [
+        "超出限制",
+        "超过限度"
+      ]
+    },
+    "exchange": {
+      "exchange ideas": [
+        "交换想法",
+        "交流意见"
+      ],
+      "in exchange for": [
+        "作为…的交换",
+        "以换取"
+      ],
+      "exchange rate": [
+        "汇率",
+        "兑换率"
+      ]
+    },
+    "exclude": {
+      "exclude from": [
+        "把…排除在外",
+        "将…排斥出"
+      ],
+      "exclusive rights": [
+        "专有权",
+        "独家权利"
+      ]
+    },
+    "exercise": {
+      "exercise regularly": [
+        "定期锻炼",
+        "经常运动"
+      ],
+      "exercise right": [
+        "行使权利",
+        "运用权利"
+      ]
+    },
+    "exist": {
+      "exist in": [
+        "存在于",
+        "以…形式存在"
+      ],
+      "cease to exist": [
+        "不复存在",
+        "消失"
+      ]
+    },
+    "expand": {
+      "expand market": [
+        "扩大市场",
+        "拓展市场"
+      ],
+      "expand rapidly": [
+        "迅速扩张",
+        "飞速增长"
+      ]
+    },
+    "expect": {
+      "expect to": [
+        "期望",
+        "预计会"
+      ],
+      "meet expectations": [
+        "满足期望",
+        "达到预期"
+      ]
+    },
+    "experience": {
+      "gain experience": [
+        "积累经验",
+        "增长见识"
+      ],
+      "first-hand experience": [
+        "亲身经历",
+        "第一手经验"
+      ]
+    },
+    "explain": {
+      "explain to": [
+        "向…解释",
+        "给…说明"
+      ],
+      "explain the reason": [
+        "解释原因",
+        "说明理由"
+      ]
+    },
+    "exploit": {
+      "exploit resources": [
+        "开发资源",
+        "利用资源"
+      ],
+      "exploit the weakness": [
+        "利用弱点",
+        "钻空子"
+      ]
+    },
+    "explore": {
+      "explore options": [
+        "探索各种选择",
+        "考虑选项"
+      ],
+      "explore new territory": [
+        "探索新领域",
+        "开拓新天地"
+      ]
+    },
+    "expose": {
+      "expose to": [
+        "暴露于",
+        "使接触"
+      ],
+      "expose the truth": [
+        "揭露真相",
+        "暴露真相"
+      ]
+    },
+    "express": {
+      "express oneself": [
+        "表达自己",
+        "展现自我"
+      ],
+      "express concern": [
+        "表达关切",
+        "表示担忧"
+      ]
+    },
+    "extend": {
+      "extend to": [
+        "延伸至",
+        "扩展到"
+      ],
+      "extend deadline": [
+        "延长截止日期",
+        "延期"
+      ]
+    },
+    "face": {
+      "face a challenge": [
+        "面对挑战",
+        "迎接困难"
+      ],
+      "face to face": [
+        "面对面",
+        "当面"
+      ],
+      "in the face of": [
+        "在…面前",
+        "面对"
+      ]
+    },
+    "facilitate": {
+      "facilitate communication": [
+        "促进交流",
+        "便利通讯"
+      ],
+      "facilitate the process": [
+        "推进这个过程",
+        "促进流程"
+      ]
+    },
+    "fail": {
+      "fail to do": [
+        "未能做…",
+        "失败"
+      ],
+      "fail the test": [
+        "考试不及格",
+        "测试未通过"
+      ],
+      "without fail": [
+        "一定",
+        "毫不例外"
+      ]
+    },
+    "fall": {
+      "fall behind": [
+        "落后",
+        "掉队"
+      ],
+      "fall into": [
+        "落入",
+        "掉进"
+      ],
+      "fall apart": [
+        "崩溃",
+        "四分五裂"
+      ]
+    },
+    "favor": {
+      "in favor of": [
+        "赞成",
+        "支持"
+      ],
+      "do a favor": [
+        "帮忙",
+        "给恩惠"
+      ]
+    },
+    "figure": {
+      "figure out": [
+        "弄清楚",
+        "解决"
+      ],
+      "public figure": [
+        "公众人物",
+        "知名人士"
+      ],
+      "figure of speech": [
+        "修辞手法",
+        "比喻说法"
+      ]
+    },
+    "focus": {
+      "focus on": [
+        "集中于",
+        "专注于"
+      ],
+      "bring into focus": [
+        "使聚焦",
+        "使清晰"
+      ],
+      "out of focus": [
+        "焦点不准的",
+        "不清晰的"
+      ]
+    },
+    "follow": {
+      "follow up": [
+        "跟进",
+        "后续处理"
+      ],
+      "follow the rules": [
+        "遵守规则",
+        "按规矩办事"
+      ],
+      "as follows": [
+        "如下",
+        "如下所述"
+      ]
+    },
+    "force": {
+      "force to do": [
+        "强迫做",
+        "迫使行…"
+      ],
+      "in force": [
+        "生效的",
+        "有效的"
+      ],
+      "come into force": [
+        "生效",
+        "开始实施"
+      ]
+    },
+    "fulfill": {
+      "fulfill a dream": [
+        "实现梦想",
+        "圆梦"
+      ],
+      "fulfill the requirements": [
+        "满足要求",
+        "符合条件"
+      ]
+    },
+    "gain": {
+      "gain access to": [
+        "获得对…的访问权",
+        "得以进入"
+      ],
+      "gain experience": [
+        "获取经验",
+        "积累阅历"
+      ],
+      "gain weight": [
+        "体重增加",
+        "变胖"
+      ]
+    },
+    "generate": {
+      "generate revenue": [
+        "产生收入",
+        "创收"
+      ],
+      "generate interest": [
+        "产生兴趣",
+        "引起关注"
+      ]
+    },
+    "get": {
+      "get along with": [
+        "与…和睦相处",
+        "与…合得来"
+      ],
+      "get over": [
+        "克服",
+        "从…中恢复过来"
+      ],
+      "get through": [
+        "完成",
+        "熬过"
+      ]
+    },
+    "give": {
+      "give up": [
+        "放弃",
+        "认输"
+      ],
+      "give rise to": [
+        "引起",
+        "导致"
+      ],
+      "give away": [
+        "赠送",
+        "泄露"
+      ]
+    },
+    "go": {
+      "go through": [
+        "经历",
+        "通过"
+      ],
+      "go on": [
+        "继续",
+        "发生"
+      ],
+      "go after": [
+        "追求",
+        "追逐"
+      ]
+    },
+    "grant": {
+      "take for granted": [
+        "想当然",
+        "认为理所当然"
+      ],
+      "grant a request": [
+        "答应请求",
+        "批准申请"
+      ]
+    },
+    "guard": {
+      "guard against": [
+        "防止",
+        "防范"
+      ],
+      "on guard": [
+        "警惕的",
+        "戒备的"
+      ],
+      "off guard": [
+        "不警惕的",
+        "无防备的"
+      ]
+    },
+    "handle": {
+      "handle the situation": [
+        "处理情况",
+        "应对局面"
+      ],
+      "handle with care": [
+        "小心处理",
+        "谨慎对待"
+      ]
+    },
+    "hold": {
+      "hold on": [
+        "等一下",
+        "坚持"
+      ],
+      "hold a meeting": [
+        "召开会议",
+        "举行聚会"
+      ],
+      "hold true": [
+        "适用",
+        "站得住脚"
+      ]
+    },
+    "identify": {
+      "identify with": [
+        "认同",
+        "与…有共鸣"
+      ],
+      "identify the problem": [
+        "识别问题",
+        "发现问题"
+      ]
+    },
+    "ignore": {
+      "ignore the fact": [
+        "忽视事实",
+        "对事实视而不见"
+      ],
+      "ignore completely": [
+        "完全忽略",
+        "置之不理"
+      ]
+    },
+    "impact": {
+      "impact on": [
+        "对…的影响",
+        "冲击"
+      ],
+      "have an impact on": [
+        "对…产生影响",
+        "对…有冲击"
+      ]
+    },
+    "implement": {
+      "implement a plan": [
+        "实施计划",
+        "执行方案"
+      ],
+      "implement changes": [
+        "实施变革",
+        "推行改革"
+      ]
+    },
+    "imply": {
+      "imply that": [
+        "意味着",
+        "暗示"
+      ],
+      "as the name implies": [
+        "顾名思义",
+        "正如其名所示"
+      ]
+    },
+    "impose": {
+      "impose on": [
+        "强加于",
+        "利用"
+      ],
+      "impose restrictions": [
+        "施加限制",
+        "实施约束"
+      ]
+    },
+    "impress": {
+      "impress on": [
+        "使铭记",
+        "给…留下印象"
+      ],
+      "be impressed by": [
+        "对…印象深刻",
+        "被…打动"
+      ]
+    },
+    "improve": {
+      "improve on": [
+        "改进",
+        "比…更好"
+      ],
+      "improve the quality": [
+        "提高质量",
+        "改善品质"
+      ]
+    },
+    "increase": {
+      "increase by": [
+        "增加了（幅度）",
+        "按…增加"
+      ],
+      "increase in": [
+        "在…方面增长",
+        "在…上的增加"
+      ],
+      "on the increase": [
+        "在增长中",
+        "呈上升趋势"
+      ]
+    },
+    "indicate": {
+      "indicate that": [
+        "表明",
+        "指出"
+      ],
+      "indicate the direction": [
+        "指示方向",
+        "指明方位"
+      ]
+    },
+    "influence": {
+      "influence on": [
+        "对…的影响",
+        "对…起作用"
+      ],
+      "under the influence": [
+        "在…的影响下",
+        "受…影响"
+      ]
+    },
+    "inform": {
+      "inform of": [
+        "通知…",
+        "告知…"
+      ],
+      "inform about": [
+        "告知…有关情况",
+        "通知…"
+      ],
+      "keep informed": [
+        "随时通知",
+        "保持消息畅通"
+      ]
+    },
+    "insist": {
+      "insist on": [
+        "坚持",
+        "坚决要求"
+      ],
+      "insist that": [
+        "坚持认为",
+        "坚决主张"
+      ]
+    },
+    "integrate": {
+      "integrate into": [
+        "融入",
+        "并入"
+      ],
+      "integrate with": [
+        "与…整合",
+        "与…结合"
+      ]
+    },
+    "intend": {
+      "intend to do": [
+        "打算做",
+        "有意做"
+      ],
+      "intend for": [
+        "意图用于",
+        "打算给"
+      ],
+      "as intended": [
+        "按照预期",
+        "如计划的那样"
+      ]
+    },
+    "interact": {
+      "interact with": [
+        "与…互动",
+        "和…交互"
+      ],
+      "interact socially": [
+        "社交互动",
+        "人文交往"
+      ]
+    },
+    "interpret": {
+      "interpret as": [
+        "解释为",
+        "理解为"
+      ],
+      "interpret the data": [
+        "解释数据",
+        "分析资料"
+      ]
+    },
+    "introduce": {
+      "introduce to": [
+        "向…介绍",
+        "引介给"
+      ],
+      "introduce oneself": [
+        "自我介绍",
+        "做自我介绍"
+      ]
+    },
+    "invest": {
+      "invest in": [
+        "投资于",
+        "投入"
+      ],
+      "invest time and effort": [
+        "投入时间与精力",
+        "付出心血"
+      ]
+    },
+    "investigate": {
+      "investigate the case": [
+        "调查这个案件",
+        "查办案件"
+      ],
+      "investigate further": [
+        "进一步调查",
+        "深入探究"
+      ]
+    },
+    "involve": {
+      "involve in": [
+        "使卷入",
+        "使参与"
+      ],
+      "get involved with": [
+        "与…有牵连",
+        "参与…"
+      ],
+      "involve doing": [
+        "需要做…",
+        "涉及做…"
+      ]
+    },
+    "keep": {
+      "keep in mind": [
+        "记住",
+        "考虑到"
+      ],
+      "keep up with": [
+        "跟上",
+        "保持…的水平"
+      ],
+      "keep on doing": [
+        "继续做…",
+        "反复做…"
+      ]
+    },
+    "lack": {
+      "lack of": [
+        "缺乏",
+        "缺少"
+      ],
+      "lack the ability": [
+        "缺乏能力",
+        "没有能力"
+      ],
+      "for lack of": [
+        "因缺乏",
+        "由于缺少"
+      ]
+    },
+    "launch": {
+      "launch a campaign": [
+        "发起一场运动",
+        "开展活动"
+      ],
+      "launch into": [
+        "着手",
+        "投入到"
+      ]
+    },
+    "lead": {
+      "lead to": [
+        "导致",
+        "通向"
+      ],
+      "lead by example": [
+        "以身作则",
+        "做出表率"
+      ],
+      "take the lead": [
+        "带头",
+        "领先"
+      ]
+    },
+    "learn": {
+      "learn from": [
+        "向…学习",
+        "从…汲取经验"
+      ],
+      "learn about": [
+        "了解",
+        "学习关于"
+      ],
+      "learn the lesson": [
+        "吸取教训",
+        "得到教训"
+      ]
+    },
+    "limit": {
+      "limit to": [
+        "限于",
+        "限制在…范围内"
+      ],
+      "time limit": [
+        "时间限制",
+        "时限"
+      ],
+      "off limits": [
+        "禁止入内",
+        "不允许接近"
+      ]
+    },
+    "look": {
+      "look for": [
+        "寻找",
+        "寻求"
+      ],
+      "look forward to": [
+        "期待",
+        "盼望"
+      ],
+      "look into": [
+        "调查",
+        "研究"
+      ]
+    },
+    "lose": {
+      "lose weight": [
+        "减肥",
+        "减重"
+      ],
+      "lose control": [
+        "失去控制",
+        "失控"
+      ],
+      "lose track": [
+        "失去线索",
+        "忘记"
+      ]
+    },
+    "maintain": {
+      "maintain order": [
+        "维持秩序",
+        "维护治安"
+      ],
+      "maintain relationships": [
+        "维持关系",
+        "维系联系"
+      ]
+    },
+    "make": {
+      "make sure": [
+        "确保",
+        "保证"
+      ],
+      "make a difference": [
+        "有影响",
+        "起作用"
+      ],
+      "make sense": [
+        "有意义",
+        "合理"
+      ]
+    },
+    "manage": {
+      "manage to do": [
+        "设法做到",
+        "成功做到"
+      ],
+      "manage a business": [
+        "经营一家企业",
+        "管理公司"
+      ]
+    },
+    "manufacture": {
+      "manufacture goods": [
+        "制造商品",
+        "生产货物"
+      ],
+      "manufacturing industry": [
+        "制造业",
+        "制造产业"
+      ]
+    },
+    "measure": {
+      "measure up to": [
+        "符合",
+        "达到…的标准"
+      ],
+      "take measures": [
+        "采取措施",
+        "想法子"
+      ]
+    },
+    "merge": {
+      "merge with": [
+        "与…合并",
+        "和…融合"
+      ],
+      "merge into": [
+        "并入",
+        "汇合成"
+      ],
+      "merge companies": [
+        "合并公司",
+        "企业合并"
+      ]
+    },
+    "monitor": {
+      "monitor progress": [
+        "监督进展",
+        "跟踪进度"
+      ],
+      "monitor closely": [
+        "密切监视",
+        "仔细监督"
+      ]
+    },
+    "motivate": {
+      "motivate to do": [
+        "激励…去做",
+        "促使…"
+      ],
+      "keep motivated": [
+        "保持积极性",
+        "保持动力"
+      ]
+    },
+    "negotiate": {
+      "negotiate with": [
+        "与…谈判",
+        "同…协商"
+      ],
+      "negotiate a deal": [
+        "商定一笔交易",
+        "谈成一桩买卖"
+      ]
+    },
+    "obtain": {
+      "obtain from": [
+        "从…获得",
+        "从…得到"
+      ],
+      "obtain permission": [
+        "获得许可",
+        "取得同意"
+      ]
+    },
+    "offer": {
+      "offer to do": [
+        "主动提出做",
+        "表示愿意做"
+      ],
+      "make an offer": [
+        "出价",
+        "提出报价"
+      ],
+      "on offer": [
+        "供出售",
+        "优惠活动中"
+      ]
+    },
+    "operate": {
+      "operate on": [
+        "给…动手术",
+        "对…进行操作"
+      ],
+      "operate a machine": [
+        "操作一台机器",
+        "开机器"
+      ]
+    },
+    "oppose": {
+      "oppose to": [
+        "反对…",
+        "与…对立"
+      ],
+      "as opposed to": [
+        "与…相对照",
+        "而不是"
+      ],
+      "oppose the plan": [
+        "反对这个计划",
+        "抵制方案"
+      ]
+    },
+    "organize": {
+      "organize an event": [
+        "组织一次活动",
+        "筹办事件"
+      ],
+      "organize data": [
+        "整理数据",
+        "组织资料"
+      ]
+    },
+    "overcome": {
+      "overcome difficulties": [
+        "克服困难",
+        "战胜困境"
+      ],
+      "overcome fear": [
+        "克服恐惧",
+        "战胜畏惧"
+      ]
+    },
+    "participate": {
+      "participate in": [
+        "参加",
+        "参与"
+      ],
+      "participate actively": [
+        "积极参与",
+        "主动参加"
+      ]
+    },
+    "pass": {
+      "pass away": [
+        "去世",
+        "逝世"
+      ],
+      "pass on": [
+        "传递",
+        "去世"
+      ],
+      "pass the test": [
+        "通过测试",
+        "考试及格"
+      ]
+    },
+    "pay": {
+      "pay attention to": [
+        "注意",
+        "重视"
+      ],
+      "pay for": [
+        "支付",
+        "付出代价"
+      ],
+      "pay off": [
+        "还清",
+        "得到回报"
+      ]
+    },
+    "perform": {
+      "perform well": [
+        "表现出色",
+        "表现好"
+      ],
+      "perform a task": [
+        "执行一项任务",
+        "完成一件事情"
+      ]
+    },
+    "persist": {
+      "persist in": [
+        "坚持",
+        "持续"
+      ],
+      "if symptoms persist": [
+        "如果症状持续",
+        "如症状不消退"
+      ]
+    },
+    "persuade": {
+      "persuade to do": [
+        "劝说…去做",
+        "说服…"
+      ],
+      "persuade of": [
+        "使…相信",
+        "说服…相信"
+      ]
+    },
+    "point": {
+      "point out": [
+        "指出",
+        "指明"
+      ],
+      "point of view": [
+        "观点",
+        "视角"
+      ],
+      "to the point": [
+        "切题的",
+        "中肯的"
+      ]
+    },
+    "pose": {
+      "pose a threat": [
+        "构成威胁",
+        "造成危险"
+      ],
+      "pose a question": [
+        "提出一个问题",
+        "发问"
+      ]
+    },
+    "predict": {
+      "predict the future": [
+        "预测未来",
+        "预言将来"
+      ],
+      "predict accurately": [
+        "准确预测",
+        "精确预言"
+      ]
+    },
+    "prefer": {
+      "prefer to": [
+        "更喜欢",
+        "宁愿"
+      ],
+      "prefer over": [
+        "更喜欢…胜过",
+        "宁愿…而不愿"
+      ],
+      "would prefer": [
+        "更愿意",
+        "宁可"
+      ]
+    },
+    "prepare": {
+      "prepare for": [
+        "为…做准备",
+        "预备"
+      ],
+      "prepare to do": [
+        "准备做",
+        "打算做"
+      ],
+      "be prepared": [
+        "做好准备",
+        "有所准备"
+      ]
+    },
+    "present": {
+      "present a report": [
+        "呈交一份报告",
+        "做汇报"
+      ],
+      "at present": [
+        "目前",
+        "现在"
+      ]
+    },
+    "preserve": {
+      "preserve food": [
+        "保存食物",
+        "腌制食品"
+      ],
+      "preserve peace": [
+        "维护和平",
+        "保持和平"
+      ]
+    },
+    "prevent": {
+      "prevent from": [
+        "阻止",
+        "防止"
+      ],
+      "prevent the spread": [
+        "防止传播",
+        "阻止蔓延"
+      ]
+    },
+    "proceed": {
+      "proceed with": [
+        "继续进行",
+        "接着做"
+      ],
+      "proceed to do": [
+        "接着做",
+        "继续做"
+      ]
+    },
+    "produce": {
+      "produce results": [
+        "产生结果",
+        "产出成果"
+      ],
+      "produce goods": [
+        "生产商品",
+        "制造货物"
+      ]
+    },
+    "promote": {
+      "promote to": [
+        "提升到…",
+        "晋升为…"
+      ],
+      "promote health": [
+        "促进健康",
+        "增进健康"
+      ]
+    },
+    "propose": {
+      "propose a plan": [
+        "提出一项计划",
+        "建议一个方案"
+      ],
+      "propose to do": [
+        "提议做…",
+        "打算做…"
+      ]
+    },
+    "protect": {
+      "protect from": [
+        "保护…免受",
+        "防护"
+      ],
+      "protect against": [
+        "防范",
+        "防御"
+      ]
+    },
+    "prove": {
+      "prove to be": [
+        "证明是",
+        "显示为"
+      ],
+      "prove a point": [
+        "证明一个观点",
+        "表明立场"
+      ]
+    },
+    "provide": {
+      "provide with": [
+        "向…提供",
+        "供给"
+      ],
+      "provide for": [
+        "为…提供",
+        "抚养"
+      ]
+    },
+    "pursue": {
+      "pursue a career": [
+        "追求事业",
+        "从事职业"
+      ],
+      "pursue happiness": [
+        "追求幸福",
+        "寻求快乐"
+      ]
+    },
+    "put": {
+      "put forward": [
+        "提出",
+        "建议"
+      ],
+      "put up with": [
+        "忍受",
+        "容忍"
+      ],
+      "put into practice": [
+        "付诸实践",
+        "实行"
+      ]
+    },
+    "qualify": {
+      "qualify for": [
+        "有资格获得",
+        "具备…的资格"
+      ],
+      "qualify as": [
+        "有资格担任",
+        "可称为…"
+      ]
+    },
+    "raise": {
+      "raise awareness": [
+        "提高意识",
+        "引起注意"
+      ],
+      "raise funds": [
+        "筹集资金",
+        "募款"
+      ],
+      "raise a question": [
+        "提出一个问题",
+        "发问"
+      ]
+    },
+    "range": {
+      "range from": [
+        "范围从…到",
+        "变化于…之间"
+      ],
+      "a wide range of": [
+        "各种各样的",
+        "广泛的"
+      ]
+    },
+    "reach": {
+      "reach a conclusion": [
+        "得出结论",
+        "达成结论"
+      ],
+      "reach out to": [
+        "联系",
+        "伸出援手"
+      ],
+      "within reach": [
+        "触手可及的",
+        "在附近"
+      ]
+    },
+    "react": {
+      "react to": [
+        "对…做出反应",
+        "回应…"
+      ],
+      "react against": [
+        "反抗",
+        "反对"
+      ]
+    },
+    "realize": {
+      "realize the importance": [
+        "意识到重要性",
+        "认识到意义"
+      ],
+      "realize a dream": [
+        "实现梦想",
+        "圆梦"
+      ]
+    },
+    "receive": {
+      "receive attention": [
+        "受到关注",
+        "获得注意"
+      ],
+      "receive treatment": [
+        "接受治疗",
+        "得到处理"
+      ]
+    },
+    "recognize": {
+      "recognize as": [
+        "认为…是",
+        "承认…为"
+      ],
+      "recognize the importance": [
+        "认识到重要性",
+        "意识到意义"
+      ]
+    },
+    "recover": {
+      "recover from": [
+        "从…中恢复",
+        "康复"
+      ],
+      "recover consciousness": [
+        "恢复意识",
+        "苏醒"
+      ]
+    },
+    "reduce": {
+      "reduce to": [
+        "减少到",
+        "降至"
+      ],
+      "reduce the risk": [
+        "降低风险",
+        "减少危险"
+      ],
+      "reduce costs": [
+        "降低成本",
+        "减少开支"
+      ]
+    },
+    "refer": {
+      "refer to": [
+        "提到",
+        "指的是"
+      ],
+      "refer to as": [
+        "称…为",
+        "把…叫做"
+      ]
+    },
+    "reflect": {
+      "reflect on": [
+        "反思",
+        "思考"
+      ],
+      "reflect the reality": [
+        "反映现实",
+        "体现真实"
+      ]
+    },
+    "refuse": {
+      "refuse to do": [
+        "拒绝做",
+        "不肯做"
+      ],
+      "refuse point-blank": [
+        "断然拒绝",
+        "直接回绝"
+      ]
+    },
+    "regard": {
+      "regard as": [
+        "视…为",
+        "把…看作"
+      ],
+      "with regard to": [
+        "关于",
+        "在…方面"
+      ],
+      "in this regard": [
+        "在这方面",
+        "就这一点而言"
+      ]
+    },
+    "relate": {
+      "relate to": [
+        "与…有关",
+        "涉及"
+      ],
+      "be related to": [
+        "与…有关",
+        "和…有联系"
+      ]
+    },
+    "release": {
+      "release from": [
+        "从…释放",
+        "解除"
+      ],
+      "press release": [
+        "新闻稿",
+        "通讯稿"
+      ]
+    },
+    "relieve": {
+      "relieve stress": [
+        "缓解压力",
+        "减轻紧张"
+      ],
+      "relieve pain": [
+        "减轻疼痛",
+        "止痛"
+      ]
+    },
+    "rely": {
+      "rely on": [
+        "依赖",
+        "依靠"
+      ],
+      "rely heavily on": [
+        "严重依赖",
+        "高度依赖"
+      ]
+    },
+    "remain": {
+      "remain silent": [
+        "保持沉默",
+        "默不作声"
+      ],
+      "remain loyal": [
+        "保持忠诚",
+        "始终如一"
+      ]
+    },
+    "remove": {
+      "remove from": [
+        "从…移除",
+        "从…删除"
+      ],
+      "remove obstacles": [
+        "排除障碍",
+        "扫清障碍"
+      ]
+    },
+    "replace": {
+      "replace with": [
+        "用…代替",
+        "替换为"
+      ],
+      "replace by": [
+        "被…取代",
+        "替代"
+      ]
+    },
+    "represent": {
+      "represent interests of": [
+        "代表…的利益",
+        "体现…的权益"
+      ]
+    },
+    "require": {
+      "require that": [
+        "要求…",
+        "需要…"
+      ],
+      "require attention": [
+        "需要注意",
+        "要求关注"
+      ]
+    },
+    "resolve": {
+      "resolve the issue": [
+        "解决问题",
+        "解决争端"
+      ],
+      "resolve to do": [
+        "决心做",
+        "决定做"
+      ]
+    },
+    "respond": {
+      "respond to": [
+        "对…做出回应",
+        "回复…"
+      ],
+      "respond quickly": [
+        "快速响应",
+        "及时答复"
+      ]
+    },
+    "restore": {
+      "restore order": [
+        "恢复秩序",
+        "重建治安"
+      ],
+      "restore confidence": [
+        "恢复信心",
+        "重建信任"
+      ]
+    },
+    "restrict": {
+      "restrict to": [
+        "限于",
+        "限制在"
+      ],
+      "restrict access": [
+        "限制访问",
+        "限制进入"
+      ]
+    },
+    "result": {
+      "result in": [
+        "导致",
+        "造成"
+      ],
+      "result from": [
+        "由…引起",
+        "起因于"
+      ],
+      "as a result": [
+        "结果",
+        "因此"
+      ]
+    },
+    "retain": {
+      "retain control": [
+        "保持控制",
+        "维持掌控"
+      ],
+      "retain information": [
+        "记住信息",
+        "保存资讯"
+      ]
+    },
+    "reveal": {
+      "reveal the truth": [
+        "揭露真相",
+        "揭示真相"
+      ],
+      "reveal oneself": [
+        "显露自己",
+        "暴露身份"
+      ]
+    },
+    "reverse": {
+      "reverse the trend": [
+        "扭转趋势",
+        "逆转走向"
+      ],
+      "in reverse": [
+        "相反地",
+        "逆向地"
+      ]
+    },
+    "rise": {
+      "give rise to": [
+        "引起",
+        "导致"
+      ],
+      "rise to the challenge": [
+        "迎接挑战",
+        "挺身而出"
+      ],
+      "on the rise": [
+        "在上升",
+        "在增加"
+      ]
+    },
+    "risk": {
+      "at risk": [
+        "处于危险中",
+        "有风险"
+      ],
+      "take a risk": [
+        "冒险",
+        "冒风险"
+      ],
+      "risk doing": [
+        "冒险做",
+        "冒…的风险"
+      ]
+    },
+    "rule": {
+      "rule out": [
+        "排除",
+        "打消"
+      ],
+      "as a rule": [
+        "通常",
+        "一般说来"
+      ],
+      "rule over": [
+        "统治",
+        "支配"
+      ]
+    },
+    "run": {
+      "run into": [
+        "偶遇",
+        "撞上"
+      ],
+      "run out of": [
+        "用光",
+        "耗尽"
+      ],
+      "in the long run": [
+        "从长远看",
+        "终究"
+      ]
+    },
+    "seek": {
+      "seek out": [
+        "寻找",
+        "找出"
+      ],
+      "seek to do": [
+        "试图做",
+        "寻求…"
+      ],
+      "seek help": [
+        "寻求帮助",
+        "求助"
+      ]
+    },
+    "sense": {
+      "make sense": [
+        "有意义",
+        "说得通"
+      ],
+      "a sense of": [
+        "一种…的感觉",
+        "…的感觉"
+      ],
+      "common sense": [
+        "常识",
+        "常理"
+      ]
+    },
+    "separate": {
+      "separate from": [
+        "与…分开",
+        "与…分离"
+      ],
+      "separate into": [
+        "分成",
+        "划分为"
+      ]
+    },
+    "serve": {
+      "serve as": [
+        "充当",
+        "担任"
+      ],
+      "serve the purpose": [
+        "达到目的",
+        "适用于需要"
+      ]
+    },
+    "set": {
+      "set up": [
+        "建立",
+        "安排"
+      ],
+      "set out to do": [
+        "着手做",
+        "开始做"
+      ],
+      "set an example": [
+        "树立榜样",
+        "做出表率"
+      ]
+    },
+    "settle": {
+      "settle down": [
+        "安顿下来",
+        "定居"
+      ],
+      "settle for": [
+        "勉强接受",
+        "将就"
+      ],
+      "settle a dispute": [
+        "解决争端",
+        "平息争论"
+      ]
+    },
+    "share": {
+      "share with": [
+        "与…分享",
+        "与…共有"
+      ],
+      "fair share": [
+        "合理的份额",
+        "应得的一份"
+      ],
+      "market share": [
+        "市场份额",
+        "市占率"
+      ]
+    },
+    "shed": {
+      "shed light on": [
+        "阐明…",
+        "帮助了解…"
+      ],
+      "shed tears": [
+        "流泪",
+        "哭泣"
+      ]
+    },
+    "shift": {
+      "shift from": [
+        "从…转变",
+        "从…转移"
+      ],
+      "shift the blame": [
+        "推卸责任",
+        "归咎于人"
+      ]
+    },
+    "show": {
+      "show off": [
+        "炫耀",
+        "卖弄"
+      ],
+      "show up": [
+        "出现",
+        "露面"
+      ],
+      "show concern": [
+        "表示关心",
+        "关切"
+      ]
+    },
+    "sign": {
+      "sign up for": [
+        "报名参加",
+        "注册"
+      ],
+      "sign a contract": [
+        "签署合同",
+        "签订协议"
+      ]
+    },
+    "solve": {
+      "solve the problem": [
+        "解决问题",
+        "解题"
+      ],
+      "solve a mystery": [
+        "解开谜团",
+        "破解神秘事件"
+      ]
+    },
+    "sort": {
+      "sort out": [
+        "整理",
+        "解决"
+      ],
+      "sort of": [
+        "有点",
+        "可以说"
+      ],
+      "of all sorts": [
+        "各种各样的",
+        "形形色色的"
+      ]
+    },
+    "speak": {
+      "speak out": [
+        "坦言",
+        "公开发言"
+      ],
+      "speak of": [
+        "谈到",
+        "提及"
+      ],
+      "so to speak": [
+        "可以说",
+        "可以这么说"
+      ]
+    },
+    "spend": {
+      "spend on": [
+        "在…方面花费",
+        "投入"
+      ],
+      "spend time doing": [
+        "花时间做…",
+        "花工夫干…"
+      ],
+      "spend money": [
+        "花钱",
+        "消费"
+      ]
+    },
+    "spread": {
+      "spread out": [
+        "展开",
+        "铺开"
+      ],
+      "spread the word": [
+        "传播消息",
+        "扩散信息"
+      ]
+    },
+    "stand": {
+      "stand out": [
+        "突出",
+        "引人注目"
+      ],
+      "stand for": [
+        "代表",
+        "主张"
+      ],
+      "stand by": [
+        "支持",
+        "袖手旁观"
+      ]
+    },
+    "stay": {
+      "stay up": [
+        "熬夜",
+        "不睡觉"
+      ],
+      "stay away from": [
+        "远离",
+        "避开"
+      ],
+      "stay in touch": [
+        "保持联系",
+        "保持联络"
+      ]
+    },
+    "stimulate": {
+      "stimulate growth": [
+        "刺激增长",
+        "促进发展"
+      ],
+      "stimulate the economy": [
+        "刺激经济",
+        "促进经济"
+      ]
+    },
+    "strengthen": {
+      "strengthen ties": [
+        "加强联系",
+        "增进关系"
+      ],
+      "strengthen the position": [
+        "巩固地位",
+        "增强立场"
+      ]
+    },
+    "stress": {
+      "stress the importance": [
+        "强调重要性",
+        "突出意义"
+      ],
+      "under stress": [
+        "在压力下",
+        "处于紧张状态"
+      ]
+    },
+    "struggle": {
+      "struggle with": [
+        "与…作斗争",
+        "挣扎于"
+      ],
+      "struggle for": [
+        "为…而奋斗",
+        "争取…"
+      ],
+      "struggle to do": [
+        "艰难地做…",
+        "苦苦挣扎去做…"
+      ]
+    },
+    "submit": {
+      "submit to": [
+        "提交给",
+        "屈服于"
+      ],
+      "submit a report": [
+        "提交一份报告",
+        "呈上一份报告"
+      ]
+    },
+    "succeed": {
+      "succeed in": [
+        "在…上成功",
+        "成功做到…"
+      ],
+      "succeed to the throne": [
+        "继承王位",
+        "继位"
+      ]
+    },
+    "suffer": {
+      "suffer from": [
+        "患有",
+        "遭受…的折磨"
+      ],
+      "suffer losses": [
+        "遭受损失",
+        "蒙受损失"
+      ]
+    },
+    "suggest": {
+      "suggest that": [
+        "建议…",
+        "暗示…"
+      ],
+      "suggest doing": [
+        "建议做…",
+        "提议…"
+      ]
+    },
+    "support": {
+      "support for": [
+        "对…的支持",
+        "扶持…"
+      ],
+      "in support of": [
+        "支持…",
+        "拥护…"
+      ]
+    },
+    "suppose": {
+      "be supposed to": [
+        "应该",
+        "被期望"
+      ],
+      "suppose that": [
+        "假设",
+        "假定"
+      ]
+    },
+    "survive": {
+      "survive on": [
+        "靠…生存",
+        "依赖…维生"
+      ],
+      "survive the accident": [
+        "在事故中幸存",
+        "活过意外"
+      ]
+    },
+    "suspect": {
+      "suspect of": [
+        "怀疑…",
+        "猜想…"
+      ],
+      "suspect that": [
+        "怀疑…",
+        "觉得…"
+      ]
+    },
+    "sustain": {
+      "sustain damage": [
+        "遭受损害",
+        "受到损伤"
+      ],
+      "sustain growth": [
+        "维持增长",
+        "持续发展"
+      ]
+    },
+    "tackle": {
+      "tackle the problem": [
+        "处理问题",
+        "解决问题"
+      ],
+      "tackle the issue": [
+        "解决这个问题",
+        "着手处理问题"
+      ]
+    },
+    "take": {
+      "take on": [
+        "承担",
+        "呈现"
+      ],
+      "take over": [
+        "接管",
+        "接任"
+      ],
+      "take into account": [
+        "考虑到",
+        "顾及"
+      ]
+    },
+    "talk": {
+      "talk about": [
+        "谈论",
+        "讨论"
+      ],
+      "talk over": [
+        "商量",
+        "讨论"
+      ],
+      "small talk": [
+        "闲聊",
+        "寒暄"
+      ]
+    },
+    "tell": {
+      "tell apart": [
+        "区分",
+        "辨别"
+      ],
+      "tell the truth": [
+        "说真话",
+        "如实相告"
+      ]
+    },
+    "tend": {
+      "tend to do": [
+        "倾向于做",
+        "往往会"
+      ],
+      "tend to be": [
+        "往往是",
+        "倾向于"
+      ],
+      "tend towards": [
+        "倾向于",
+        "趋向于"
+      ]
+    },
+    "think": {
+      "think about": [
+        "思考",
+        "考虑"
+      ],
+      "think over": [
+        "仔细考虑",
+        "三思"
+      ],
+      "think highly of": [
+        "高度评价",
+        "赞赏"
+      ]
+    },
+    "trace": {
+      "trace back to": [
+        "追溯到",
+        "溯源至"
+      ],
+      "without a trace": [
+        "无影无踪",
+        "不留痕迹"
+      ]
+    },
+    "track": {
+      "keep track of": [
+        "追踪",
+        "记录"
+      ],
+      "on the right track": [
+        "方向正确",
+        "走在正道上"
+      ],
+      "track down": [
+        "追踪到",
+        "追查到"
+      ]
+    },
+    "transfer": {
+      "transfer to": [
+        "转移到",
+        "调往"
+      ],
+      "transfer funds": [
+        "转移资金",
+        "转账"
+      ]
+    },
+    "transform": {
+      "transform into": [
+        "转变为",
+        "转换成"
+      ],
+      "transform the industry": [
+        "改变行业",
+        "变革产业"
+      ]
+    },
+    "treat": {
+      "treat as": [
+        "视为",
+        "当作…对待"
+      ],
+      "treat with respect": [
+        "尊重对待",
+        "以礼相待"
+      ]
+    },
+    "trigger": {
+      "trigger a reaction": [
+        "引发反应",
+        "激起反响"
+      ],
+      "trigger the alarm": [
+        "触发警报",
+        "拉响警报"
+      ]
+    },
+    "trust": {
+      "trust in": [
+        "信任",
+        "信赖"
+      ],
+      "trust with": [
+        "托付",
+        "信赖…做"
+      ],
+      "build trust": [
+        "建立信任",
+        "树立信用"
+      ]
+    },
+    "try": {
+      "try out": [
+        "试用",
+        "尝试"
+      ],
+      "try on": [
+        "试穿",
+        "试戴"
+      ],
+      "try best": [
+        "竭尽全力",
+        "尽力"
+      ]
+    },
+    "turn": {
+      "turn out": [
+        "结果是",
+        "到场"
+      ],
+      "turn down": [
+        "拒绝",
+        "调低"
+      ],
+      "in turn": [
+        "依次",
+        "反过来"
+      ]
+    },
+    "undergo": {
+      "undergo changes": [
+        "经历变化",
+        "发生改变"
+      ],
+      "undergo surgery": [
+        "接受手术",
+        "动手术"
+      ]
+    },
+    "undermine": {
+      "undermine authority": [
+        "削弱权威",
+        "损害威信"
+      ],
+      "undermine confidence": [
+        "削弱信心",
+        "打击自信"
+      ]
+    },
+    "undertake": {
+      "undertake a task": [
+        "承担一项任务",
+        "接受工作"
+      ],
+      "undertake to do": [
+        "承诺做",
+        "答应做"
+      ]
+    },
+    "urge": {
+      "urge to do": [
+        "催促…去做",
+        "力劝…"
+      ],
+      "urge caution": [
+        "提醒要小心",
+        "劝告谨慎行事"
+      ]
+    },
+    "vary": {
+      "vary from": [
+        "从…到…不等",
+        "有差异"
+      ],
+      "vary widely": [
+        "差异很大",
+        "千差万别"
+      ],
+      "vary in": [
+        "在…方面不同",
+        "在…上变化"
+      ]
+    },
+    "verify": {
+      "verify the information": [
+        "核实信息",
+        "验证资料"
+      ],
+      "verify the identity": [
+        "核实身份",
+        "验证身份"
+      ]
+    },
+    "view": {
+      "view as": [
+        "视为",
+        "看作"
+      ],
+      "point of view": [
+        "观点",
+        "视角"
+      ],
+      "in view of": [
+        "鉴于",
+        "考虑到"
+      ]
+    },
+    "violate": {
+      "violate the law": [
+        "违法",
+        "触犯法律"
+      ],
+      "violate privacy": [
+        "侵犯隐私",
+        "侵害私密"
+      ]
+    },
+    "vote": {
+      "vote for": [
+        "投票支持",
+        "投票赞成"
+      ],
+      "vote against": [
+        "投票反对",
+        "投反对票"
+      ],
+      "cast a vote": [
+        "投票",
+        "投出一票"
+      ]
+    },
+    "warn": {
+      "warn of": [
+        "警告…",
+        "提醒…的危险"
+      ],
+      "warn against": [
+        "告诫不要…",
+        "警告防备…"
+      ],
+      "warn that": [
+        "警告说",
+        "提醒…"
+      ]
+    },
+    "weigh": {
+      "weigh the pros and cons": [
+        "权衡利弊",
+        "考虑正反面"
+      ],
+      "weigh on": [
+        "使…感到沉重",
+        "对…造成压力"
+      ]
+    },
+    "win": {
+      "win over": [
+        "赢得…的支持",
+        "说服…改变主意"
+      ],
+      "win back": [
+        "赢回",
+        "恢复"
+      ],
+      "win the prize": [
+        "获奖",
+        "得到奖励"
+      ]
+    },
+    "withdraw": {
+      "withdraw from": [
+        "退出",
+        "从…撤回"
+      ],
+      "withdraw money": [
+        "取钱",
+        "提款"
+      ]
+    },
+    "work": {
+      "work out": [
+        "解决",
+        "锻炼"
+      ],
+      "work on": [
+        "致力于",
+        "从事于"
+      ],
+      "work for": [
+        "为…工作",
+        "效力于"
+      ]
+    },
+    "yield": {
+      "yield to": [
+        "屈服于",
+        "让位于"
+      ],
+      "yield results": [
+        "产生结果",
+        "出成果"
+      ],
+      "high yield": [
+        "高产",
+        "高收益"
+      ]
     }
   }
 }

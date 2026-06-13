@@ -1,0 +1,615 @@
+[
+  {
+    "word": "uneasy",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "mammal",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "supplement",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "complement",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "compensation",
+    "derivatives": [
+      "compensate (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "humanitarian",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "barge",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "fluctuation",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "fluctuate",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "invalid",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "ward",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "strength",
+    "derivatives": [
+      "strengthen (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "icy",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "objective",
+    "derivatives": [
+      "object (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "villa",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "characterize",
+    "derivatives": [
+      "characteristic (adj.)",
+      "character (n.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "signify",
+    "derivatives": [
+      "significant (adj.)",
+      "significance (n.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "manifest",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "seemingly",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "superficial",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "criterion",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "norm",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "heading",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "reason",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "advocate",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "discrimination",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "transform",
+    "derivatives": [
+      "transformation (n.)",
+      "transformative (adj.)"
+    ],
+    "phrases": [
+      "transform into",
+      "transform the industry"
+    ]
+  },
+  {
+    "word": "loosen",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "alteration",
+    "derivatives": [
+      "alter (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "fall",
+    "derivatives": [],
+    "phrases": [
+      "fall behind",
+      "fall into"
+    ]
+  },
+  {
+    "word": "program",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "edit",
+    "derivatives": [
+      "edition (n.)",
+      "editor (n.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "verge",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "rim",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "hearth",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "fireplace",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "patron",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "diploma",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "indispensable",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "sullen",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "bandage",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "breakdown",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "essence",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "captive",
+    "derivatives": [
+      "capture (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "reverse",
+    "derivatives": [],
+    "phrases": [
+      "reverse the trend",
+      "in reverse"
+    ]
+  },
+  {
+    "word": "deviation",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "arctic",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "tragic",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "woe",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "grief",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "firework",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "storm",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "tyranny",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "wrath",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "tyrant",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "panther",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "leopard",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "grumble",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "announce",
+    "derivatives": [
+      "announcement (n.)"
+    ],
+    "phrases": [
+      "announce the results",
+      "announce that"
+    ]
+  },
+  {
+    "word": "vengeance",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "fortress",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "assurance",
+    "derivatives": [
+      "assure (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "fuse",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "reservation",
+    "derivatives": [
+      "reserve (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "safeguard",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "preservation",
+    "derivatives": [
+      "preserve (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "saturation",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "mist",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "chip",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "inclusive",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "siege",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "embrace",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "baseball",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "hemisphere",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "radius",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "scar",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "liner",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "trigger",
+    "derivatives": [],
+    "phrases": [
+      "trigger a reaction",
+      "trigger the alarm"
+    ]
+  },
+  {
+    "word": "tar",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "blind",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "shutter",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "lily",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "millionaire",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "white",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "blond",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "idiot",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "bank",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "tabulate",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "bestow",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "subdivide",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "dock",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "straighten",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "flatten",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "ascribe",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "except",
+    "derivatives": [
+      "exception (n.)",
+      "exceptional (adj.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "entitle",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "ballet",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "haughty",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "foul",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "assassinate",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "burial",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "luxurious",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "patriot",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "patriotic",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "dwarf",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "stout",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "alas",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "Egyptian",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "pathetic",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "should",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "ought",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "scripture",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "referee",
+    "derivatives": [],
+    "phrases": []
+  }
+]

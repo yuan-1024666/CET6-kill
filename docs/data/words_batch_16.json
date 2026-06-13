@@ -1,0 +1,603 @@
+[
+  {
+    "word": "stationery",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "plague",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "softness",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "graze",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "locality",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "situated",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "bachelor",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "unpaid",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "stern",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "commission",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "latitude",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "vitamin",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "Venus",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "idealism",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "mast",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "enclosure",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "violation",
+    "derivatives": [
+      "violate (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "violate",
+    "derivatives": [
+      "violation (n.)",
+      "violator (n.)"
+    ],
+    "phrases": [
+      "violate the law",
+      "violate privacy"
+    ]
+  },
+  {
+    "word": "towards",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "plead",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "catalogue",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "microprocessor",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "subtle",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "atom",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "calculus",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "gleam",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "negligible",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "microwave",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "awful",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "majesty",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "prestige",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "endanger",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "crisis",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "peril",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "dismiss",
+    "derivatives": [
+      "dismissal (n.)"
+    ],
+    "phrases": [
+      "dismiss the idea",
+      "dismiss from"
+    ]
+  },
+  {
+    "word": "fro",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "mesh",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "network",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "web",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "stubborn",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "trifle",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "completion",
+    "derivatives": [
+      "complete (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "crooked",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "hull",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "diplomatic",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "alien",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "strange",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "distort",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "twist",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "tile",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "watt",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "elliptical",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "haul",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "hip",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "devour",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "retirement",
+    "derivatives": [
+      "retire (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "drawback",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "inference",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "rational",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "propulsion",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "propel",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "recommendation",
+    "derivatives": [
+      "recommend (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "overthrow",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "impulse",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "presumably",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "gather",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "shove",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "solidarity",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "regiment",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "bandit",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "lever",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "overtake",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "nose",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "bald",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "projector",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "poll",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "dizzy",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "steal",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "misery",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "torment",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "thrash",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "dominant",
+    "derivatives": [
+      "dominate (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "dominate",
+    "derivatives": [
+      "domination (n.)",
+      "dominant (adj.)"
+    ],
+    "phrases": [
+      "dominate the market",
+      "dominant position"
+    ]
+  },
+  {
+    "word": "statistics",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "even",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "identical",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "likeness",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "simultaneous",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "accessory",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "homogeneous",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "coordinate",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "whilst",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "notify",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "advertise",
+    "derivatives": [
+      "advertisement (n.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "correspondence",
+    "derivatives": [
+      "correspond (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "popularity",
+    "derivatives": [
+      "popular (v.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "inflation",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "currency",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "entry",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "customary",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "ordinarily",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "hydrocarbon",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "resignation",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "blacksmith",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "ferrous",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "adjoin",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "hop",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "skip",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "overlook",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "regulate",
+    "derivatives": [
+      "regulation (n.)",
+      "regulatory (adj.)"
+    ],
+    "phrases": []
+  },
+  {
+    "word": "modulate",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "settlement",
+    "derivatives": [],
+    "phrases": []
+  },
+  {
+    "word": "mischief",
+    "derivatives": [],
+    "phrases": []
+  }
+]
