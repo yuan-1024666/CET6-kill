@@ -1,0 +1,692 @@
+{
+  "derivatives": {
+    "hush": ["安静", "使安静"],
+    "hushed": ["安静的", "寂静的"],
+    "hush-hush": ["秘密的"],
+    "reliability": ["可靠性", "可信度"],
+    "reliably": ["可靠地", "可信地"],
+    "reliance": ["依赖", "依靠"],
+    "consistence": ["一致性", "连贯性"],
+    "consistent": ["前后一致的", "始终如一的"],
+    "consistently": ["一致地", "始终如一"],
+    "preservation": ["保存", "保护"],
+    "possess": ["拥有", "具有"],
+    "possessions": ["财产", "所有物"],
+    "profit": ["利润", "利益"],
+    "profitably": ["有利地", "有益地"],
+    "ultimately": ["最终", "最后"],
+    "consume": ["消耗", "消费"],
+    "classification": ["分类", "分级"],
+    "demonstrate": ["演示", "证明"],
+    "reserve": ["保留", "预订"],
+    "revolutionary": ["革命的", "革命性的"],
+    "revolution": ["革命", "变革"],
+    "relief": ["缓解", "救济"],
+    "regard": ["看待", "尊敬"],
+    "opposing": ["相反的", "对立的"],
+    "transformation": ["转变", "变革"],
+    "intervention": ["干预", "介入"],
+    "variety": ["多样性", "种类"],
+    "various": ["各种的", "多样的"],
+    "necessary": ["必要的", "必需的"],
+    "decision": ["决定", "决策"],
+    "violate": ["违反", "侵犯"],
+    "extension": ["扩展", "延期"],
+    "analyze": ["分析", "解析"],
+    "analysis": ["分析", "解析"],
+    "frightened": ["害怕的", "受惊的"],
+    "frightening": ["令人害怕的", "吓人的"],
+    "furnishing": ["家具", "陈设"],
+    "scare": ["惊吓", "恐慌"],
+    "scarcely": ["几乎不", "勉强"],
+    "recruit": ["招募", "招聘"],
+    "recruitment": ["招募", "招聘"],
+    "determine": ["确定", "决定"],
+    "determination": ["决心", "决定"],
+    "protection": ["保护", "防护"],
+    "productive": ["多产的", "富有成效的"],
+    "production": ["生产", "产量"],
+    "productivity": ["生产力", "生产率"],
+    "introduction": ["介绍", "引言"],
+    "reduction": ["减少", "降低"],
+    "inclusion": ["包含", "纳入"],
+    "exclusion": ["排除", "排斥"],
+    "conclusion": ["结论", "结尾"],
+    "resolution": ["决议", "分辨率"],
+    "solution": ["解决方案", "溶液"],
+    "involvement": ["参与", "涉及"],
+    "development": ["发展", "开发"],
+    "improvement": ["改善", "改进"],
+    "expansion": ["扩展", "扩大"],
+    "intention": ["意图", "目的"],
+    "attention": ["注意", "关注"],
+    "contention": ["争论", "论点"],
+    "dependent": ["依赖的", "依靠的"],
+    "independence": ["独立", "自主"],
+    "independent": ["独立的", "自主的"],
+    "difference": ["差异", "区别"],
+    "differentiation": ["区分", "分化"],
+    "reference": ["参考", "引用"],
+    "transferable": ["可转移的", "可转让的"],
+    "preference": ["偏好", "偏爱"],
+    "inference": ["推论", "推断"],
+    "offering": ["提供物", "祭品"],
+    "suffering": ["痛苦", "苦难"],
+    "conference": ["会议", "协商"],
+    "deferral": ["推迟", "延期"],
+    "admission": ["承认", "准入"],
+    "permission": ["许可", "允许"],
+    "submission": ["提交", "服从"],
+    "commitment": ["承诺", "投入"],
+    "transmission": ["传输", "变速器"],
+    "emission": ["排放", "发射"],
+    "acquisition": ["获得", "收购"],
+    "requirement": ["要求", "需求"],
+    "inquiry": ["询问", "调查"],
+    "demanding": ["苛刻的", "要求高的"],
+    "commander": ["指挥官"],
+    "supplier": ["供应商"],
+    "application": ["应用", "申请"],
+    "implication": ["暗示", "含义"],
+    "compliance": ["遵守", "依从"],
+    "multiplication": ["乘法", "繁殖"],
+    "simplification": ["简化"],
+    "identification": ["识别", "身份证明"],
+    "identity": ["身份", "同一性"],
+    "clarification": ["澄清", "说明"],
+    "specification": ["规范", "规格"],
+    "modification": ["修改", "调整"],
+    "verification": ["验证", "核实"],
+    "qualification": ["资格", "限制"],
+    "certification": ["证明", "认证"],
+    "justification": ["理由", "辩护"],
+    "maintenance": ["维护", "维修"],
+    "container": ["容器"],
+    "retention": ["保留", "保持"],
+    "attainment": ["成就", "达到"],
+    "evaluation": ["评估", "评价"],
+    "appreciation": ["欣赏", "感激"],
+    "depreciation": ["贬值", "折旧"],
+    "prediction": ["预测", "预言"],
+    "contradiction": ["矛盾", "反驳"],
+    "dictation": ["口述", "听写"],
+    "construction": ["建设", "建造"],
+    "instruction": ["指导", "指令"],
+    "destruction": ["破坏", "毁灭"],
+    "obstruction": ["障碍", "妨碍"],
+    "conductor": ["导体", "指挥"],
+    "producer": ["生产者", "制片人"],
+    "reducer": ["还原剂"],
+    "introducer": ["介绍人"],
+    "induction": ["归纳", "就职"],
+    "deduction": ["演绎", "扣除"],
+    "impression": ["印象", "印记"],
+    "expression": ["表达", "表情"],
+    "suppression": ["压制", "抑制"],
+    "depression": ["抑郁", "萧条"],
+    "congress": ["国会", "代表大会"],
+    "regression": ["回归", "倒退"],
+    "succession": ["继承", "连续"],
+    "processor": ["处理器"],
+    "excessive": ["过度的", "过分的"],
+    "confession": ["承认", "忏悔"],
+    "investment": ["投资", "投入"],
+    "investor": ["投资者"],
+    "divestment": ["剥离", "撤资"],
+    "suggestion": ["建议", "暗示"],
+    "proposal": ["提议", "提案"],
+    "composition": ["组成", "作文"],
+    "composer": ["作曲家"],
+    "disposal": ["处理", "处置"],
+    "exposure": ["暴露", "曝光"],
+    "imposition": ["强加", "征税"],
+    "recognition": ["识别", "承认"],
+    "organization": ["组织", "机构"],
+    "realization": ["实现", "认识"],
+    "specialization": ["专业化"],
+    "emphasis": ["强调", "重点"],
+    "characterization": ["描述", "刻画"],
+    "summary": ["总结", "概要"],
+    "memory": ["记忆", "内存"],
+    "memorial": ["纪念的", "纪念碑"],
+    "standardization": ["标准化"]
+  },
+  "phrases": {
+    "hush": {
+      "hush up": ["掩盖", "隐瞒"],
+      "hush money": ["封口费"],
+      "all clear": ["安全了", "解除警报"],
+      "hush-hush": ["秘密的"]
+    },
+    "reliable": {
+      "be reliable with": ["对...可靠"],
+      "reliable source": ["可靠来源"],
+      "be reliable to": ["可依赖的"],
+      "reliable service": ["可靠服务"]
+    },
+    "consistent": {
+      "consistent with": ["与...一致"],
+      "be consistent in": ["在...方面一致"]
+    },
+    "preserve": {
+      "preserve the environment": ["保护环境"],
+      "preserve tradition": ["保留传统"]
+    },
+    "possess": {
+      "possess skills": ["拥有技能"],
+      "possess knowledge": ["拥有知识"]
+    },
+    "profit": {
+      "make a profit": ["获利"],
+      "profit from": ["从...获利"]
+    },
+    "consume": {
+      "consume energy": ["消耗能量"],
+      "consume resources": ["消耗资源"]
+    },
+    "classify": {
+      "classify as": ["归类为"],
+      "be classified as": ["被归类为"]
+    },
+    "demonstrate": {
+      "demonstrate skills": ["展示技能"],
+      "demonstrate support": ["表示支持"]
+    },
+    "reserve": {
+      "reserve a seat": ["预订座位"],
+      "natural reserve": ["自然保护区"]
+    },
+    "relieve": {
+      "relieve pain": ["缓解疼痛"],
+      "relieve stress": ["减轻压力"]
+    },
+    "regard": {
+      "regard as": ["认为是"],
+      "with regard to": ["关于"]
+    },
+    "eliminate": {
+      "eliminate poverty": ["消除贫困"],
+      "eliminate risks": ["消除风险"]
+    },
+    "oppose": {
+      "oppose to": ["反对"],
+      "be opposed to": ["反对"]
+    },
+    "transform": {
+      "transform into": ["转变为"],
+      "transform the industry": ["变革行业"]
+    },
+    "intervene": {
+      "intervene in": ["干预"],
+      "intervene between": ["调停"]
+    },
+    "vary": {
+      "vary from": ["不同于"],
+      "vary widely": ["差异很大"]
+    },
+    "necessity": {
+      "of necessity": ["必然"],
+      "out of necessity": ["出于必要"]
+    },
+    "decide": {
+      "decide on": ["决定"],
+      "decide against": ["决定反对"]
+    },
+    "violate": {
+      "violate rules": ["违反规则"],
+      "violate rights": ["侵犯权利"]
+    },
+    "extend": {
+      "extend an invitation": ["发出邀请"],
+      "extend deadline": ["延长截止日期"]
+    },
+    "analyze": {
+      "analyze data": ["分析数据"],
+      "analyze problem": ["分析问题"]
+    },
+    "frighten": {
+      "frighten away": ["吓跑"],
+      "be frightened of": ["害怕"]
+    },
+    "furnish": {
+      "furnish with": ["配备"],
+      "well-furnished": ["装修良好的"]
+    },
+    "scare": {
+      "scare away": ["吓跑"],
+      "be scared of": ["害怕"]
+    },
+    "recruit": {
+      "recruit employees": ["招聘员工"],
+      "military recruitment": ["征兵"]
+    },
+    "determine": {
+      "determine to": ["决心"],
+      "determine the cause": ["确定原因"]
+    },
+    "protect": {
+      "protect from": ["保护免受"],
+      "protect environment": ["保护环境"]
+    },
+    "produce": {
+      "produce goods": ["生产商品"],
+      "produce results": ["产生结果"]
+    },
+    "reduce": {
+      "reduce costs": ["降低成本"],
+      "reduce pollution": ["减少污染"]
+    },
+    "introduce": {
+      "introduce to": ["介绍给"],
+      "self-introduction": ["自我介绍"]
+    },
+    "include": {
+      "include in": ["包含在内"],
+      "be included in": ["被包含"]
+    },
+    "exclude": {
+      "exclude from": ["排除"],
+      "be excluded from": ["被排除"]
+    },
+    "conclude": {
+      "conclude that": ["得出结论"],
+      "conclude meeting": ["结束会议"]
+    },
+    "resolve": {
+      "resolve problem": ["解决问题"],
+      "resolve dispute": ["解决争端"]
+    },
+    "solve": {
+      "solve problem": ["解决问题"],
+      "solve crisis": ["解决危机"]
+    },
+    "involve": {
+      "involve in": ["参与"],
+      "be involved in": ["涉及"]
+    },
+    "develop": {
+      "develop skills": ["培养技能"],
+      "develop technology": ["开发技术"]
+    },
+    "improve": {
+      "improve performance": ["提高性能"],
+      "improve quality": ["提高质量"]
+    },
+    "increase": {
+      "increase by": ["增加了"],
+      "increase productivity": ["提高生产力"]
+    },
+    "decrease": {
+      "decrease by": ["减少了"],
+      "decrease gradually": ["逐渐减少"]
+    },
+    "expand": {
+      "expand business": ["拓展业务"],
+      "expand market": ["扩大市场"]
+    },
+    "intend": {
+      "intend to": ["打算"],
+      "be intended for": ["旨在"]
+    },
+    "attend": {
+      "attend meeting": ["参加会议"],
+      "attend school": ["上学"]
+    },
+    "contend": {
+      "contend with": ["应对"],
+      "contend for": ["争夺"]
+    },
+    "depend": {
+      "depend on": ["依赖"],
+      "be dependent on": ["依赖于"]
+    },
+    "differ": {
+      "differ from": ["不同于"],
+      "differ in": ["在...方面不同"]
+    },
+    "refer": {
+      "refer to": ["参考"],
+      "refer to as": ["称为"]
+    },
+    "transfer": {
+      "transfer to": ["转移到"],
+      "transfer money": ["转账"]
+    },
+    "prefer": {
+      "prefer to": ["更喜欢"],
+      "prefer doing": ["更喜欢做"]
+    },
+    "infer": {
+      "infer from": ["从...推断"],
+      "infer conclusion": ["推断结论"]
+    },
+    "offer": {
+      "offer help": ["提供帮助"],
+      "offer advice": ["提供建议"]
+    },
+    "suffer": {
+      "suffer from": ["遭受"],
+      "suffer loss": ["遭受损失"]
+    },
+    "confer": {
+      "confer with": ["协商"],
+      "confer on": ["授予"]
+    },
+    "defer": {
+      "defer to": ["遵从"],
+      "defer decision": ["推迟决定"]
+    },
+    "admit": {
+      "admit to": ["承认"],
+      "admit mistake": ["承认错误"]
+    },
+    "permit": {
+      "permit doing": ["允许做"],
+      "work permit": ["工作许可证"]
+    },
+    "submit": {
+      "submit to": ["提交"],
+      "submit application": ["提交申请"]
+    },
+    "commit": {
+      "commit to": ["承诺"],
+      "commit crime": ["犯罪"]
+    },
+    "transmit": {
+      "transmit information": ["传输信息"],
+      "transmit signals": ["传输信号"]
+    },
+    "emit": {
+      "emit light": ["发光"],
+      "emit sound": ["发出声音"]
+    },
+    "acquire": {
+      "acquire skills": ["获得技能"],
+      "acquire knowledge": ["获得知识"]
+    },
+    "require": {
+      "require to": ["要求"],
+      "require attention": ["需要注意"]
+    },
+    "inquire": {
+      "inquire about": ["询问"],
+      "inquire into": ["调查"]
+    },
+    "request": {
+      "request help": ["请求帮助"],
+      "request information": ["请求信息"]
+    },
+    "demand": {
+      "demand attention": ["需要关注"],
+      "meet demand": ["满足需求"]
+    },
+    "command": {
+      "command respect": ["赢得尊重"],
+      "command army": ["指挥军队"]
+    },
+    "supply": {
+      "supply with": ["供应"],
+      "supply chain": ["供应链"]
+    },
+    "apply": {
+      "apply for": ["申请"],
+      "apply to": ["应用于"]
+    },
+    "imply": {
+      "imply that": ["暗示"],
+      "be implied": ["被暗示"]
+    },
+    "reply": {
+      "reply to": ["回复"],
+      "quick reply": ["快速回复"]
+    },
+    "comply": {
+      "comply with": ["遵守"],
+      "fully comply": ["完全遵守"]
+    },
+    "multiply": {
+      "multiply by": ["乘以"],
+      "multiply rapidly": ["快速增加"]
+    },
+    "simplify": {
+      "simplify process": ["简化流程"],
+      "simplify problem": ["简化问题"]
+    },
+    "identify": {
+      "identify problem": ["识别问题"],
+      "identify cause": ["确定原因"]
+    },
+    "clarify": {
+      "clarify point": ["阐明观点"],
+      "clarify misunderstanding": ["澄清误解"]
+    },
+    "specify": {
+      "specify requirements": ["指定要求"],
+      "specify details": ["详细说明"]
+    },
+    "modify": {
+      "modify plan": ["修改计划"],
+      "modify behavior": ["改变行为"]
+    },
+    "verify": {
+      "verify information": ["验证信息"],
+      "verify identity": ["核实身份"]
+    },
+    "qualify": {
+      "qualify for": ["有资格"],
+      "qualify exam": ["资格考试"]
+    },
+    "certify": {
+      "certify product": ["认证产品"],
+      "certify documents": ["认证文件"]
+    },
+    "justify": {
+      "justify decision": ["证明决定合理"],
+      "justify expense": ["证明费用合理"]
+    },
+    "sustain": {
+      "sustain growth": ["维持增长"],
+      "sustain effort": ["持续努力"]
+    },
+    "maintain": {
+      "maintain order": ["维持秩序"],
+      "maintain relationship": ["维持关系"]
+    },
+    "contain": {
+      "contain information": ["包含信息"],
+      "contain costs": ["控制成本"]
+    },
+    "obtain": {
+      "obtain information": ["获取信息"],
+      "obtain permission": ["获得许可"]
+    },
+    "retain": {
+      "retain employees": ["留住员工"],
+      "retain information": ["保留信息"]
+    },
+    "attain": {
+      "attain goal": ["达到目标"],
+      "attain success": ["获得成功"]
+    },
+    "entertain": {
+      "entertain guests": ["招待客人"],
+      "entertain ideas": ["考虑想法"]
+    },
+    "evaluate": {
+      "evaluate performance": ["评估表现"],
+      "evaluate options": ["评估选项"]
+    },
+    "appreciate": {
+      "appreciate help": ["感谢帮助"],
+      "appreciate art": ["欣赏艺术"]
+    },
+    "depreciate": {
+      "depreciate in value": ["贬值"],
+      "depreciate currency": ["货币贬值"]
+    },
+    "predict": {
+      "predict future": ["预测未来"],
+      "predict outcome": ["预测结果"]
+    },
+    "contradict": {
+      "contradict oneself": ["自相矛盾"],
+      "contradict statement": ["反驳声明"]
+    },
+    "dictate": {
+      "dictate terms": ["发号施令"],
+      "dictate policy": ["制定政策"]
+    },
+    "construct": {
+      "construct building": ["建造建筑"],
+      "construct theory": ["构建理论"]
+    },
+    "instruct": {
+      "instruct student": ["指导学生"],
+      "instruct to": ["指示"]
+    },
+    "destruct": {
+      "destruct building": ["破坏建筑"],
+      "self-destruct": ["自毁"]
+    },
+    "obstruct": {
+      "obstruct progress": ["阻碍进步"],
+      "obstruct justice": ["妨碍司法"]
+    },
+    "conduct": {
+      "conduct research": ["进行研究"],
+      "conduct meeting": ["主持会议"]
+    },
+    "induce": {
+      "induce labor": ["引产"],
+      "induce investment": ["吸引投资"]
+    },
+    "deduce": {
+      "deduce conclusion": ["推断结论"],
+      "deduce logically": ["逻辑推断"]
+    },
+    "impress": {
+      "impress boss": ["给老板留下印象"],
+      "make impression": ["留下印象"]
+    },
+    "express": {
+      "express opinion": ["表达观点"],
+      "express gratitude": ["表达感激"]
+    },
+    "suppress": {
+      "suppress rebellion": ["镇压叛乱"],
+      "suppress emotions": ["压抑情绪"]
+    },
+    "depress": {
+      "depress market": ["使市场低迷"],
+      "feel depressed": ["感到沮丧"]
+    },
+    "progress": {
+      "progress slowly": ["进展缓慢"],
+      "make progress": ["取得进步"]
+    },
+    "congress": {
+      "congress meeting": ["国会会议"],
+      "congress vote": ["国会投票"]
+    },
+    "regress": {
+      "regress to": ["退回到"],
+      "economic regress": ["经济倒退"]
+    },
+    "succeed": {
+      "succeed in": ["成功"],
+      "succeed quickly": ["快速成功"]
+    },
+    "process": {
+      "process data": ["处理数据"],
+      "process order": ["处理订单"]
+    },
+    "excess": {
+      "excess baggage": ["超重行李"],
+      "in excess of": ["超过"]
+    },
+    "access": {
+      "access information": ["访问信息"],
+      "access denied": ["访问被拒绝"]
+    },
+    "recess": {
+      "recess time": ["休息时间"],
+      "recess period": ["休会期"]
+    },
+    "confess": {
+      "confess crime": ["认罪"],
+      "confess mistake": ["承认错误"]
+    },
+    "invest": {
+      "invest money": ["投资"],
+      "invest time": ["投入时间"]
+    },
+    "divest": {
+      "divest assets": ["剥离资产"],
+      "divest holdings": ["出售股份"]
+    },
+    "suggest": {
+      "suggest idea": ["提出想法"],
+      "suggest changes": ["建议修改"]
+    },
+    "propose": {
+      "propose plan": ["提出计划"],
+      "propose marriage": ["求婚"]
+    },
+    "compose": {
+      "compose music": ["作曲"],
+      "compose letter": ["写信"]
+    },
+    "dispose": {
+      "dispose of": ["处理"],
+      "dispose waste": ["处理废物"]
+    },
+    "expose": {
+      "expose to": ["暴露于"],
+      "expose corruption": ["揭露腐败"]
+    },
+    "impose": {
+      "impose tax": ["征税"],
+      "impose restrictions": ["施加限制"]
+    },
+    "recognize": {
+      "recognize achievement": ["认可成就"],
+      "recognize importance": ["认识到重要性"]
+    },
+    "organize": {
+      "organize event": ["组织活动"],
+      "organize team": ["组织团队"]
+    },
+    "realize": {
+      "realize dream": ["实现梦想"],
+      "realize potential": ["发挥潜力"]
+    },
+    "specialize": {
+      "specialize in": ["专攻"],
+      "specialize field": ["专业领域"]
+    },
+    "emphasize": {
+      "emphasize importance": ["强调重要性"],
+      "emphasize need": ["强调需求"]
+    },
+    "characterize": {
+      "characterize by": ["以...为特征"],
+      "characterize behavior": ["描述行为"]
+    },
+    "summarize": {
+      "summarize report": ["总结报告"],
+      "summarize meeting": ["总结会议"]
+    },
+    "symbolize": {
+      "symbolize freedom": ["象征自由"],
+      "symbolize unity": ["象征团结"]
+    },
+    "memorize": {
+      "memorize words": ["记单词"],
+      "memorize speech": ["背诵演讲"]
+    },
+    "standardize": {
+      "standardize process": ["标准化流程"],
+      "standardize product": ["标准化产品"]
+    }
+  }
+}
