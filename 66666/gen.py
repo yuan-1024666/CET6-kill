@@ -1,7 +1,7 @@
 # Generator v11: 真同根词only | 每段答案独立分配 | 无假词
 import os, json, re
 
-d = r'f:\66666'
+d = r'f:\66666\66666'
 txt_files = [f for f in os.listdir(d) if f.endswith('.txt') and 'parsed' not in f.lower() and 'json' not in f.lower()]
 src = os.path.join(d, txt_files[0])
 raw = open(src, 'rb').read()
