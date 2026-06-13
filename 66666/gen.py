@@ -1,10 +1,101 @@
-# Generator v11: 真同根词only | 每段答案独立分配 | 无假词
+# Generator v13: 智能自动生成同根词和短语含义
 import os, json, re
 
 d = r'f:\66666\66666'
 txt_files = [f for f in os.listdir(d) if f.endswith('.txt') and 'parsed' not in f.lower() and 'json' not in f.lower()]
 src = os.path.join(d, txt_files[0])
 raw = open(src, 'rb').read()
+
+# 加载同根词和短语的专属含义映射
+derivative_meanings = {}
+phrase_meanings = {}
+meanings_file = os.path.join(d, 'data', 'word_meanings.json')
+if os.path.exists(meanings_file):
+    for enc in ['utf-8', 'gb18030', 'gbk']:
+        try:
+            with open(meanings_file, 'r', encoding=enc) as f:
+                meanings_data = json.load(f)
+                derivative_meanings = meanings_data.get('derivatives', {})
+                phrase_meanings = meanings_data.get('phrases', {})
+                print(f"Loaded {len(derivative_meanings)} derivative meanings and {len(phrase_meanings)} phrase meanings with encoding {enc}")
+                break
+        except:
+            continue
+
+# 智能生成同根词含义
+def generate_derivative_meaning(base_meaning, word, pos):
+    """根据原词含义和词性智能生成同根词含义"""
+    if not base_meaning:
+        return base_meaning
+    
+    # 根据词性后缀生成相应的含义
+    transformations = {
+        'n.': [
+            (lambda m: m + '性'),      # 形容词→名词 (如: 可靠的 → 可靠性)
+            (lambda m: m + '度'),      # (如: 稳定 → 稳定度)
+            (lambda m: '对' + m + '的态度'),
+        ],
+        'adj.': [
+            (lambda m: m + '的'),      # 名词→形容词 (如: 依赖 → 依赖的)
+            (lambda m: '具有' + m + '性质的'),
+        ],
+        'adv.': [
+            (lambda m: m + '地'),      # 形容词→副词 (如: 可靠的 → 可靠地)
+        ],
+        'v.': [
+            (lambda m: '使' + m),      # 形容词→动词 (如: 稳定 → 使稳定)
+            (lambda m: '变得' + m),
+        ]
+    }
+    
+    for p, funcs in transformations.items():
+        if pos.startswith(p):
+            for func in funcs:
+                try:
+                    result = func(base_meaning)
+                    if result != base_meaning:
+                        return result
+                except:
+                    continue
+    return base_meaning
+
+# 智能生成短语含义
+def generate_phrase_meaning(base_meaning, phrase):
+    """根据原词含义和短语结构智能生成短语含义"""
+    if not base_meaning or not phrase:
+        return base_meaning
+    
+    # 常见短语模式
+    patterns = [
+        (r'be (\w+) with', lambda m: '对...' + m),
+        (r'be (\w+) to', lambda m: '可' + m + '的'),
+        (r'(\w+) of', lambda m: m + '的'),
+        (r'(\w+) on', lambda m: '在...方面' + m),
+        (r'(\w+) for', lambda m: '为...' + m),
+        (r'(\w+) in', lambda m: '在...中' + m),
+        (r'(\w+) from', lambda m: '从...' + m),
+        (r'(\w+) up', lambda m: '使' + m),
+        (r'(\w+) out', lambda m: '彻底' + m),
+        (r'(\w+) away', lambda m: '使...' + m + '离开'),
+    ]
+    
+    for pattern, func in patterns:
+        if re.match(pattern, phrase.lower()):
+            return func(base_meaning)
+    
+    # 默认：添加介词含义
+    if 'of' in phrase:
+        return base_meaning + '的'
+    elif 'with' in phrase:
+        return '与...' + base_meaning
+    elif 'to' in phrase:
+        return '向...' + base_meaning
+    elif 'for' in phrase:
+        return '为...' + base_meaning
+    elif 'in' in phrase:
+        return '在...中' + base_meaning
+    
+    return base_meaning
 
 text = None
 for enc in ['gb18030', 'gbk', 'utf-8']:
@@ -216,6 +307,7 @@ DERIVATIVES = {
     'guide': {'guidance': 'n.', 'guiding': 'adj.'},
     'harmony': {'harmonious': 'adj.'},
     'healthy': {'health': 'n.', 'healthier': 'adj.'},
+    'hush': {'hushed': 'adj.', 'hush-hush': 'adj.'},
     'hesitate': {'hesitation': 'n.', 'hesitant': 'adj.'},
     'identify': {'identification': 'n.', 'identity': 'n.'},
     'ignore': {'ignorance': 'n.', 'ignorant': 'adj.'},
@@ -557,6 +649,7 @@ REAL_PHRASES = {
     'guard': ['guard against', 'on guard', 'off guard'],
     'handle': ['handle the situation', 'handle with care'],
     'hold': ['hold on', 'hold a meeting', 'hold true'],
+    'hush': ['hush up', 'hush money', 'all clear'],
     'identify': ['identify with', 'identify the problem'],
     'impact': ['impact on', 'have an impact on'],
     'implement': ['implement a plan', 'implement changes'],
@@ -743,29 +836,57 @@ for wi, w in enumerate(words_list):
     
     # ---- Segment 2: 同根词 or 词义2 ----
     derivatives = DERIVATIVES.get(word_lower)
-    seg2_answer = [meanings[1]] if len(meanings) > 1 else ([meanings[0]] if meanings else ['?'])
-    seg2_target_meaning = meanings[1] if len(meanings) > 1 else first_meaning
     
     if derivatives:
         der_word = list(derivatives.keys())[0]
         der_pos = derivatives[der_word]
+        # 使用同根词的专属含义，如果没有则智能生成
+        der_meanings = derivative_meanings.get(der_word.lower(), [])
+        if der_meanings:
+            seg2_answer = der_meanings[:2]
+            seg2_target_meaning = der_meanings[0]
+        else:
+            # 智能生成同根词含义
+            generated_meaning = generate_derivative_meaning(first_meaning, der_word, der_pos)
+            if generated_meaning and generated_meaning != first_meaning:
+                seg2_answer = [generated_meaning]
+                seg2_target_meaning = generated_meaning
+            else:
+                seg2_answer = [meanings[1]] if len(meanings) > 1 else ([meanings[0]] if meanings else ['?'])
+                seg2_target_meaning = meanings[1] if len(meanings) > 1 else first_meaning
         segs.append({
             'text': der_word,
             'label': f'同根词({der_pos})',
             'answer': seg2_answer,
-            'hints': [f"「{w['word']}」→「{der_word}」词性变为{der_pos}"] + make_good_hints(seg2_target_meaning, w['word'], pos_str)[:3],
+            'hints': [f"「{w['word']}」→「{der_word}」词性变为{der_pos}"] + make_good_hints(seg2_target_meaning, der_word, der_pos)[:3],
         })
     elif word_lower in REVERSE_DERIV:
         rev = REVERSE_DERIV[word_lower][0]
+        rev_word = rev['base']
+        # 使用同根词的专属含义，如果没有则智能生成
+        rev_meanings = derivative_meanings.get(rev_word.lower(), [])
+        if rev_meanings:
+            seg2_answer = rev_meanings[:2]
+            seg2_target_meaning = rev_meanings[0]
+        else:
+            generated_meaning = generate_derivative_meaning(first_meaning, rev_word, pos_str)
+            if generated_meaning and generated_meaning != first_meaning:
+                seg2_answer = [generated_meaning]
+                seg2_target_meaning = generated_meaning
+            else:
+                seg2_answer = [meanings[1]] if len(meanings) > 1 else ([meanings[0]] if meanings else ['?'])
+                seg2_target_meaning = meanings[1] if len(meanings) > 1 else first_meaning
         segs.append({
-            'text': rev['base'],
+            'text': rev_word,
             'label': '同根词(原形)',
             'answer': seg2_answer,
-            'hints': [f"「{w['word']}」来自「{rev['base']}」"] + make_good_hints(seg2_target_meaning, w['word'], pos_str)[:3],
+            'hints': [f"「{w['word']}」来自「{rev_word}」"] + make_good_hints(seg2_target_meaning, rev_word, pos_str)[:3],
         })
     else:
         # No real derivative — use word itself with different meaning
         seg2_label = '词义2' if len(meanings) > 1 else '用法'
+        seg2_answer = [meanings[1]] if len(meanings) > 1 else ([meanings[0]] if meanings else ['?'])
+        seg2_target_meaning = meanings[1] if len(meanings) > 1 else first_meaning
         segs.append({
             'text': w['word'],
             'label': seg2_label,
@@ -775,16 +896,30 @@ for wi, w in enumerate(words_list):
     
     # ---- Segment 3: 短语 or 词义3 ----
     phrase_candidates = REAL_PHRASES.get(word_lower)
+    
+    # 预先定义默认值
     seg3_answer = [meanings[2]] if len(meanings) > 2 else ([meanings[1]] if len(meanings) > 1 else ([meanings[0]] if meanings else ['?']))
     seg3_target_meaning = meanings[2] if len(meanings) > 2 else (meanings[1] if len(meanings) > 1 else first_meaning)
     
     if phrase_candidates:
         chosen_phrase = phrase_candidates[hash(w['word']) % len(phrase_candidates)]
+        # 使用短语的专属含义，如果没有则智能生成
+        phrase_dict = phrase_meanings.get(word_lower, {})
+        phrase_ans = phrase_dict.get(chosen_phrase, [])
+        if phrase_ans:
+            seg3_answer = phrase_ans
+            seg3_target_meaning = phrase_ans[0]
+        else:
+            # 智能生成短语含义
+            generated_meaning = generate_phrase_meaning(first_meaning, chosen_phrase)
+            if generated_meaning and generated_meaning != first_meaning:
+                seg3_answer = [generated_meaning]
+                seg3_target_meaning = generated_meaning
         segs.append({
             'text': chosen_phrase,
             'label': '短语',
             'answer': seg3_answer,
-            'hints': [f"「{w['word']}」的常见搭配"] + make_good_hints(seg3_target_meaning, w['word'], pos_str)[:3],
+            'hints': [f"「{w['word']}」的常见搭配"] + make_good_hints(seg3_target_meaning, chosen_phrase, pos_str)[:3],
         })
     elif len(meanings) > 2:
         segs.append({
